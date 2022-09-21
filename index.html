@@ -3,13 +3,25 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Join - KanbanBoard</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="">
+        <title>Join - KanbanBoard</title>
+
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="stylesheet" type="text/css" href="./css/about_us.css">
+        <link rel="stylesheet" type="text/css" href="./css/add_task.css">
+        <link rel="stylesheet" type="text/css" href="./css/backlog.css">
+        <link rel="stylesheet" type="text/css" href="./css/board.css">
+        <link rel="stylesheet" type="text/css" href="./css/help.css">
+        <link rel="stylesheet" type="text/css" href="./css/summary.css">
+
+        <script src="./script.js"></script>
+        <script src="./js/includeHtml.js"></script>
     </head>
 
-    <body>
-        
+    <body onload="init()">
+        <div w3-include-html="./templates/sidenav.html" class="left-main-container"></div>
+
+        <div class="right-main-container"></div>
     </body>
 
 </html>
