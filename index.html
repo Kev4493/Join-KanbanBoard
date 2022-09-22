@@ -14,6 +14,7 @@
         <link rel="stylesheet" type="text/css" href="./css/help.css">
         <link rel="stylesheet" type="text/css" href="./css/sidenav.css">
         <link rel="stylesheet" type="text/css" href="./css/summary.css">
+        <link rel="stylesheet" type="text/css" href="./css/header.css">
 
         <script src="./script.js"></script>
         <script src="./js/includeHtml.js"></script>
@@ -22,7 +23,9 @@
     <body onload="init()">
         <div w3-include-html="./templates/sidenav.html" class="left-main-container"></div>
 
-        <div class="right-main-container"></div>
+        <div class="right-main-container">
+            <div w3-include-html="./templates/header.html"></div>
+        </div>
     </body>
 
 </html>
