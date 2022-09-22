@@ -1,0 +1,45 @@
+.sidenav-container {
+    width: 200px;
+    height: 100vh;
+    background-color: #2A3647;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 0rem;
+}
+
+.join-logo {
+    object-fit: cover;
+}
+
+.nav-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav-link {
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link:hover {
+    background-color: #091931;
+    transition: all ease-in-out 125ms;
+}
+
+
+
+.nav-link > img {
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+}
+
+.nav-footer {
+    width: 100%;
+}
