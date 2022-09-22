@@ -1,0 +1,21 @@
+.add-task-container {
+    padding: 5rem 6rem;
+}
+
+.headline {
+    font-size: 3rem;
+}
+
+.left-form-container {
+    width: 50%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+label {
+    margin-top: 2rem;
+}
