@@ -1,21 +1,118 @@
 .add-task-container {
     padding: 5rem 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .headline {
     font-size: 3rem;
 }
 
+.form-container {
+    display: flex;
+}
+
+/* === Left Form Container === */
+
 .left-form-container {
     width: 50%;
+    border-right: 1px solid #D1D1D1;
+    padding-right: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    width: 250px;
 }
 
 label {
     margin-top: 2rem;
+}
+
+.add-task-inputfield {
+    border: 1px solid #D1D1D1;
+    width: 422px;
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+textarea {
+    border: 1px solid #D1D1D1;
+    width: 422px;
+    height: 80px;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+/* === Right Form Container === */
+
+.right-form-container {
+    padding-left: 5rem;
+    width: 50%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.prio-button-headline {
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 422px;
+    display: flex;
+    align-items: center;
+}
+
+.prio-button-icon {
+    margin-right: 0.5rem;
+    width: 15px;
+}
+
+.prio-button {
+    width: 130px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* === Submit Container === */
+
+.submit-container {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-button {
+    height: 50px;
+    background-color: white;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 0rem 1rem;
+}
+
+.create-task-button {
+    background-color: #2A3647;
+    color: white;
+}
+
+.submit-button-icon {
+    margin-left: 1rem;
+    width: 15px;
 }
