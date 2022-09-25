@@ -21,7 +21,3 @@ function openAddTask() {
     document.getElementById('board').classList.add('d-none')
     document.getElementById('add-task').classList.remove('d-none')
 }
-
-function openAddTaskDialog() {
-    document.getElementById('add-task-dialog').classList.remove('d-none');
-}

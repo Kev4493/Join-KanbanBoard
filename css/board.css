@@ -98,6 +98,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.close-icon {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.125s ease-in-out;
+}
+
+.close-icon:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all 0.125s ease-in-out;
 }
 
 .add-task-include {
