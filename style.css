@@ -44,6 +44,7 @@
     font-family: 'Poppins';
 }
 
+
 body {
     display: flex;
     
@@ -52,4 +53,9 @@ body {
 .right-main-container {
     background-color: #F5F5F5;
     width: 100%;
+}
+
+
+.d-none {
+    display: none !important;
 }

@@ -1,5 +1,5 @@
 .add-task-container {
-    padding: 5rem 6rem;
+    padding: 5rem 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,16 +11,19 @@
 
 .form-container {
     display: flex;
+    width: 100%;
+    /* border: 1px solid black; */
+    justify-content: space-between;
 }
 
 /* === Left Form Container === */
 
 .left-form-container {
-    width: 50%;
-    border-right: 1px solid #D1D1D1;
-    padding-right: 5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    width: 40%;
+    /* border-right: 1px solid #D1D1D1; */
+    /* padding-right: 5rem; */
+    /* padding-top: 1rem; */
+    /* padding-bottom: 1rem; */
 }
 
 form {
@@ -34,29 +37,35 @@ label {
 
 .add-task-inputfield {
     border: 1px solid #D1D1D1;
-    width: 422px;
+    /* max-width: 422px; */
     height: 40px;
     border-radius: 10px;
-    padding-left: 1rem;
+    padding: 0 1rem;
     display: flex;
     align-items: center;
 }
 
 textarea {
     border: 1px solid #D1D1D1;
-    width: 422px;
+    /* width: 422px; */
     height: 80px;
     border-radius: 10px;
     padding: 1rem;
 }
 
+hr {
+    border: none;
+    border-left: 1px solid #D1D1D1;
+    width: 1px;
+}
+
 /* === Right Form Container === */
 
 .right-form-container {
-    padding-left: 5rem;
-    width: 50%;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    /* padding-left: 5rem; */
+    width: 40%;
+    /* padding-top: 1rem; */
+    /* padding-bottom: 1rem; */
 }
 
 .prio-button-headline {
@@ -68,7 +77,7 @@ textarea {
 .button-container {
     display: flex;
     justify-content: space-between;
-    width: 422px;
+    /* width: 422px; */
     display: flex;
     align-items: center;
 }
@@ -90,9 +99,10 @@ textarea {
 /* === Submit Container === */
 
 .submit-container {
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     display: flex;
     justify-content: flex-end;
+    /* max-width: 1000px; */
 }
 
 .submit-button {
@@ -105,6 +115,7 @@ textarea {
     display: flex;
     align-items: center;
     padding: 0rem 1rem;
+    border: 1px solid #2A3647;
 }
 
 .create-task-button {

@@ -1,0 +1,164 @@
+.summary-container {
+    padding: 3rem 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* === Summary Header */
+
+.summary-header > h1 {
+    border-right: 1px solid black;
+    padding-right: 2rem;
+    font-size: 3rem;
+}
+
+.summary-header > p {
+    padding-left: 2rem;
+    font-size: 1.5rem;
+}
+
+.summary-header {
+    display: flex;
+    align-items: center;
+}
+
+/* === Summary Row 1 === */
+
+.summary-row-1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    width: 600px;
+}
+
+.summary-box {
+    width: 170px;
+    height: 170px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.number-in-box {
+    /* font-weight: 700; */
+    font-size: 4rem;
+}
+
+.text-in-box {
+    text-align: center;
+}
+
+/* === Summary Row 2 === */
+
+.summary-row-2 {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    height: 170px;
+}
+
+.urgent-box {
+    display: flex;
+    height: 170px;
+    background-color: white;
+    border-radius: 30px;
+    width: 600px;
+    padding: 2rem;
+}
+
+.urgent-box-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid black;
+    width: 50%;
+}
+
+.urgent-box-left > img {
+    width: 60px;
+    height: 60px;
+}
+
+.number-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.number-in-urgent-box {
+    font-size: 2rem;
+}
+
+.urgent-box-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.deadline-date {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.welcome-text-container {
+    margin-left: 8rem;
+}
+
+.welcome-text {
+    font-size: 3rem;
+}
+
+.welcome-name {
+    font-size: 3.5rem;
+    color: #29ABE2;
+    font-weight: 700;
+}
+
+/* === Summary Row 3 === */
+
+.summary-row-3 {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.todo-container, .done-container {
+    background-color: white;
+    width: 280px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-number, .done-number {
+    font-size: 4rem;
+}
+
+.todo-text-container, .done-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+}
+
+.done-container > img {
+    width: 60px;
+    height: 60px;
+}
+
+.todo-container > img {
+    width: 60px;
+    height: 60px;
+}
