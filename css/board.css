@@ -77,7 +77,7 @@
 /* === Add Task Dialog === */
 
 .add-task-dialog-bg {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 999;
     position: fixed;
     left: 0;
