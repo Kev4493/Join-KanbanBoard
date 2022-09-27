@@ -1,3 +1,7 @@
+let allTasks = [];
+
+
+
 function addTask() {
     let taskTitle = document.getElementById('taskTitle').value;
     let taskDescription = document.getElementById('taskDescription').value;
@@ -5,11 +9,18 @@ function addTask() {
     let taskAssignedTo = document.getElementById('taskAssignedTo').value;
     let taskDueDate = document.getElementById('taskDueDate').value;
 
-    console.log('Title: ', taskTitle)
-    console.log('Description: ', taskDescription)
-    console.log('Category: ', taskCategory)
-    console.log('Assigned To: ', taskAssignedTo)
-    console.log('Due Date: ', taskDueDate)
+    let task = {
+        'title': taskTitle,
+        'description': taskDescription,
+        'category': taskCategory,
+        'assigned': taskAssignedTo,
+        'dueDate': taskDueDate,
+        'createdAt': new Date().getTime()
+    }
+
+    allTasks.push(task);
+
+    console.log('All Tasks: ', allTasks)
 
     closeAddTaskDialog();
 }
