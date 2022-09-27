@@ -19,6 +19,4 @@ function addTask() {
     allTasks.push(task);
 
     console.log('All Tasks: ', allTasks)
-
-    closeAddTaskDialog();
 }
