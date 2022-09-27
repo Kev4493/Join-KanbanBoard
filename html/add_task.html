@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Join - Add Task</title>
+
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <link rel="stylesheet" type="text/css" href="../css/add_task.css">
+        <link rel="stylesheet" type="text/css" href="../css/board.css">
+        <link rel="stylesheet" type="text/css" href="../css/header.css">
+        <link rel="stylesheet" type="text/css" href="../css/sidenav.css">
+
+
+
+        <script src="../script.js"></script>
+        <script src="../js/includeHtml.js"></script>
+        <script src="../js/addTask.js"></script>
+        <script src="../js/board.js"></script>
+    </head>
+
+    <body onload="init()">
+        <nav w3-include-html="../templates/sidenav.html" class="left-main-container"></nav>
+
+        <div class="right-main-container">
+            <header w3-include-html="../templates/header.html"></header>
+
+            <div class="add-task-container">
+
+                <h1 class="headline">Add Task</h1>
+            
+                <div class="form-container">
+                    <div class="left-form-container">
+                        <form action="">
+                            <label for="title">Title</label>
+                            <input id="taskTitle" class="add-task-inputfield" type="text" name="title" placeholder="Enter a title">
+            
+                            <label for="description">Description</label>
+                            <textarea name="description" id="taskDescription" cols="30" rows="10" placeholder="Enter a description"></textarea>
+            
+                            <label for="category">Category</label>
+                            <select class="add-task-inputfield" name="category" id="taskCategory">
+                                <option value="" disabled selected hidden>Select task category</option>
+                                <option value="software-development">Software Development</option>
+                                <option value="design">UX/UI - Design</option>
+                                <option value="marketing">Marketing</option>
+                                <option value="sales">Sales</option>
+                            </select>
+            
+                            <label for="assigned">Assigned to</label>
+                            <select class="add-task-inputfield" name="assigned" id="taskAssignedTo">
+                                <option value="" disabled selected hidden>Select contacts to assign</option>
+                                <option value="kevin">Kevin</option>
+                            </select>
+                        </form>
+                    </div>
+            
+                    <hr>
+            
+                    <div class="right-form-container">
+                        <form action="">
+                            <label for="birthday">Due date</label>
+                            <input class="add-task-inputfield" type="date" id="taskDueDate" name="birthday">
+                        </form>
+            
+                        <div class="prio-button-container">
+                            <h3 class="prio-button-headline">Prio</h3>
+                            <div class="button-container">
+                                <button class="prio-button" value="urgent"><img class="prio-button-icon" src="../assets/icons/urgent.png" alt=""> Urgent</button>
+                                <button class="prio-button" value="medium"><img class="prio-button-icon" src="../assets/icons/medium.png" alt=""> Medium</button>
+                                <button class="prio-button" value="low"><img class="prio-button-icon" src="../assets/icons/low.png" alt=""> Low</button>
+                            </div>
+                        </div>
+            
+            
+                    </div>
+                </div>
+            
+                <div class="submit-container">
+                    <button class="submit-button">Clear <img class="submit-button-icon" src="../assets/icons/cancel.png" alt=""></button>
+                    <button onclick="addTask()" class="submit-button create-task-button"> Create Task <img class="submit-button-icon" src="../assets/icons/done.png" alt=""></button>
+                </div>
+            
+            </div>
+
+        </div>
+    </body>
+
+</html>

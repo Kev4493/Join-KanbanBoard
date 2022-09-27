@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Join - Board</title>
+
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <link rel="stylesheet" type="text/css" href="../css/board.css">
+        <link rel="stylesheet" type="text/css" href="../css/header.css">
+        <link rel="stylesheet" type="text/css" href="../css/sidenav.css">
+        <link rel="stylesheet" type="text/css" href="../css/add_task.css">
+
+        <script src="../script.js"></script>
+        <script src="../js/includeHtml.js"></script>
+        <script src="../js/addTask.js"></script>
+        <script src="../js/board.js"></script>
+    </head>
+
+    <body onload="init()">
+        <nav w3-include-html="../templates/sidenav.html" class="left-main-container"></nav>
+
+        <div class="right-main-container">
+            <header w3-include-html="../templates/header.html"></header>
+
+            <div class="board-container">
+
+                <div class="headline-container">
+                    <h1>Board</h1>
+                    <div class="headline-right">
+                        <input class="task-search" type="search" placeholder="Find Task">
+                        <button onclick="openAddTaskDialog()" class="add-task-button">Add Task <img class="add-icon" src="../assets/icons/add_icon.png" alt=""></button>
+                    </div>
+                </div>
+            
+                <div class="task-status-container">
+                    <div class="task-status-row">
+                        <div class="task-status-header">
+                            <p>To do</p>
+                            <img src="../assets/icons/add_button_circle.png" alt="">
+                        </div>
+                        <div id="taskContainer" class="">
+            
+                        </div>
+                    </div>
+            
+                    <div class="task-status-row">
+                        <div class="task-status-header">
+                            <p>In progress</p>
+                            <img src="../assets/icons/add_button_circle.png" alt="">
+                        </div>
+                        <div class="task">
+                            
+                        </div>
+                    </div>
+            
+                    <div class="task-status-row">
+                        <div class="task-status-header">
+                            <p>Awaiting Feedback</p>
+                            <img src="../assets/icons/add_button_circle.png" alt="">
+                        </div>
+                        <div class="task">
+                            
+                        </div>
+                    </div>
+            
+                    <div class="task-status-row">
+                        <div class="task-status-header">
+                            <p>Done</p>
+                            <img src="../assets/icons/add_button_circle.png" alt="">
+                        </div>
+                        <div class="task">
+                            
+                        </div>
+                    </div>
+            
+                </div>
+            
+                <div id="add-task-dialog" class="add-task-dialog-bg d-none">
+                    <div class="add-task-dialog">
+                        <img onclick="closeAddTaskDialog()" class="close-icon" src="../assets/icons/close_icon.png" alt="">
+                        <div class="add-task-include">
+                            <div w3-include-html="../templates/add_task_template.html"></div>
+                        </div>
+                    </div>
+                </div>
+            
+            
+            </div>
+
+        </div>
+    </body>
+
+</html>

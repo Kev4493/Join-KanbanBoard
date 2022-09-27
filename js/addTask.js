@@ -1,7 +1,5 @@
 let allTasks = [];
 
-
-
 function addTask() {
     let taskTitle = document.getElementById('taskTitle').value;
     let taskDescription = document.getElementById('taskDescription').value;

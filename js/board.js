@@ -4,5 +4,4 @@ function openAddTaskDialog() {
 
 function closeAddTaskDialog() {
     document.getElementById('add-task-dialog').classList.add('d-none');
-
 }
