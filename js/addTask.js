@@ -18,5 +18,22 @@ function addTask() {
 
     allTasks.push(task);
 
-    console.log('All Tasks: ', allTasks)
+    console.log('AllTasks: ', allTasks);
+
+    showTaskInBoard();
+}
+
+
+function showTaskInBoard() {
+    let taskContainer = document.getElementById('taskContainer');
+
+    taskContainer.innerHTML = '';
+
+    for (let i = 0; i < allTasks.length; i++) {
+        taskContainer.innerHTML += /*html*/ `
+        <div class="task">
+            <p>${allTasks[i].title}</p>
+        </div>
+    `; 
+    }
 }
