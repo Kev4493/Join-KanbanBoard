@@ -1,8 +1,3 @@
-function initBoard() {
-    includeHTML();
-    setURL('http://kevin-wagner.developerakademie.net/smallest_backend_ever');
-};
-
 function openAddTaskDialog() {
     document.getElementById('add-task-dialog').classList.remove('d-none');
 };
