@@ -16,13 +16,12 @@ function addTask() {
         'createdAt': new Date().getTime()
     };
 
-    saveTasks(task);
-
-    console.log('AllTasks: ', allTasks);
+    allTasks.push(task);
+    saveTasks();
 };
 
 
-async function saveTasks(task) {
-    allTasks.push(task);
+async function saveTasks() {
     await backend.setItem('allTasks', JSON.stringify(allTasks));
 }
+
