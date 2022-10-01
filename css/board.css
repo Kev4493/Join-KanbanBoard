@@ -68,10 +68,32 @@
 
 .task {
     width: 100%;
-    min-height: 150px;
+    min-height: 200px;
     background-color: white;
     margin-top: 2rem;
     border-radius: 30px;
+    padding: 1rem;
+}
+
+.category-container {
+    background-color: orange;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.title-container {
+    margin-top: 1rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.description-container {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 /* === Add Task Dialog === */
