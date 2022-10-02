@@ -100,6 +100,10 @@ body {
     color: rgba(0, 0, 0, 0.5);
 }
 
+.bg-color {
+    background-color: red;
+}
+
 /* === Add Task Dialog === */
 
 .add-task-dialog-bg {

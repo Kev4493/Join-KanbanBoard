@@ -1,42 +1,8 @@
-function openAddTaskDialog() {
-    document.getElementById('add-task-dialog').classList.remove('d-none');
-};
-
-
-function closeAddTaskDialog() {
-    document.getElementById('add-task-dialog').classList.add('d-none');
-};
-
-
-async function loadAllTasks() {
-    await downloadFromServer();
-    allTasks = JSON.parse(backend.getItem('allTasks')) || [];
-
+function initBoard() {
+    includeHTML();
+    setURL('https://kevin-wagner.developerakademie.net/smallest_backend_ever');
+    loadAllTasks();
     renderTasks();
-}
-
-
-function renderTasks() {
-    let taskContainer = document.getElementById('taskContainer');
-
-    taskContainer.innerHTML = '';
-
-    for (let i = 0; i < allTasks.length; i++) {
-        taskContainer.innerHTML += /*html*/ `
-        <div class="task">
-            <div class="category-container">
-                <p>${allTasks[i].category}</p>
-            </div>
-            <div class="title-container">
-                <p>${allTasks[i].title}</p>
-            </div>
-            <div class="description-container">
-                <p>${allTasks[i].description}</p>
-            </div>
-            <p onclick="deleteTask(${i})">Löschen</p>
-        </div>
-    `;
-    }
 }
 
 
@@ -45,3 +11,20 @@ function deleteTask(i) {
     renderTasks();
     saveTasks();
 }
+
+
+function colorOfAssigned(i) {
+    if (allTasks.assigned == 'Kevin') {
+        document.getElementById('assigned-to').classList.add('bg-color')
+    }
+}
+
+
+function openAddTaskDialog() {
+    document.getElementById('add-task-dialog').classList.remove('d-none');
+};
+
+
+function closeAddTaskDialog() {
+    document.getElementById('add-task-dialog').classList.add('d-none');
+};
