@@ -39,6 +39,7 @@ function renderTasks() {
     }
 }
 
+
 function deleteTask(i) {
     allTasks.splice(i, 1);
     renderTasks();
