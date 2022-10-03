@@ -43,7 +43,7 @@ function addTaskFromDialog() {
         'category': taskCategory,
         'assigned': taskAssignedTo,
         'dueDate': taskDueDate,
-        'createdAt': new Date().getTime()
+        'createdAt': new Date().getTime(),
     };
 
     allTasks.push(task);
@@ -52,7 +52,7 @@ function addTaskFromDialog() {
     saveAllTasks();
 
     console.log('allTasks', allTasks)
-};
+}
 
 
 async function saveAllTasks() {
@@ -63,4 +63,41 @@ async function saveAllTasks() {
 async function loadAllTasks() {
     await downloadFromServer();
     allTasks = JSON.parse(backend.getItem('allTasks')) || [];
+}
+
+
+function addUrgent() {
+    let urgentButton = document.getElementById('urgent-button');
+    let mediumButton = document.getElementById('medium-button');
+    let lowButton = document.getElementById('low-button');
+
+    urgentButton.classList.toggle('prio-button-active');
+    mediumButton.classList.remove('prio-button-active');
+    lowButton.classList.remove('prio-button-active');
+}
+
+
+function addMedium() {
+    let urgentButton = document.getElementById('urgent-button');
+    let mediumButton = document.getElementById('medium-button');
+    let lowButton = document.getElementById('low-button');
+
+    urgentButton.classList.remove('prio-button-active');
+    mediumButton.classList.toggle('prio-button-active');
+    lowButton.classList.remove('prio-button-active');
+}
+
+
+function addLow() {
+    let urgentButton = document.getElementById('urgent-button');
+    let mediumButton = document.getElementById('medium-button');
+    let lowButton = document.getElementById('low-button');
+
+    urgentButton.classList.remove('prio-button-active');
+    mediumButton.classList.remove('prio-button-active');
+    lowButton.classList.toggle('prio-button-active');
+}
+
+async function deleteAllTasks() {
+    await backend.deleteItem('allTasks');
 }
