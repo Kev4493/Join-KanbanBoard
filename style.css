@@ -54,7 +54,30 @@ body {
     width: 100%;
 }
 
-
 .d-none {
     display: none !important;
+}
+
+/* === BG Colors for the assigned-to Names on the Board === */
+
+.bg-color-lightblue {
+    background-color: lightblue;
+}
+
+.bg-color-burlywood {
+    background-color: burlywood;
+}
+
+/* === BG Colors for the category on the Board === */
+
+.bg-color-orange {
+    background-color: orange;
+}
+
+.bg-color-cornflowerblue {
+    background-color: cornflowerblue;
+}
+
+.bg-color-khaki {
+    background-color: khaki;
 }

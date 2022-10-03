@@ -23,10 +23,17 @@ function renderTasks() {
                 <div class="description-container">
                     <p>${allTasks[i].description}</p>
                 </div>
-                <div id="assigned-to" class="assigned-to-container">
-                    ${allTasks[i].assigned}
+                <div class="card-footer">
+                    <div id="assigned-to${i}" class="assigned-to-container">
+                        ${allTasks[i].assigned}
+                    </div>
+                    <div class="prio-container">
+                        
+                    </div>
                 </div>
-                <p onclick="deleteTask(${i})">Löschen</p>
+                <div class="delete-container">
+                    <img class="trash-icon" onclick="deleteTask(${i})" src="../assets/icons/trash.png" alt="">
+                </div>
             </div>
         `;
         colorOfAssigned(i);
@@ -42,11 +49,11 @@ function deleteTask(i) {
 
 
 function colorOfAssigned(i) {
-    if (allTasks[i].assigned == 'Kevin') {
-        document.getElementById('assigned-to').classList.add('bg-color-red');
+    if (allTasks[i].assigned == 'KW') {
+        document.getElementById(`assigned-to${i}`).classList.add('bg-color-lightblue');
     } else {
-        if (allTasks[i].assigned == 'Kristian') {
-            document.getElementById('assigned-to').classList.add('bg-color-yellow');
+        if (allTasks[i].assigned == 'KH') {
+            document.getElementById(`assigned-to${i}`).classList.add('bg-color-burlywood');
         }
     }
 };

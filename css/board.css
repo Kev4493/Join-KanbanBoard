@@ -80,7 +80,7 @@ body {
 }
 
 .category-container {
-    background-color: orange;
+    background-color: khaki;
     display: inline-block;
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
@@ -100,13 +100,28 @@ body {
     color: rgba(0, 0, 0, 0.5);
 }
 
-.bg-color-red {
-    background-color: red;
+.assigned-to-container {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
 }
 
-.bg-color-yellow {
-    background-color: yellow;
+.delete-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
 }
+
+.trash-icon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
 
 /* === Add Task Dialog === */
 
