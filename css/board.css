@@ -70,11 +70,21 @@ body {
     font-weight: 700;
 }
 
+.task-container {
+    height: 60vh;
+    overflow-y: scroll;
+    margin-top: 2rem;
+}
+
+.task-container::-webkit-scrollbar {
+    display: none;
+}
+
 .task {
     width: 100%;
     min-height: 200px;
     background-color: white;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
     border-radius: 30px;
     padding: 1rem;
 }
