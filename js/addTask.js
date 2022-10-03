@@ -26,7 +26,7 @@ function addTask() {
 
     allTasks.push(task);
 
-    saveTasks();
+    saveAllTasks();
 };
 
 
@@ -48,14 +48,14 @@ function addTaskFromDialog() {
 
     allTasks.push(task);
     
-    renderTasks();
-    saveTasks();
+    renderTasks(); 
+    saveAllTasks();
 
     console.log('allTasks', allTasks)
 };
 
 
-async function saveTasks() {
+async function saveAllTasks() {
     await backend.setItem('allTasks', JSON.stringify(allTasks));
 }
 
@@ -63,33 +63,4 @@ async function saveTasks() {
 async function loadAllTasks() {
     await downloadFromServer();
     allTasks = JSON.parse(backend.getItem('allTasks')) || [];
-}
-
-
-function renderTasks() {
-    let taskContainer = document.getElementById('taskContainer');
-
-    taskContainer.innerHTML = '';
-
-    for (let i = 0; i < allTasks.length; i++) {
-        taskContainer.innerHTML += /*html*/ `
-            <div class="task">
-                <div class="category-container">
-                    <p>${allTasks[i].category}</p>
-                </div>
-                <div class="title-container">
-                    <p>${allTasks[i].title}</p>
-                </div>
-                <div class="description-container">
-                    <p>${allTasks[i].description}</p>
-                </div>
-                <div id="assigned-to" class="assigned-to-container">
-                    ${allTasks[i].assigned}
-                </div>
-                <p onclick="deleteTask(${i})">Löschen</p>
-            </div>
-        `;
-
-        colorOfAssigned(i);
-    }
 }
