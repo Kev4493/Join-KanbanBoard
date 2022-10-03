@@ -25,14 +25,15 @@ function renderTasks() {
                 </div>
                 <div class="card-footer">
                     <div id="assigned-to-container${i}" class="assigned-to-container" title="${allTasks[i].assigned}">
-                        ${allTasks[i].assigned.charAt(0)}
+                        <!-- Mit folgender Syntax, lassen sich die Anfangsbuchstaben von einem String anzeigen: -->
+                        ${allTasks[i].assigned.split(" ").map(word => word[0]).join("")}
                     </div>
                     <div class="prio-container">
                         
                     </div>
                 </div>
                 <div class="delete-container">
-                    <img class="trash-icon" onclick="deleteTask(${i})" src="../assets/icons/trash.png" alt="">
+                    <img class="trash-icon" onclick="deleteTask(${i})" src="../assets/icons/trash.png" alt="" title="Delete complete Task">
                 </div>
             </div>
         `;
@@ -57,7 +58,6 @@ function addColorOfCategory(i) {
                 }
             }
         }
-
     }
 }
 
