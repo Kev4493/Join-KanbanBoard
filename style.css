@@ -70,8 +70,8 @@ body {
 
 /* === BG Colors for the category on the Board === */
 
-.bg-color-orange {
-    background-color: orange;
+.bg-color-lightcoral {
+    background-color: lightcoral;
 }
 
 .bg-color-cornflowerblue {
@@ -80,4 +80,8 @@ body {
 
 .bg-color-khaki {
     background-color: khaki;
+}
+
+.bg-color-lightgreen {
+    background-color: lightgreen;
 }
