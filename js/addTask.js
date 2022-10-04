@@ -1,14 +1,14 @@
-function initAddTask() {
+async function initAddTask() {
     includeHTML();
     setURL('https://kevin-wagner.developerakademie.net/smallest_backend_ever');
-    loadAllTasks();
+    await loadAllTasks();
 }
 
 
 let allTasks = [];
 
 
-function addTask() {
+async function addTask() {
     let taskTitle = document.getElementById('taskTitle').value;
     let taskDescription = document.getElementById('taskDescription').value;
     let taskCategory = document.getElementById('taskCategory').value;
@@ -27,11 +27,11 @@ function addTask() {
 
     allTasks.push(task);
 
-    saveAllTasks();
+    await saveAllTasks();
 };
 
 
-function addTaskFromDialog() {
+async function addTaskFromDialog() {
     let taskTitle = document.getElementById('taskTitle').value;
     let taskDescription = document.getElementById('taskDescription').value;
     let taskCategory = document.getElementById('taskCategory').value;
@@ -51,7 +51,7 @@ function addTaskFromDialog() {
     allTasks.push(task);
     
     renderTasks(); 
-    saveAllTasks();
+    await saveAllTasks();
 
     console.log('allTasks', allTasks)
 }

@@ -93,10 +93,10 @@ function addColorOfAssigned(i) {
 };
 
 
-function deleteTask(i) {
+async function deleteTask(i) {
     allTasks.splice(i, 1);
     renderTasks();
-    saveAllTasks();
+    await saveAllTasks();
 };
 
 
