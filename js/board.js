@@ -14,6 +14,7 @@ function renderTasks() {
     toDoContainer.innerHTML = '';
 
     for (let i = 0; i < allTasks.length; i++) {
+
         toDoContainer.innerHTML += /*html*/ `
             <div draggable="true" ondragstart="startDragging(${i})" class="task">
                 <div id="category-container${i}" class="category-container">
@@ -30,15 +31,14 @@ function renderTasks() {
                         <!-- Mit folgender Syntax, lassen sich die Anfangsbuchstaben von einem String anzeigen: -->
                         ${allTasks[i].assigned.split(" ").map(word => word[0]).join("")}
                     </div>
-                    <div class="prio-container">
-                        
-                    </div>
+                    <div class="prio-container"></div>
                 </div>
                 <div class="delete-container">
                     <img class="trash-icon" onclick="deleteTask(${i})" src="../assets/icons/trash.png" alt="" title="Delete complete Task">
                 </div>
             </div>
         `;
+
         addColorOfCategory(i);
         addColorOfAssigned(i);
     }
