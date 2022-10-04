@@ -21,7 +21,8 @@ function addTask() {
         'category': taskCategory,
         'assigned': taskAssignedTo,
         'dueDate': taskDueDate,
-        'createdAt': new Date().getTime()
+        'createdAt': new Date().getTime(),
+        'container-category': 'todo-container'
     };
 
     allTasks.push(task);
@@ -44,6 +45,7 @@ function addTaskFromDialog() {
         'assigned': taskAssignedTo,
         'dueDate': taskDueDate,
         'createdAt': new Date().getTime(),
+        'container-category': 'todo-container'
     };
 
     allTasks.push(task);

@@ -7,13 +7,15 @@ async function initBoard() {
 
 
 function renderTasks() {
-    let taskContainer = document.getElementById('taskContainer');
+    // let containerType = allTasks.filter(t => t['category-container'] == 'todo-container');
 
-    taskContainer.innerHTML = '';
+    let toDoContainer = document.getElementById('todo-container');
+
+    toDoContainer.innerHTML = '';
 
     for (let i = 0; i < allTasks.length; i++) {
-        taskContainer.innerHTML += /*html*/ `
-            <div class="task">
+        toDoContainer.innerHTML += /*html*/ `
+            <div draggable="true" ondragstart="startDragging(${i})" class="task">
                 <div id="category-container${i}" class="category-container">
                     <p>${allTasks[i].category}</p>
                 </div>
@@ -41,6 +43,24 @@ function renderTasks() {
         addColorOfAssigned(i);
     }
 }
+
+// === Drag and Drop: ===
+
+let currentDraggedElement;
+
+function startDragging(i) {
+    currentDraggedElement = i;
+}
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function moveTo(containerType) {
+    allTasks[currentDraggedElement]['category-container'] = containerType;
+    renderTasks();
+}
+// === === === ===
 
 
 function addColorOfCategory(i) {

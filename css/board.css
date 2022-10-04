@@ -3,7 +3,7 @@ body {
 }
 
 .board-container {
-    padding: 5rem 10%;
+    padding: 3rem 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,7 +52,7 @@ body {
 /* === Task Status Container === */
 
 .task-status-container {
-    margin-top: 2rem;
+    margin-top: 3rem;
     display: flex;
     justify-content: space-between;
 }
@@ -63,11 +63,14 @@ body {
 
 .task-status-header {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: center;
 }
 
 .task-status-header>p {
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 .task-container {

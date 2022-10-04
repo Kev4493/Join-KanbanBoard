@@ -40,9 +40,9 @@
                     <div class="task-status-row">
                         <div class="task-status-header">
                             <p>To do</p>
-                            <img src="../assets/icons/add_button_circle.png" alt="">
+                            <!-- <img src="../assets/icons/add_button_circle.png" alt=""> -->
                         </div>
-                        <div id="taskContainer" class="task-container">
+                        <div id="todo-container" class="task-container" ondrop="moveTo('todo-container')" ondragover="allowDrop(event)">
             
                         </div>
                     </div>
@@ -50,9 +50,9 @@
                     <div class="task-status-row">
                         <div class="task-status-header">
                             <p>In progress</p>
-                            <img src="../assets/icons/add_button_circle.png" alt="">
+                            <!-- <img src="../assets/icons/add_button_circle.png" alt=""> -->
                         </div>
-                        <div id="" class="task-container">
+                        <div id="in-progress-container" class="task-container" ondrop="moveTo('in-progress-container')" ondragover="allowDrop(event)">
             
                         </div>
                     </div>
@@ -60,9 +60,9 @@
                     <div class="task-status-row">
                         <div class="task-status-header">
                             <p>Awaiting Feedback</p>
-                            <img src="../assets/icons/add_button_circle.png" alt="">
+                            <!-- <img src="../assets/icons/add_button_circle.png" alt=""> -->
                         </div>
-                        <div id="" class="task-container">
+                        <div id="awaiting-feedback-container" class="task-container" ondrop="moveTo('awaiting-feedback-container')" ondragover="allowDrop(event)">
                             
                         </div>
                     </div>
@@ -70,9 +70,9 @@
                     <div class="task-status-row">
                         <div class="task-status-header">
                             <p>Done</p>
-                            <img src="../assets/icons/add_button_circle.png" alt="">
+                            <!-- <img src="../assets/icons/add_button_circle.png" alt=""> -->
                         </div>
-                        <div id="" class="task-container">
+                        <div id="done-container" class="task-container" ondrop="moveTo('done-container')" ondragover="allowDrop(event)">
                             
                         </div>
                     </div>
