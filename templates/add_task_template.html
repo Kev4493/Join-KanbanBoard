@@ -4,15 +4,15 @@
 
     <div class="form-container">
         <div class="left-form-container">
-            <form action="">
+            <form>
                 <label for="title">Title</label>
-                <input id="taskTitle" class="add-task-inputfield" type="text" name="title" placeholder="Enter a title">
+                <input required id="taskTitle" class="add-task-inputfield" type="text" name="title" placeholder="Enter a title">
 
                 <label for="description">Description</label>
-                <textarea name="description" id="taskDescription" cols="30" rows="10" placeholder="Enter a description"></textarea>
+                <textarea required name="description" id="taskDescription" cols="30" rows="10" placeholder="Enter a description"></textarea>
 
                 <label for="category">Category</label>
-                <select class="add-task-inputfield" name="category" id="taskCategory">
+                <select required class="add-task-inputfield" name="category" id="taskCategory">
                     <option value="" disabled selected hidden>Select task category</option>
                     <option value="Software-Development">Software Development</option>
                     <option value="Design">UX/UI - Design</option>
@@ -21,7 +21,7 @@
                 </select>
 
                 <label for="assigned">Assigned to</label>
-                <select class="add-task-inputfield" name="assigned" id="taskAssignedTo">
+                <select required class="add-task-inputfield" name="assigned" id="taskAssignedTo">
                     <option value="" disabled selected hidden>Select contacts to assign</option>
                     <option value="Kevin Wagner">Kevin Wagner</option>
                     <option value="Kristian Huptas">Kristian Huptas</option>
@@ -32,9 +32,9 @@
         <hr>
 
         <div class="right-form-container">
-            <form action="">
+            <form>
                 <label for="birthday">Due date</label>
-                <input class="add-task-inputfield" type="date" id="taskDueDate" name="birthday">
+                <input required class="add-task-inputfield" type="date" id="taskDueDate" name="birthday">
             </form>
 
             <div class="prio-button-container">
@@ -51,8 +51,10 @@
     </div>
 
     <div class="submit-container">
-        <button class="submit-button">Clear <img class="submit-button-icon" src="../assets/icons/cancel.png" alt=""></button>
-        <button onclick="addTaskFromDialog(); closeAddTaskDialog()" class="submit-button create-task-button"> Create Task <img class="submit-button-icon" src="../assets/icons/done.png" alt=""></button>
+        <form onsubmit="addTaskFromDialog(); return false" >
+            <button class="submit-button">Clear <img class="submit-button-icon" src="../assets/icons/cancel.png" alt=""></button>
+            <button class="submit-button create-task-button"> Create Task <img class="submit-button-icon" src="../assets/icons/done.png" alt=""></button>
+        </form>
     </div>
 
 </div>

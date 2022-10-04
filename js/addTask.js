@@ -26,8 +26,8 @@ async function addTask() {
     };
 
     allTasks.push(task);
-
     await saveAllTasks();
+    window.location.href = '../html/board.html';
 };
 
 
@@ -52,6 +52,7 @@ async function addTaskFromDialog() {
     
     renderTasks(); 
     await saveAllTasks();
+    closeAddTaskDialog();
 
     console.log('allTasks', allTasks)
 }

@@ -113,6 +113,11 @@ hr {
     /* max-width: 1000px; */
 }
 
+.submit-container > form {
+    display: flex;
+    flex-direction: row;
+}
+
 .submit-button {
     height: 50px;
     background-color: white;
