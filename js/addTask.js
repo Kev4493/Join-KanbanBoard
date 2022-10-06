@@ -22,7 +22,7 @@ async function addTask() {
         'assigned': taskAssignedTo,
         'dueDate': taskDueDate,
         'createdAt': new Date().getTime(),
-        'container-category': 'todo-container'
+        'status': 'todo'
     };
 
     allTasks.push(task);
@@ -45,7 +45,7 @@ async function addTaskFromDialog() {
         'assigned': taskAssignedTo,
         'dueDate': taskDueDate,
         'createdAt': new Date().getTime(),
-        'container-category': 'todo-container'
+        'status': 'todo'
     };
 
     allTasks.push(task);
@@ -100,6 +100,7 @@ function addLow() {
     mediumButton.classList.remove('prio-button-active');
     lowButton.classList.toggle('prio-button-active');
 }
+
 
 async function deleteAllTasks() {
     await backend.deleteItem('allTasks');
