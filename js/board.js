@@ -53,6 +53,7 @@ function renderTasks() {
 
 
 function generateTaskHtml(i) {
+    
     return /*html*/ `
         <div draggable="true" ondragstart="startDragging(${i})" class="task">
             <div id="category-container${i}" class="category-container">
@@ -87,14 +88,16 @@ function startDragging(i) {
     currentDraggedElement = i;
 }
 
-function allowDrop(ev) {
-    ev.preventDefault();
-}
 
 async function moveTo(containerType) {
     allTasks[currentDraggedElement]['status'] = containerType;
     renderTasks();
     await saveAllTasks();
+}
+
+
+function allowDrop(ev) {
+    ev.preventDefault();
 }
 
 // === === === === === ===
