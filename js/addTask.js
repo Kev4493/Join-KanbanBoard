@@ -22,7 +22,7 @@ async function addTask() {
         'assigned': taskAssignedTo,
         'dueDate': taskDueDate,
         'createdAt': new Date().getTime(),
-        'status': 'todo'
+        'status': 'todo',
     };
 
     allTasks.push(task);

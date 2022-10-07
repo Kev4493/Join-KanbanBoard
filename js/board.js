@@ -12,7 +12,8 @@ function renderTasks() {
     toDoContainer.innerHTML = '';
 
     for (let i = 0; i < toDoCategory.length; i++) {
-        toDoContainer.innerHTML += generateTaskHtml(i);
+        const element = toDoCategory[i]
+        toDoContainer.innerHTML += generateTaskHtml(i, element);
         addColorOfCategory(i);
         addColorOfAssigned(i);
     }
@@ -23,7 +24,8 @@ function renderTasks() {
     inProgressContainer.innerHTML = '';
 
     for (let i = 0; i < inProgressCategory.length; i++) {
-        inProgressContainer.innerHTML += generateTaskHtml(i);
+        const element = inProgressCategory[i]
+        inProgressContainer.innerHTML += generateTaskHtml(i, element);
         addColorOfCategory(i);
         addColorOfAssigned(i);
     }
@@ -52,10 +54,10 @@ function renderTasks() {
 }
 
 
-function generateTaskHtml(i) {
+function generateTaskHtml(i, element) {
     
     return /*html*/ `
-        <div draggable="true" ondragstart="startDragging(${i})" class="task">
+        <div draggable="true" ondragstart="startDragging(${element['createdAt']})" class="task">
             <div id="category-container${i}" class="category-container">
                 <p>${allTasks[i].category}</p>
             </div>
@@ -84,8 +86,8 @@ function generateTaskHtml(i) {
 
 let currentDraggedElement;
 
-function startDragging(i) {
-    currentDraggedElement = i;
+function startDragging(id) {
+    currentDraggedElement = id;
 }
 
 
@@ -97,7 +99,7 @@ async function moveTo(containerType) {
 
 
 function allowDrop(ev) {
-    ev.preventDefault();
+    ev.preventDefault(); // Das Standartverhalten des DIV Containers wird damit so verändert, dass man Elemente dort hineinwerfen kann.
 }
 
 // === === === === === ===
