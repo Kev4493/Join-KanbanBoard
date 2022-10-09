@@ -12,7 +12,7 @@ function renderTasks() {
     toDoContainer.innerHTML = '';
 
     for (let i = 0; i < toDoCategory.length; i++) {
-        const element = toDoCategory[i]
+        const element = toDoCategory[i];
         toDoContainer.innerHTML += generateTaskHtml(i, element);
         addColorOfCategory(i);
         addColorOfAssigned(i);
@@ -24,7 +24,7 @@ function renderTasks() {
     inProgressContainer.innerHTML = '';
 
     for (let i = 0; i < inProgressCategory.length; i++) {
-        const element = inProgressCategory[i]
+        const element = inProgressCategory[i];
         inProgressContainer.innerHTML += generateTaskHtml(i, element);
         addColorOfCategory(i);
         addColorOfAssigned(i);
@@ -36,7 +36,8 @@ function renderTasks() {
     awaitingFeedbackContainer.innerHTML = '';
 
     for (let i = 0; i < awaitingFeedbackCategory.length; i++) {
-        awaitingFeedbackContainer.innerHTML += generateTaskHtml(i);
+        const element = awaitingFeedbackCategory[i];
+        awaitingFeedbackContainer.innerHTML += generateTaskHtml(i, element);
         addColorOfCategory(i);
         addColorOfAssigned(i);
     }
@@ -47,7 +48,8 @@ function renderTasks() {
     doneContainer.innerHTML = '';
 
     for (let i = 0; i < doneCategory.length; i++) {
-        doneContainer.innerHTML += generateTaskHtml(i);
+        const element = doneCategory[i];
+        doneContainer.innerHTML += generateTaskHtml(i, element);
         addColorOfCategory(i);
         addColorOfAssigned(i);
     }
@@ -57,7 +59,7 @@ function renderTasks() {
 function generateTaskHtml(i, element) {
     
     return /*html*/ `
-        <div draggable="true" ondragstart="startDragging(${element['createdAt']})" class="task">
+        <div draggable="true" ondragstart="startDragging(${element['id']})" class="task">
             <div id="category-container${i}" class="category-container">
                 <p>${allTasks[i].category}</p>
             </div>

@@ -21,7 +21,7 @@ async function addTask() {
         'category': taskCategory,
         'assigned': taskAssignedTo,
         'dueDate': taskDueDate,
-        'createdAt': new Date().getTime(),
+        'id': new Date().getTime(),
         'status': 'todo',
     };
 
@@ -44,7 +44,7 @@ async function addTaskFromDialog() {
         'category': taskCategory,
         'assigned': taskAssignedTo,
         'dueDate': taskDueDate,
-        'createdAt': new Date().getTime(),
+        'id': new Date().getTime(),
         'status': 'todo'
     };
 
