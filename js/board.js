@@ -14,8 +14,8 @@ function renderTasks() {
     for (let i = 0; i < toDoCategory.length; i++) {
         const element = toDoCategory[i];
         toDoContainer.innerHTML += generateTaskHtml(i, element);
-        addColorOfCategory(i);
-        addColorOfAssigned(i);
+        addColorOfCategory(element, i);
+        addColorOfAssigned(element, i);
     }
 
 
@@ -26,8 +26,8 @@ function renderTasks() {
     for (let i = 0; i < inProgressCategory.length; i++) {
         const element = inProgressCategory[i];
         inProgressContainer.innerHTML += generateTaskHtml(i, element);
-        addColorOfCategory(i);
-        addColorOfAssigned(i);
+        addColorOfCategory(element, i);
+        addColorOfAssigned(element, i);
     }
 
 
@@ -38,8 +38,8 @@ function renderTasks() {
     for (let i = 0; i < awaitingFeedbackCategory.length; i++) {
         const element = awaitingFeedbackCategory[i];
         awaitingFeedbackContainer.innerHTML += generateTaskHtml(i, element);
-        addColorOfCategory(i);
-        addColorOfAssigned(i);
+        addColorOfCategory(element, i);
+        addColorOfAssigned(element, i);
     }
 
 
@@ -50,29 +50,29 @@ function renderTasks() {
     for (let i = 0; i < doneCategory.length; i++) {
         const element = doneCategory[i];
         doneContainer.innerHTML += generateTaskHtml(i, element);
-        addColorOfCategory(i);
-        addColorOfAssigned(i);
+        addColorOfCategory(element, i);
+        addColorOfAssigned(element, i);
     }
 }
 
 
 function generateTaskHtml(i, element) {
-    
+
     return /*html*/ `
-        <div draggable="true" ondragstart="startDragging(${element})" class="task">
+        <div draggable="true" ondragstart="startDragging(${element['id']})" class="task">
             <div id="category-container${i}" class="category-container">
-                <p>${allTasks[i].category}</p>
+                <p>${element['category']}</p>
             </div>
             <div class="title-container">
-                <p>${allTasks[i].title}</p>
+                <p>${element['title']}</p>
             </div>
             <div class="description-container">
-                <p>${allTasks[i].description}</p>
+                <p>${element['description']}</p>
             </div>
             <div class="card-footer">
-                <div id="assigned-to-container${i}" class="assigned-to-container" title="${allTasks[i].assigned}">
+                <div id="assigned-to-container${i}" class="assigned-to-container" title="${element['assigned']}">
                     <!-- Mit folgender Syntax, lassen sich die Anfangsbuchstaben von einem String anzeigen: -->
-                    ${allTasks[i].assigned.split(" ").map(word => word[0]).join("")}
+                    ${element['assigned'].split(" ").map(word => word[0]).join("")}
                 </div>
                 <div class="prio-container"></div>
             </div>
@@ -94,7 +94,9 @@ function startDragging(element) {
 
 
 async function moveTo(containerType) {
-    currentDraggedElement['status'] = containerType;
+    let array = allTasks.find(t => t.id === currentDraggedElement)
+    array['status'] = containerType;
+
     renderTasks();
     await saveAllTasks();
 }
@@ -107,17 +109,17 @@ function allowDrop(ev) {
 // === === === === === ===
 
 
-function addColorOfCategory(i) {
-    if (allTasks[i].category == 'Sales') {
+function addColorOfCategory(element, i) {
+    if (element['category'] == 'Sales') {
         document.getElementById(`category-container${i}`).classList.add('bg-color-lightcoral');
     } else {
-        if (allTasks[i].category == 'Marketing') {
+        if (element['category'] == 'Marketing') {
             document.getElementById(`category-container${i}`).classList.add('bg-color-cornflowerblue');
         } else {
-            if (allTasks[i].category == 'Design') {
+            if (element['category'] == 'Design') {
                 document.getElementById(`category-container${i}`).classList.add('bg-color-khaki');
             } else {
-                if (allTasks[i].category == 'Software-Development') {
+                if (element['category'] == 'Software-Development') {
                     document.getElementById(`category-container${i}`).classList.add('bg-color-lightgreen');
                 }
             }
@@ -126,11 +128,11 @@ function addColorOfCategory(i) {
 }
 
 
-function addColorOfAssigned(i) {
-    if (allTasks[i].assigned == 'Kevin Wagner') {
+function addColorOfAssigned(element, i) {
+    if (element['assigned'] == 'Kevin Wagner') {
         document.getElementById(`assigned-to-container${i}`).classList.add('bg-color-lightblue');
     } else {
-        if (allTasks[i].assigned == 'Kristian Huptas') {
+        if (element['assigned'] == 'Kristian Huptas') {
             document.getElementById(`assigned-to-container${i}`).classList.add('bg-color-burlywood');
         }
     }
