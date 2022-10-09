@@ -59,7 +59,7 @@ function renderTasks() {
 function generateTaskHtml(i, element) {
     
     return /*html*/ `
-        <div draggable="true" ondragstart="startDragging(${element['id']})" class="task">
+        <div draggable="true" ondragstart="startDragging(${element})" class="task">
             <div id="category-container${i}" class="category-container">
                 <p>${allTasks[i].category}</p>
             </div>
@@ -88,13 +88,13 @@ function generateTaskHtml(i, element) {
 
 let currentDraggedElement;
 
-function startDragging(id) {
-    currentDraggedElement = id;
+function startDragging(element) {
+    currentDraggedElement = element;
 }
 
 
 async function moveTo(containerType) {
-    allTasks[currentDraggedElement]['status'] = containerType;
+    currentDraggedElement['status'] = containerType;
     renderTasks();
     await saveAllTasks();
 }
