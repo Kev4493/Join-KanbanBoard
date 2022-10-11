@@ -13,7 +13,7 @@ function renderTasks() {
 
     for (let i = 0; i < toDoCategory.length; i++) {
         const element = toDoCategory[i];
-        toDoContainer.innerHTML += generateTaskHtml(i, element);
+        toDoContainer.innerHTML += generateTaskHtml(i, element, 'todo');
         // addColorOfCategory(element, i);
         // addColorOfAssigned(element, i);
     }
@@ -25,7 +25,7 @@ function renderTasks() {
 
     for (let i = 0; i < inProgressCategory.length; i++) {
         const element = inProgressCategory[i];
-        inProgressContainer.innerHTML += generateTaskHtml(i, element);
+        inProgressContainer.innerHTML += generateTaskHtml(i, element, 'in-progress');
         // addColorOfCategory(element, i);
         // addColorOfAssigned(element, i);
     }
@@ -37,7 +37,7 @@ function renderTasks() {
 
     for (let i = 0; i < awaitingFeedbackCategory.length; i++) {
         const element = awaitingFeedbackCategory[i];
-        awaitingFeedbackContainer.innerHTML += generateTaskHtml(i, element);
+        awaitingFeedbackContainer.innerHTML += generateTaskHtml(i, element, 'awaiting-feedback');
         // addColorOfCategory(element, i);
         // addColorOfAssigned(element, i);
     }
@@ -49,14 +49,14 @@ function renderTasks() {
 
     for (let i = 0; i < doneCategory.length; i++) {
         const element = doneCategory[i];
-        doneContainer.innerHTML += generateTaskHtml(i, element);
+        doneContainer.innerHTML += generateTaskHtml(i, element, 'done');
         // addColorOfCategory(element, i);
         // addColorOfAssigned(element, i);
     }
 }
 
 
-function generateTaskHtml(i, element) {
+function generateTaskHtml(i, element, status) {
 
     return /*html*/ `
         <div draggable="true" ondragstart="startDragging(${element['id']})" class="task">
@@ -77,7 +77,7 @@ function generateTaskHtml(i, element) {
                 <div class="prio-container"></div>
             </div>
             <div class="delete-container">
-                <img class="trash-icon" onclick="deleteTask(${i})" src="../assets/icons/trash.png" alt="" title="Delete complete Task">
+                <img class="trash-icon" onclick="deleteTask(${i, status})" src="../assets/icons/trash.png" alt="" title="Delete complete Task">
             </div>
         </div>
     `;
@@ -139,8 +139,10 @@ function addColorOfAssigned(element, i) {
 };
 
 
-async function deleteTask(i) {
-    allTasks.splice(i, 1);
+async function deleteTask(i, status) {
+    let statusCategory = allTasks.filter(t => t['status'] == status);
+
+    statusCategory.splice(i, 1);
     renderTasks();
     await saveAllTasks();
 };
