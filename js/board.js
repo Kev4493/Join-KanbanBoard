@@ -14,8 +14,8 @@ function renderTasks() {
     for (let i = 0; i < toDoCategory.length; i++) {
         const element = toDoCategory[i];
         toDoContainer.innerHTML += generateTaskHtml(i, element);
-        addColorOfCategory(element, i);
-        addColorOfAssigned(element, i);
+        // addColorOfCategory(element, i);
+        // addColorOfAssigned(element, i);
     }
 
 
@@ -26,8 +26,8 @@ function renderTasks() {
     for (let i = 0; i < inProgressCategory.length; i++) {
         const element = inProgressCategory[i];
         inProgressContainer.innerHTML += generateTaskHtml(i, element);
-        addColorOfCategory(element, i);
-        addColorOfAssigned(element, i);
+        // addColorOfCategory(element, i);
+        // addColorOfAssigned(element, i);
     }
 
 
@@ -38,8 +38,8 @@ function renderTasks() {
     for (let i = 0; i < awaitingFeedbackCategory.length; i++) {
         const element = awaitingFeedbackCategory[i];
         awaitingFeedbackContainer.innerHTML += generateTaskHtml(i, element);
-        addColorOfCategory(element, i);
-        addColorOfAssigned(element, i);
+        // addColorOfCategory(element, i);
+        // addColorOfAssigned(element, i);
     }
 
 
@@ -50,8 +50,8 @@ function renderTasks() {
     for (let i = 0; i < doneCategory.length; i++) {
         const element = doneCategory[i];
         doneContainer.innerHTML += generateTaskHtml(i, element);
-        addColorOfCategory(element, i);
-        addColorOfAssigned(element, i);
+        // addColorOfCategory(element, i);
+        // addColorOfAssigned(element, i);
     }
 }
 
@@ -60,7 +60,7 @@ function generateTaskHtml(i, element) {
 
     return /*html*/ `
         <div draggable="true" ondragstart="startDragging(${element['id']})" class="task">
-            <div id="category-container${i}" class="category-container">
+            <div id="category-container${i}" class="category-container ${element['category']}">
                 <p>${element['category']}</p>
             </div>
             <div class="title-container">
@@ -70,7 +70,7 @@ function generateTaskHtml(i, element) {
                 <p>${element['description']}</p>
             </div>
             <div class="card-footer">
-                <div id="assigned-to-container${i}" class="assigned-to-container" title="${element['assigned']}">
+                <div id="assigned-to-container${i}" class="assigned-to-container ${element['assigned']}" title="${element['assigned']}">
                     <!-- Mit folgender Syntax, lassen sich die Anfangsbuchstaben von einem String anzeigen: -->
                     ${element['assigned'].split(" ").map(word => word[0]).join("")}
                 </div>

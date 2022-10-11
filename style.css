@@ -70,6 +70,17 @@ body {
     background-color: burlywood;
 }
 
+/* === BG Colors for the assigned-to Names on the Board === */
+
+.Kevin.Wagner {
+    background-color: lightblue;
+}
+
+.Kristian.Huptas {
+    background-color: burlywood;
+}
+
+
 /* === BG Colors for the category on the Board === */
 
 .bg-color-lightcoral {
@@ -85,5 +96,23 @@ body {
 }
 
 .bg-color-lightgreen {
+    background-color: lightgreen;
+}
+
+/* === BG Colors for the category on the Board === */
+
+.Software-Development {
+    background-color: lightcoral;
+}
+
+.Design {
+    background-color: cornflowerblue;
+}
+
+.Marketing {
+    background-color: khaki;
+}
+
+.Sales {
     background-color: lightgreen;
 }
