@@ -77,7 +77,7 @@ function generateTaskHtml(i, element, status) {
                 <div class="prio-container"></div>
             </div>
             <div class="delete-container">
-                <img class="trash-icon" onclick="deleteTask(${i, status})" src="../assets/icons/trash.png" alt="" title="Delete complete Task">
+                <img class="trash-icon" onclick="deleteTask(${element.id})" src="../assets/icons/trash.png" alt="" title="Delete complete Task">
             </div>
         </div>
     `;
@@ -139,13 +139,16 @@ function addColorOfAssigned(element, i) {
 };
 
 
-async function deleteTask(i, status) {
-    let statusCategory = allTasks.filter(t => t['status'] == status);
+async function deleteTask(foo) {
+    let id;
+    allTasks.forEach((t, index) => {
+        if(t.id === foo) id = index;
+    });
 
-    statusCategory.splice(i, 1);
+    allTasks.splice(id, 1);
     renderTasks();
     await saveAllTasks();
-};
+}
 
 
 function openAddTaskDialog() {
