@@ -139,6 +139,7 @@ function addColorOfAssigned(element, i) {
 };
 
 
+// Diese FUnktion nochmal erklären lassen.. 
 async function deleteTask(foo) {
     let id;
     allTasks.forEach((t, index) => {
