@@ -61,21 +61,21 @@ function generateTaskHtml(i, element, status) {
     return /*html*/ `
         <div draggable="true" ondragstart="startDragging(${element['id']})" class="task">
             <div id="category-container${i}" class="category-container ${element['category']}">
-                <p>${element['category']}</p>
+                <p title="Category">${element['category']}</p>
             </div>
             <div class="title-container">
-                <p>${element['title']}</p>
+                <p title="Title">${element['title']}</p>
             </div>
             <div class="description-container">
-                <p>${element['description']}</p>
+                <p title="Description">${element['description']}</p>
             </div>
             <div class="card-footer">
-                <div id="assigned-to-container${i}" class="assigned-to-container ${element['assigned']}" title="${element['assigned']}">
+                <div id="assigned-to-container${i}" class="assigned-to-container ${element['assigned']}" title="Assigned to: ${element['assigned']}">
                     <!-- Mit folgender Syntax, lassen sich die Anfangsbuchstaben von einem String anzeigen: -->
                     ${element['assigned'].split(" ").map(word => word[0]).join("")}
                 </div>
                 <div id="prio-container${i}">
-                    <img src="../assets/icons/${element['prio']}.png" alt="">
+                    <img src="../assets/icons/${element['prio']}.png" alt="" title="Priority: ${element['prio']}">
                 </div>
             </div>
             <div class="delete-container">
