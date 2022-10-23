@@ -74,7 +74,9 @@ function generateTaskHtml(i, element, status) {
                     <!-- Mit folgender Syntax, lassen sich die Anfangsbuchstaben von einem String anzeigen: -->
                     ${element['assigned'].split(" ").map(word => word[0]).join("")}
                 </div>
-                <div class="prio-container"></div>
+                <div id="prio-container${i}">
+                    <img src="../assets/icons/${element['prio']}.png" alt="">
+                </div>
             </div>
             <div class="delete-container">
                 <img class="trash-icon" onclick="deleteTask(${element.id})" src="../assets/icons/trash.png" alt="" title="Delete complete Task">

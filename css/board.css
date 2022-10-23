@@ -113,6 +113,13 @@ body {
     color: rgba(0, 0, 0, 0.5);
 }
 
+.card-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+
 .assigned-to-container {
     width: 35px;
     height: 35px;
@@ -120,7 +127,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
 }
 
 .delete-container {

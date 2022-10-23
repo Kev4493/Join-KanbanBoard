@@ -6,6 +6,10 @@ async function initAddTask() {
 
 
 let allTasks = [];
+let currentTaskPrio;
+let urgent = false;
+let medium = false;
+let low = false
 
 
 async function addTask() {
@@ -15,12 +19,15 @@ async function addTask() {
     let taskAssignedTo = document.getElementById('taskAssignedTo').value;
     let taskDueDate = document.getElementById('taskDueDate').value;
 
+    checkTaskPrio();
+
     let task = {
         'title': taskTitle,
         'description': taskDescription,
         'category': taskCategory,
         'assigned': taskAssignedTo,
         'dueDate': taskDueDate,
+        'prio': currentTaskPrio,
         'id': new Date().getTime(),
         'status': 'todo',
     };
@@ -38,12 +45,15 @@ async function addTaskFromDialog() {
     let taskAssignedTo = document.getElementById('taskAssignedTo').value;
     let taskDueDate = document.getElementById('taskDueDate').value;
 
+    checkTaskPrio();
+
     let task = {
         'title': taskTitle,
         'description': taskDescription,
         'category': taskCategory,
         'assigned': taskAssignedTo,
         'dueDate': taskDueDate,
+        'prio': currentTaskPrio,
         'id': new Date().getTime(),
         'status': 'todo'
     };
@@ -77,6 +87,10 @@ function addUrgent() {
     urgentButton.classList.toggle('prio-button-active');
     mediumButton.classList.remove('prio-button-active');
     lowButton.classList.remove('prio-button-active');
+
+    urgent = true;
+    medium = false;
+    low = false;
 }
 
 
@@ -88,6 +102,10 @@ function addMedium() {
     urgentButton.classList.remove('prio-button-active');
     mediumButton.classList.toggle('prio-button-active');
     lowButton.classList.remove('prio-button-active');
+
+    urgent = false;
+    medium = true;
+    low = false;
 }
 
 
@@ -99,9 +117,35 @@ function addLow() {
     urgentButton.classList.remove('prio-button-active');
     mediumButton.classList.remove('prio-button-active');
     lowButton.classList.toggle('prio-button-active');
+
+    urgent = false;
+    medium = false;
+    low = true;
 }
 
 
 async function deleteAllTasks() {
     await backend.deleteItem('allTasks');
+}
+
+function checkTaskPrio() {
+    let urgentBtn = document.getElementById('urgent-button');
+    let mediumBtn = document.getElementById('medium-button');
+    let lowBtn = document.getElementById('low-button');
+
+    let urgentBtnVal = urgentBtn.value;
+    let mediumBtnVal = mediumBtn.value;
+    let lowBtnVal = lowBtn.value;
+
+    if (urgent == true) {
+        currentTaskPrio = urgentBtnVal;
+    } else{
+        if (medium == true) {
+            currentTaskPrio = mediumBtnVal;
+        } else {
+            if(low = true) {
+                currentTaskPrio = lowBtnVal;
+            }
+        }
+    }
 }
