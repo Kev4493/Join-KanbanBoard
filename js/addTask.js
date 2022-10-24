@@ -14,21 +14,21 @@ let low = false
 
 
 async function addTask() {
-    let taskTitle = document.getElementById('taskTitle').value;
-    let taskDescription = document.getElementById('taskDescription').value;
-    let taskCategory = document.getElementById('taskCategory').value;
-    let taskAssignedTo = document.getElementById('taskAssignedTo').value;
-    let taskDueDate = document.getElementById('taskDueDate').value;
+    let taskTitle = document.getElementById('taskTitle');
+    let taskDescription = document.getElementById('taskDescription');
+    let taskCategory = document.getElementById('taskCategory');
+    let taskAssignedTo = document.getElementById('taskAssignedTo');
+    let taskDueDate = document.getElementById('taskDueDate');
 
     checkTaskPrio();
 
     let task = {
-        'title': taskTitle,
-        'description': taskDescription,
-        'category': taskCategory,
-        'assigned': taskAssignedTo,
-        'dueDate': taskDueDate,
-        'prio': currentTaskPrio,
+        'title': taskTitle.value,
+        'description': taskDescription.value,
+        'category': taskCategory.value,
+        'assigned': taskAssignedTo.value,
+        'dueDate': taskDueDate.value,
+        'prio': currentTaskPrio.value,
         'id': new Date().getTime(),
         'status': 'todo',
     };
@@ -40,21 +40,21 @@ async function addTask() {
 
 
 async function addTaskFromDialog() {
-    let taskTitle = document.getElementById('taskTitle').value;
-    let taskDescription = document.getElementById('taskDescription').value;
-    let taskCategory = document.getElementById('taskCategory').value;
-    let taskAssignedTo = document.getElementById('taskAssignedTo').value;
-    let taskDueDate = document.getElementById('taskDueDate').value;
+    let taskTitle = document.getElementById('taskTitle');
+    let taskDescription = document.getElementById('taskDescription');
+    let taskCategory = document.getElementById('taskCategory');
+    let taskAssignedTo = document.getElementById('taskAssignedTo');
+    let taskDueDate = document.getElementById('taskDueDate');
 
     checkTaskPrio();
 
     let task = {
-        'title': taskTitle,
-        'description': taskDescription,
-        'category': taskCategory,
-        'assigned': taskAssignedTo,
-        'dueDate': taskDueDate,
-        'prio': currentTaskPrio,
+        'title': taskTitle.value,
+        'description': taskDescription.value,
+        'category': taskCategory.value,
+        'assigned': taskAssignedTo.value,
+        'dueDate': taskDueDate.value,
+        'prio': currentTaskPrio.value,
         'id': new Date().getTime(),
         'status': 'todo'
     };

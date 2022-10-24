@@ -14,9 +14,12 @@
         <script src="../script.js"></script>
         <script src="../js/mini_backend.js"></script>
         <script src="../js/includeHtml.js"></script>
+
+        <script src="../js/summary.js"></script>
+        <script src="../js/addTask.js"></script>
     </head>
 
-    <body onload="init()">
+    <body onload="initSummary()">
         <nav w3-include-html="../templates/sidenav.html" class="left-main-container"></nav>
 
         <div class="right-main-container">
@@ -32,11 +35,11 @@
             
                 <div class="summary-row-1">
                     <div class="summary-box">
-                        <p class="number-in-box">5</p>
+                        <p id="board-counter" class="number-in-box"></p>
                         <p class="text-in-box">Tasks <br> in Board</p>
                     </div>
                     <div class="summary-box">
-                        <p class="number-in-box">2</p>
+                        <p id="progress-counter" class="number-in-box"></p>
                         <p class="text-in-box">Tasks <br> in Progress</p>
                     </div>
                     <div class="summary-box">
