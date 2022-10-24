@@ -96,6 +96,11 @@ hr {
     border: 1px solid #D1D1D1;
     border-radius: 10px;
     cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13.3px;
 }
 
 .prio-button-active {
