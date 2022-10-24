@@ -10,6 +10,7 @@ function loadAllCounters() {
     progressCounter();
 }
 
+
 function boardCounter() {
     let tasksInBoard = allTasks.length;
     let counterDisplay = document.getElementById('board-counter');
@@ -18,6 +19,7 @@ function boardCounter() {
         <p>${tasksInBoard}</p>
     `
 }
+
 
 function progressCounter() {
     let tasksInProgress = allTasks.filter(t => t['status'] == 'in-progress').length;
