@@ -111,34 +111,34 @@ function allowDrop(ev) {
 // === === === === === ===
 
 
-function addColorOfCategory(element, i) {
-    if (element['category'] == 'Sales') {
-        document.getElementById(`category-container${i}`).classList.add('bg-color-lightcoral');
-    } else {
-        if (element['category'] == 'Marketing') {
-            document.getElementById(`category-container${i}`).classList.add('bg-color-cornflowerblue');
-        } else {
-            if (element['category'] == 'Design') {
-                document.getElementById(`category-container${i}`).classList.add('bg-color-khaki');
-            } else {
-                if (element['category'] == 'Software-Development') {
-                    document.getElementById(`category-container${i}`).classList.add('bg-color-lightgreen');
-                }
-            }
-        }
-    }
-}
+// function addColorOfCategory(element, i) {
+//     if (element['category'] == 'Sales') {
+//         document.getElementById(`category-container${i}`).classList.add('bg-color-lightcoral');
+//     } else {
+//         if (element['category'] == 'Marketing') {
+//             document.getElementById(`category-container${i}`).classList.add('bg-color-cornflowerblue');
+//         } else {
+//             if (element['category'] == 'Design') {
+//                 document.getElementById(`category-container${i}`).classList.add('bg-color-khaki');
+//             } else {
+//                 if (element['category'] == 'Software-Development') {
+//                     document.getElementById(`category-container${i}`).classList.add('bg-color-lightgreen');
+//                 }
+//             }
+//         }
+//     }
+// }
 
 
-function addColorOfAssigned(element, i) {
-    if (element['assigned'] == 'Kevin Wagner') {
-        document.getElementById(`assigned-to-container${i}`).classList.add('bg-color-lightblue');
-    } else {
-        if (element['assigned'] == 'Kristian Huptas') {
-            document.getElementById(`assigned-to-container${i}`).classList.add('bg-color-burlywood');
-        }
-    }
-};
+// function addColorOfAssigned(element, i) {
+//     if (element['assigned'] == 'Kevin Wagner') {
+//         document.getElementById(`assigned-to-container${i}`).classList.add('bg-color-lightblue');
+//     } else {
+//         if (element['assigned'] == 'Kristian Huptas') {
+//             document.getElementById(`assigned-to-container${i}`).classList.add('bg-color-burlywood');
+//         }
+//     }
+// };
 
 
 // Diese FUnktion nochmal erklären lassen.. 

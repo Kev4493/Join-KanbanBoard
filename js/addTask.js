@@ -7,6 +7,7 @@ async function initAddTask() {
 
 let allTasks = [];
 let currentTaskPrio;
+
 let urgent = false;
 let medium = false;
 let low = false
