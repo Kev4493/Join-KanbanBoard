@@ -28,7 +28,7 @@ async function addTask() {
         'category': taskCategory.value,
         'assigned': taskAssignedTo.value,
         'dueDate': taskDueDate.value,
-        'prio': currentTaskPrio.value,
+        'prio': currentTaskPrio,
         'id': new Date().getTime(),
         'status': 'todo',
     };

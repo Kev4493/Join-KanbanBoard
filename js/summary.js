@@ -8,6 +8,9 @@ async function initSummary() {
 function loadAllCounters() {
     boardCounter();
     progressCounter();
+    feedbackCounter();
+    toDoCounter();
+    doneCounter();
 }
 
 
@@ -28,5 +31,34 @@ function progressCounter() {
     counterDisplay.innerHTML = /*html*/ `
         <p>${tasksInProgress}</p>
     `
-    console.log('Tasks in Progress: ', tasksInProgress);
+}
+
+
+function feedbackCounter() {
+    let tasksInAwaitingFeedback = allTasks.filter(t => t['status'] == 'awaiting-feedback').length;
+    let counterDisplay = document.getElementById('feedback-counter');
+
+    counterDisplay.innerHTML = /*html*/ `
+        <p>${tasksInAwaitingFeedback}</p>
+    `
+}
+
+
+function toDoCounter() {
+    let tasksInTodo = allTasks.filter(t => t['status'] == 'todo').length;
+    let counterDisplay = document.getElementById('todo-counter');
+
+    counterDisplay.innerHTML = /*html*/ `
+        <p>${tasksInTodo}</p>
+    `
+}
+
+
+function doneCounter() {
+    let doneCategory = allTasks.filter(t => t['status'] == 'done').length;
+    let counterDisplay = document.getElementById('done-counter');
+
+    counterDisplay.innerHTML = /*html*/ `
+        <p>${doneCategory}</p>
+    `
 }
