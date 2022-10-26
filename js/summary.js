@@ -6,6 +6,7 @@ async function initSummary() {
     loadAllCounters();
 }
 
+
 function loadAllCounters() {
     boardCounter();
     progressCounter();
@@ -13,7 +14,6 @@ function loadAllCounters() {
     toDoCounter();
     doneCounter();
     urgentCounter();
-    // showNearestDate();
     showNearestUrgentDate();
 }
 
@@ -79,7 +79,6 @@ function urgentCounter() {
 
 
 function showNearestUrgentDate() {
-
     let allUrgentDates = [];
     let urgentTasks = allTasks.filter(t => t['prio'] == 'urgent');
     let deadlineContainer = document.getElementById('deadline-date')
