@@ -11,6 +11,8 @@ function loadAllCounters() {
     feedbackCounter();
     toDoCounter();
     doneCounter();
+    urgentCounter();
+    showNearestDate();
 }
 
 
@@ -61,4 +63,31 @@ function doneCounter() {
     counterDisplay.innerHTML = /*html*/ `
         <p>${doneCategory}</p>
     `
+}
+
+function urgentCounter() {
+    let urgentPrio = allTasks.filter(t => t['prio'] == 'urgent').length;
+    let counterDisplay = document.getElementById('urgent-counter');
+
+    counterDisplay.innerHTML = /*html*/ `
+        <p>${urgentPrio}</p>
+    `
+}
+
+
+function showNearestDate() {
+    let today = new Date().toLocaleString("default", {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric",
+    });
+
+    let urgentPrio = allTasks.filter(t => t['prio'] == 'urgent');
+
+    for (let i = 0; i < urgentPrio.length; i++) {
+        const element = urgentPrio[i].dueDate;
+        console.log(element);
+    }
+
+    
 }
