@@ -1,6 +1,7 @@
 async function initSummary() {
     includeHTML();
-    setURL('https://kevin-wagner.developerakademie.net/smallest_backend_ever');
+    // setURL('https://kevin-wagner.developerakademie.net/smallest_backend_ever');
+    setURL('https://kanbanboard.kev-wagner.com/smallest_backend_ever');
     await loadAllTasks();
     loadAllCounters();
 }
@@ -12,7 +13,8 @@ function loadAllCounters() {
     toDoCounter();
     doneCounter();
     urgentCounter();
-    showNearestDate();
+    // showNearestDate();
+    showNearestUrgentDate();
 }
 
 
@@ -65,6 +67,7 @@ function doneCounter() {
     `
 }
 
+
 function urgentCounter() {
     let urgentPrio = allTasks.filter(t => t['prio'] == 'urgent').length;
     let counterDisplay = document.getElementById('urgent-counter');
@@ -75,19 +78,34 @@ function urgentCounter() {
 }
 
 
-function showNearestDate() {
-    let today = new Date().toLocaleString("default", {
+function showNearestUrgentDate() {
+
+    let allUrgentDates = [];
+    let urgentTasks = allTasks.filter(t => t['prio'] == 'urgent');
+    let deadlineContainer = document.getElementById('deadline-date')
+
+    for (let i = 0; i < urgentTasks.length; i++) {
+        const dueDate = urgentTasks[i].dueDate;
+
+        // alle dueDates in timestamp umwandeln:
+        let allDatesInTimestamp = new Date(dueDate).getTime();
+
+        // alle timestamps im Array speichern:
+        allUrgentDates.push(allDatesInTimestamp);
+    }
+
+    // das Array mit allen timestamps der größe nach sortieren (niedrigster timestamp zuerst):
+    allUrgentDates.sort(function (x, y) {
+        return x - y;
+    })
+
+    // der niedrigste timestamp aus dem Array in Datum konvertieren:
+    let convertedDate = new Date(allUrgentDates[0]).toLocaleString("default", {
         "year": "numeric",
         "month": "long",
         "day": "numeric",
     });
 
-    let urgentPrio = allTasks.filter(t => t['prio'] == 'urgent');
-
-    for (let i = 0; i < urgentPrio.length; i++) {
-        const element = urgentPrio[i].dueDate;
-        console.log(element);
-    }
-
-    
+    // Datum rendern:
+    deadlineContainer.innerHTML = convertedDate;
 }
