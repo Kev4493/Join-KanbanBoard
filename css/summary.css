@@ -113,6 +113,10 @@
     margin-left: 8rem;
 }
 
+.text-box {
+    margin: 3rem 0;
+}
+
 .welcome-text {
     font-size: 3rem;
 }
