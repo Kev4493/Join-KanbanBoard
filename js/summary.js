@@ -4,6 +4,7 @@ async function initSummary() {
     setURL('https://kanbanboard.kev-wagner.com/smallest_backend_ever');
     await loadAllTasks();
     loadAllCounters();
+    activeSummaryNavLink();
 }
 
 
@@ -107,4 +108,8 @@ function showNearestUrgentDate() {
 
     // Datum rendern:
     deadlineContainer.innerHTML = convertedDate;
+}
+
+function activeSummaryNavLink() {
+    document.getElementById('summary-link').classList.add('active-link')
 }

@@ -4,6 +4,7 @@ async function initBoard() {
     setURL('https://kanbanboard.kev-wagner.com/smallest_backend_ever');
     await loadAllTasks(); // Es wird gewartet bis alles geladen ist.
     renderTasks(); // Dann wird gerendert.
+    activeBoardNavLink();
 }
 
 
@@ -163,3 +164,7 @@ function openAddTaskDialog() {
 function closeAddTaskDialog() {
     document.getElementById('add-task-dialog').classList.add('d-none');
 };
+
+function activeBoardNavLink() {
+    document.getElementById('board-link').classList.add('active-link')
+}

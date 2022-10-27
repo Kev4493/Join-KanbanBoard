@@ -3,6 +3,7 @@ async function initAddTask() {
     // setURL('https://kevin-wagner.developerakademie.net/smallest_backend_ever');
     setURL('https://kanbanboard.kev-wagner.com/smallest_backend_ever');
     await loadAllTasks();
+    activeAddTaskNavLink();
 }
 
 
@@ -150,4 +151,9 @@ function checkTaskPrio() {
             }
         }
     }
+}
+
+
+function activeAddTaskNavLink() {
+    document.getElementById('addtask-link').classList.add('active-link')
 }

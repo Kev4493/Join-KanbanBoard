@@ -32,6 +32,9 @@
     transition: all ease-in-out 125ms;
 }
 
+.active-link {
+    background-color: #091931;
+}
 
 
 .nav-link > img {
