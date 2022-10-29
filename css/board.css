@@ -83,6 +83,8 @@ body {
     display: none;
 }
 
+/* === Task Card === */
+
 .task {
     width: 100%;
     min-height: 200px;
@@ -90,6 +92,13 @@ body {
     margin-bottom: 2rem;
     border-radius: 30px;
     padding: 1rem;
+    border: 1px solid white;
+}
+
+.task:hover {
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    transition: all ease-in-out 125ms;
 }
 
 .category-container {
@@ -188,4 +197,31 @@ body {
 
 .add-task-include {
     width: 100%;
+}
+
+/* === Detail Task Dialog === */
+
+.detail-task-dialog-bg {
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-task-dialog {
+    height: 50vh;
+    width: 20vw;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }

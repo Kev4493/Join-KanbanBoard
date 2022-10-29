@@ -14,7 +14,7 @@ function renderTasks() {
     toDoContainer.innerHTML = '';
 
     for (let i = 0; i < toDoCategory.length; i++) {
-        const task = toDoCategory[i];
+        let task = toDoCategory[i];
         toDoContainer.innerHTML += generateTaskHtml(i, task, 'todo');
     }
 
@@ -24,7 +24,7 @@ function renderTasks() {
     inProgressContainer.innerHTML = '';
 
     for (let i = 0; i < inProgressCategory.length; i++) {
-        const task = inProgressCategory[i];
+        let task = inProgressCategory[i];
         inProgressContainer.innerHTML += generateTaskHtml(i, task, 'in-progress');
     }
 
@@ -34,7 +34,7 @@ function renderTasks() {
     awaitingFeedbackContainer.innerHTML = '';
 
     for (let i = 0; i < awaitingFeedbackCategory.length; i++) {
-        const task = awaitingFeedbackCategory[i];
+        let task = awaitingFeedbackCategory[i];
         awaitingFeedbackContainer.innerHTML += generateTaskHtml(i, task, 'awaiting-feedback');
     }
 
@@ -44,16 +44,15 @@ function renderTasks() {
     doneContainer.innerHTML = '';
 
     for (let i = 0; i < doneCategory.length; i++) {
-        const task = doneCategory[i];
+        let task = doneCategory[i];
         doneContainer.innerHTML += generateTaskHtml(i, task, 'done');
     }
 }
 
 
 function generateTaskHtml(i, task) {
-
     return /*html*/ `
-        <div draggable="true" ondragstart="startDragging(${task['id']})" class="task">
+        <div onclick="openDetailTaskDialog(${task})" draggable="true" ondragstart="startDragging(${task['id']})" class="task">
             <div id="category-container${i}" class="category-container ${task['category']}">
                 <p title="Category">${task['category']}</p>
             </div>
@@ -144,7 +143,7 @@ function searchTask() {
     toDoContainer.innerHTML = '';
 
     for (let i = 0; i < toDoCategory.length; i++) {
-        const task = toDoCategory[i];
+        let task = toDoCategory[i];
         if(task.title.toLowerCase().includes(search)) {
             toDoContainer.innerHTML += generateTaskHtml(i, task, 'todo');
         }
@@ -156,7 +155,7 @@ function searchTask() {
     inProgressContainer.innerHTML = '';
 
     for (let i = 0; i < inProgressCategory.length; i++) {
-        const task = inProgressCategory[i];
+        let task = inProgressCategory[i];
         if(task.title.toLowerCase().includes(search)) {
             inProgressContainer.innerHTML += generateTaskHtml(i, task, 'in-progress');
         }
@@ -168,7 +167,7 @@ function searchTask() {
     awaitingFeedbackContainer.innerHTML = '';
 
     for (let i = 0; i < awaitingFeedbackCategory.length; i++) {
-        const task = awaitingFeedbackCategory[i];
+        let task = awaitingFeedbackCategory[i];
         if(task.title.toLowerCase().includes(search)) {
             awaitingFeedbackContainer.innerHTML += generateTaskHtml(i, task, 'awaiting-feedback');
         }
@@ -180,7 +179,7 @@ function searchTask() {
     doneContainer.innerHTML = '';
 
     for (let i = 0; i < doneCategory.length; i++) {
-        const task = doneCategory[i];
+        let task = doneCategory[i];
         if(task.title.toLowerCase().includes(search)) {
             doneContainer.innerHTML += generateTaskHtml(i, task, 'done');
         }
@@ -188,14 +187,14 @@ function searchTask() {
 }
 
 
+function openDetailTaskDialog(task) {
+    let taskDialogBg = document.getElementById('detail-task-dialog-bg')
+    taskDialogBg.classList.remove('d-none')
+
+    console.log(task);
+}
 
 
-
-
-
-
-
-
-
-
-
+function closeDetailTaskDialog() {
+    document.getElementById('detail-task-dialog-bg').classList.add('d-none');
+}
