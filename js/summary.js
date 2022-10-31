@@ -123,7 +123,7 @@ function greetingUsers() {
 
     if (hours < 12) {
         greetingMessage = 'Good morning,';
-    } else if (hours <= 12 && hrs <= 17) {
+    } else if (hours >= 12 && hours <= 17) {
         greetingMessage = 'Good afternoon,';
     } else if (hours >= 17 && hours <= 24) {
         greetingMessage = 'Good evening,';

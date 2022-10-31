@@ -60,6 +60,18 @@ body {
     display: none !important;
 }
 
+.bold {
+    font-weight: 700;
+}
+
+.font-size-small {
+    font-size: 0.8rem;
+}
+
+.mr1 {
+    margin-right: 1rem;
+}
+
 /* === BG Colors for the assigned-to Names on the Board === */
 
 .bg-color-lightblue {

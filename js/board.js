@@ -52,7 +52,7 @@ function renderTasks() {
 
 function generateTaskHtml(i, task) {
     return /*html*/ `
-        <div onclick="openDetailTaskDialog(${task})" draggable="true" ondragstart="startDragging(${task['id']})" class="task">
+        <div onclick="openDetailTaskDialog(${task.id})" draggable="true" ondragstart="startDragging(${task['id']})" class="task">
             <div id="category-container${i}" class="category-container ${task['category']}">
                 <p title="Category">${task['category']}</p>
             </div>
@@ -70,9 +70,6 @@ function generateTaskHtml(i, task) {
                 <div id="prio-container${i}">
                     <img src="../assets/icons/${task['prio']}.png" alt="" title="Priority: ${task['prio']}">
                 </div>
-            </div>
-            <div class="delete-container">
-                <img class="trash-icon" onclick="deleteTask(${task.id})" src="../assets/icons/trash.png" alt="" title="Delete complete Task">
             </div>
         </div>
     `;
@@ -109,11 +106,13 @@ function allowDrop(ev) {
 // Diese Funktion nochmal erklären lassen.. 
 async function deleteTask(foo) {
     let id;
+
     allTasks.forEach((t, index) => {
         if(t.id === foo) id = index;
     });
 
     allTasks.splice(id, 1);
+    closeDetailTaskDialog();
     renderTasks();
     await saveAllTasks();
 }
@@ -187,11 +186,62 @@ function searchTask() {
 }
 
 
-function openDetailTaskDialog(task) {
+function openDetailTaskDialog(foo) {
     let taskDialogBg = document.getElementById('detail-task-dialog-bg')
     taskDialogBg.classList.remove('d-none')
 
-    console.log(task);
+    let id;
+    allTasks.forEach((t, index) => {
+        if(t.id === foo) id = index;
+    });
+
+    document.getElementById('detail-task-dialog').innerHTML = renderDetailTasksDialog(id)
+
+    console.log(allTasks[id].title);
+}
+
+
+function renderDetailTasksDialog(id) {
+    return /*html*/ `
+        <img onclick="closeDetailTaskDialog()" class="close-icon-dialog" src="../assets/icons/close_icon.png" alt="">
+        <div class="category-container-dialog ${allTasks[id]['category']}">
+            <p title="Category">${allTasks[id]['category']}</p>
+        </div>
+        <div class="title-container-dialog">
+            <p title="Title">${allTasks[id]['title']}</p>
+        </div>
+        <div class="description-container-dialog">
+            <p title="Description">${allTasks[id]['description']}</p>
+        </div>
+        <div class="due-date-container">
+            <p class="font-size-small bold mr1">Due Date:</p>
+            <p class="font-size-small">${allTasks[id]['dueDate']}</p>
+        </div>
+        <div class="priority-container">
+            <p class="font-size-small bold mr1">Priority:</p>
+            <p class="font-size-small prio-${allTasks[id]['prio']}">${allTasks[id]['prio']}</p>
+        </div>
+        <div class="assigned-to-container-dialog">
+            <p class="font-size-small bold">Assigned To:</p>
+            <div class="names-cnt">
+                <div class="assigned-to-circle ${allTasks[id]['assigned']}" title="Assigned to: ${allTasks[id]['assigned']}">
+                    <!-- Mit folgender Syntax, lassen sich die Anfangsbuchstaben von einem String anzeigen: -->
+                    ${allTasks[id]['assigned'].split(" ").map(word => word[0]).join("")}
+                </div>
+                <div>
+                    <p class="font-size-small">${allTasks[id]['assigned']}</p>
+                </div>
+            </div>
+        </div>
+        <div class="edit-cnt">
+            <div class="delete">
+                <img class="trash-icon-dialog" onclick="deleteTask(${allTasks[id].id})" src="../assets/icons/trash.png" alt="" title="Delete complete Task">
+            </div>
+            <div class="edit">
+                <img class="pencil-icon-dialog" src="../assets/icons/pencil.png" alt="" title="Edit Task">
+            </div>
+        </div>
+    `
 }
 
 
