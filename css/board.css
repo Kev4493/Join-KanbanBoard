@@ -215,9 +215,9 @@ body {
 
 .detail-task-dialog {
     /* height: 50vh; */
-    width: 20vw;
+    /* width: 20vw; */
     padding: 20px;
-    background-color: white;
+    background-color: #F5F5F5;
     border: 1px solid lightgray;
     border-radius: 10px;
     display: flex;

@@ -98,7 +98,6 @@ function allowDrop(ev) {
     ev.preventDefault(); // Das Standartverhalten des DIV Containers wird damit so verändert, dass man Elemente dort hineinwerfen kann.
 }
 
-
 // === === === === === ===
 
 
@@ -225,7 +224,6 @@ function renderDetailTasksDialog(id) {
             <p class="font-size-small bold">Assigned To:</p>
             <div class="names-cnt">
                 <div class="assigned-to-circle ${allTasks[id]['assigned']}" title="Assigned to: ${allTasks[id]['assigned']}">
-                    <!-- Mit folgender Syntax, lassen sich die Anfangsbuchstaben von einem String anzeigen: -->
                     ${allTasks[id]['assigned'].split(" ").map(word => word[0]).join("")}
                 </div>
                 <div>
@@ -237,7 +235,7 @@ function renderDetailTasksDialog(id) {
             <div class="delete">
                 <img class="trash-icon-dialog" onclick="deleteTask(${allTasks[id].id})" src="../assets/icons/trash.png" alt="" title="Delete complete Task">
             </div>
-            <div class="edit">
+            <div onclick="editTask(${id})" class="edit">
                 <img class="pencil-icon-dialog" src="../assets/icons/pencil.png" alt="" title="Edit Task">
             </div>
         </div>

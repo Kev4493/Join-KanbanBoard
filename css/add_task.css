@@ -106,9 +106,9 @@ hr {
 .prio-button-active {
     background: #e5e5e5;
     -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-       -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-            box-shadow: inset 0px 0px 5px #c1c1c1;
-     outline: none;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+    outline: none;
 }
 
 /* === Submit Container === */
@@ -141,4 +141,19 @@ hr {
 .submit-button-icon {
     margin-left: 1rem;
     width: 15px;
+}
+
+/* === Edit Task Dialog */
+
+.form-container-edit-task {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.submit-container-edit-task {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
 }
