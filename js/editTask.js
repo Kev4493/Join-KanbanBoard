@@ -4,7 +4,7 @@ function editTask(id) {
     let editDueDate = document.getElementById('task-duedate-edit');
     let editAssignedTo = document.getElementById('task-assigned-edit');
 
-    checkEditTaskPrio();
+    addEditTaskPrio();
 
     let editTask = {
         'title': editTitle.value,
@@ -31,7 +31,7 @@ async function updateCurrentTask(id, editTask) {
 }
 
 
-function addUrgentEdit() {
+function activateUrgentEditButton() {
     let urgentButton = document.getElementById('urgent-button-edit');
     let mediumButton = document.getElementById('medium-button-edit');
     let lowButton = document.getElementById('low-button-edit');
@@ -46,7 +46,7 @@ function addUrgentEdit() {
 }
 
 
-function addMediumEdit() {
+function activateMediumEditButton() {
     let urgentButton = document.getElementById('urgent-button-edit');
     let mediumButton = document.getElementById('medium-button-edit');
     let lowButton = document.getElementById('low-button-edit');
@@ -61,7 +61,7 @@ function addMediumEdit() {
 }
 
 
-function addLowEdit() {
+function activateLowEditButton() {
     let urgentButton = document.getElementById('urgent-button-edit');
     let mediumButton = document.getElementById('medium-button-edit');
     let lowButton = document.getElementById('low-button-edit');
@@ -76,7 +76,7 @@ function addLowEdit() {
 }
 
 
-function checkEditTaskPrio() {
+function addEditTaskPrio() {
     let urgentBtn = document.getElementById('urgent-button-edit');
     let mediumBtn = document.getElementById('medium-button-edit');
     let lowBtn = document.getElementById('low-button-edit');
@@ -96,6 +96,21 @@ function checkEditTaskPrio() {
             }
         }
     }
+}
+
+
+function clearEditTaskForm() {
+    let taskTitle = document.getElementById('task-title-edit');
+    let taskDescription = document.getElementById('task-description-edit');
+    let taskAssignedTo = document.getElementById('task-assigned-edit');
+    let taskDueDate = document.getElementById('task-duedate-edit');
+
+    taskTitle.value = '';
+    taskDescription.value = '';
+    taskAssignedTo.value = '';
+    taskDueDate.value = '';
+
+    deactivatePrioButtons();
 }
 
 
@@ -132,18 +147,18 @@ function renderEditTaskDialog(id) {
                 <div class="prio-button-container">
                     <h3 class="prio-button-headline">Prio</h3>
                     <div class="button-container">
-                        <button type="button" onclick="addUrgentEdit()" id="urgent-button-edit" class="prio-button" value="urgent"><img
+                        <button type="button" onclick="activateUrgentEditButton()" id="urgent-button-edit" class="prio-button" value="urgent"><img
                             class="prio-button-icon" src="../assets/icons/urgent.png" alt="">Urgent</button>
-                        <button type="button" onclick="addMediumEdit()" id="medium-button-edit" class="prio-button" value="medium"><img
+                        <button type="button" onclick="activateMediumEditButton()" id="medium-button-edit" class="prio-button" value="medium"><img
                             class="prio-button-icon" src="../assets/icons/medium.png" alt="">Medium</button>
-                        <button type="button" onclick="addLowEdit()" id="low-button-edit" class="prio-button" value="low"><img
+                        <button type="button" onclick="activateLowEditButton()" id="low-button-edit" class="prio-button" value="low"><img
                             class="prio-button-icon" src="../assets/icons/low.png" alt=""> Low</button>
                     </div>
                 </div>
 
                 <!-- === Submit Buttons === -->
                 <div class="submit-container-edit-task">
-                    <button class="submit-button">Clear <img class="submit-button-icon" src="../assets/icons/cancel.png"
+                    <button onclick="clearEditTaskForm()" type="button" class="submit-button">Clear <img class="submit-button-icon" src="../assets/icons/cancel.png"
                         alt=""></button>
                     <button type="submit" class="submit-button create-task-button">Edit Task <img
                         class="submit-button-icon" src="../assets/icons/done.png" alt=""></button>

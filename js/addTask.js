@@ -22,7 +22,7 @@ async function addTask() {
     let taskAssignedTo = document.getElementById('taskAssignedTo');
     let taskDueDate = document.getElementById('taskDueDate');
 
-    checkTaskPrio();
+    addTaskPrio();
 
     let task = {
         'title': taskTitle.value,
@@ -48,7 +48,7 @@ async function addTaskFromDialog() {
     let taskAssignedTo = document.getElementById('taskAssignedTo');
     let taskDueDate = document.getElementById('taskDueDate');
 
-    checkTaskPrio();
+    addTaskPrio();
 
     let task = {
         'title': taskTitle.value,
@@ -82,7 +82,7 @@ async function loadAllTasks() {
 }
 
 
-function addUrgent() {
+function activateUrgentButton() {
     let urgentButton = document.getElementById('urgent-button');
     let mediumButton = document.getElementById('medium-button');
     let lowButton = document.getElementById('low-button');
@@ -97,7 +97,7 @@ function addUrgent() {
 }
 
 
-function addMedium() {
+function activateMediumButton() {
     let urgentButton = document.getElementById('urgent-button');
     let mediumButton = document.getElementById('medium-button');
     let lowButton = document.getElementById('low-button');
@@ -112,7 +112,7 @@ function addMedium() {
 }
 
 
-function addLow() {
+function activateLowButton() {
     let urgentButton = document.getElementById('urgent-button');
     let mediumButton = document.getElementById('medium-button');
     let lowButton = document.getElementById('low-button');
@@ -131,7 +131,7 @@ async function deleteAllTasks() {
     await backend.deleteItem('allTasks');
 }
 
-function checkTaskPrio() {
+function addTaskPrio() {
     let urgentBtn = document.getElementById('urgent-button');
     let mediumBtn = document.getElementById('medium-button');
     let lowBtn = document.getElementById('low-button');
@@ -156,4 +156,32 @@ function checkTaskPrio() {
 
 function activeAddTaskNavLink() {
     document.getElementById('addtask-link').classList.add('active-link')
+}
+
+
+function clearAddTaskForm() {
+    let taskTitle = document.getElementById('taskTitle');
+    let taskDescription = document.getElementById('taskDescription');
+    let taskCategory = document.getElementById('taskCategory');
+    let taskAssignedTo = document.getElementById('taskAssignedTo');
+    let taskDueDate = document.getElementById('taskDueDate');
+
+    taskTitle.value = '';
+    taskDescription.value = '';
+    taskCategory.value = '';
+    taskAssignedTo.value = '';
+    taskDueDate.value = '';
+
+    deactivatePrioButtons();
+}
+
+
+function deactivatePrioButtons() {
+    let urgentButton = document.getElementById('urgent-button');
+    let mediumButton = document.getElementById('medium-button');
+    let lowButton = document.getElementById('low-button');
+
+    urgentButton.classList.remove('prio-button-active');
+    mediumButton.classList.remove('prio-button-active');
+    lowButton.classList.remove('prio-button-active');
 }

@@ -73,13 +73,13 @@
                         <div class="prio-button-container">
                             <h3 class="prio-button-headline">Prio</h3>
                             <div class="button-container">
-                                <button type="button" onclick="addUrgent()" id="urgent-button" class="prio-button" value="urgent"><img
+                                <button type="button" onclick="activateUrgentButton()" id="urgent-button" class="prio-button" value="urgent"><img
                                         class="prio-button-icon" src="../assets/icons/urgent.png" alt="">
                                     Urgent</button>
-                                <button type="button" onclick="addMedium()" id="medium-button" class="prio-button" value="medium"><img
+                                <button type="button" onclick="activateMediumButton()" id="medium-button" class="prio-button" value="medium"><img
                                         class="prio-button-icon" src="../assets/icons/medium.png" alt="">
                                     Medium</button>
-                                <button type="button" onclick="addLow()" id="low-button" class="prio-button" value="low"><img
+                                <button type="button" onclick="activateLowButton()" id="low-button" class="prio-button" value="low"><img
                                         class="prio-button-icon" src="../assets/icons/low.png" alt=""> Low</button>
                             </div>
                         </div>
@@ -88,7 +88,7 @@
 
                 <div class="submit-container">
                     <!-- === Clear & Create Task Buttons === -->
-                    <button class="submit-button">Clear <img class="submit-button-icon" src="../assets/icons/cancel.png"
+                    <button onclick="clearAddTaskForm()" type="button" class="submit-button">Clear <img class="submit-button-icon" src="../assets/icons/cancel.png"
                             alt=""></button>
                     <button type="submit" class="submit-button create-task-button"> Create Task <img
                             class="submit-button-icon" src="../assets/icons/done.png" alt=""></button>
