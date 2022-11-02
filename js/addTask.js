@@ -94,8 +94,6 @@ function addUrgent() {
     urgent = true;
     medium = false;
     low = false;
-
-    console.log(urgent);
 }
 
 

@@ -194,9 +194,7 @@ function openDetailTaskDialog(foo) {
         if(t.id === foo) id = index;
     });
 
-    document.getElementById('detail-task-dialog').innerHTML = renderDetailTasksDialog(id)
-
-    console.log(allTasks[id].title);
+    document.getElementById('detail-task-dialog').innerHTML = renderDetailTasksDialog(id);
 }
 
 
@@ -235,7 +233,7 @@ function renderDetailTasksDialog(id) {
             <div class="delete">
                 <img class="trash-icon-dialog" onclick="deleteTask(${allTasks[id].id})" src="../assets/icons/trash.png" alt="" title="Delete complete Task">
             </div>
-            <div onclick="editTask(${id})" class="edit">
+            <div onclick="renderEditTaskDialog(${id})" class="edit">
                 <img class="pencil-icon-dialog" src="../assets/icons/pencil.png" alt="" title="Edit Task">
             </div>
         </div>
