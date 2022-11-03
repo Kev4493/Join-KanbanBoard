@@ -24,7 +24,7 @@ async function addTask() {
 
     addTaskPrio();
 
-    let task = {
+    task = {
         'title': taskTitle.value,
         'description': taskDescription.value,
         'category': taskCategory.value,
@@ -41,34 +41,34 @@ async function addTask() {
 };
 
 
-async function addTaskFromDialog() {
-    let taskTitle = document.getElementById('taskTitle');
-    let taskDescription = document.getElementById('taskDescription');
-    let taskCategory = document.getElementById('taskCategory');
-    let taskAssignedTo = document.getElementById('taskAssignedTo');
-    let taskDueDate = document.getElementById('taskDueDate');
+// async function addTaskFromDialog() {
+//     let taskTitle = document.getElementById('taskTitle');
+//     let taskDescription = document.getElementById('taskDescription');
+//     let taskCategory = document.getElementById('taskCategory');
+//     let taskAssignedTo = document.getElementById('taskAssignedTo');
+//     let taskDueDate = document.getElementById('taskDueDate');
 
-    addTaskPrio();
+//     addTaskPrio();
 
-    let task = {
-        'title': taskTitle.value,
-        'description': taskDescription.value,
-        'category': taskCategory.value,
-        'assigned': taskAssignedTo.value,
-        'dueDate': taskDueDate.value,
-        'prio': currentTaskPrio.value,
-        'id': new Date().getTime(),
-        'status': 'todo',
-    };
+//     task = {
+//         'title': taskTitle.value,
+//         'description': taskDescription.value,
+//         'category': taskCategory.value,
+//         'assigned': taskAssignedTo.value,
+//         'dueDate': taskDueDate.value,
+//         'prio': currentTaskPrio,
+//         'id': new Date().getTime(),
+//         'status': 'todo',
+//     };
 
-    allTasks.push(task);
-    
-    renderTasks(); 
-    await saveAllTasks();
-    closeAddTaskDialog();
+//     allTasks.push(task);
 
-    console.log('allTasks', allTasks)
-}
+//     renderTasks();
+//     await saveAllTasks();
+//     closeAddTaskDialog();
+
+//     console.log('allTasks', allTasks)
+// }
 
 
 async function saveAllTasks() {
@@ -94,7 +94,6 @@ function activateUrgentButton() {
     urgent = true;
     medium = false;
     low = false;
-
 }
 
 
@@ -147,7 +146,7 @@ function addTaskPrio() {
         if (medium == true) {
             currentTaskPrio = mediumBtnVal;
         } else {
-            if(low = true) {
+            if(low == true) {
                 currentTaskPrio = lowBtnVal;
             }
         }
