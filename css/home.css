@@ -1,0 +1,62 @@
+.right-main-container {
+    /* background-image: url(../assets/img/pexels-vraj-shah-633814.jpg); */
+}
+
+.home-container {
+    padding: 3rem 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-header {
+    display: flex;
+    align-items: center;
+}
+
+.home-header > h1 {
+    font-size: 3rem;
+    border-right: 1px solid black;
+    padding-right: 2rem;
+}
+
+.home-header > p {
+    padding-left: 2rem;
+    font-size: 1.5rem;
+}
+
+.home-body {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.time > p {
+    font-size: 6rem;
+    font-weight: 700;
+    color: #091931;;
+}
+
+
+.greeting > p {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #091931;;
+}
+
+.question {
+    margin-top: 4rem;
+    font-size: 3rem;
+    color: #29ABE2;
+}
+
+.btn-container {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.btn-container > a {
+    text-decoration: none;
+}
