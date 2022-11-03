@@ -58,7 +58,7 @@ async function addTaskFromDialog() {
         'dueDate': taskDueDate.value,
         'prio': currentTaskPrio.value,
         'id': new Date().getTime(),
-        'status': 'todo'
+        'status': 'todo',
     };
 
     allTasks.push(task);
@@ -94,6 +94,7 @@ function activateUrgentButton() {
     urgent = true;
     medium = false;
     low = false;
+
 }
 
 

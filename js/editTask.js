@@ -24,7 +24,6 @@ async function updateCurrentTask(id, editTask) {
     allTasks[id]['assigned'] = editTask['assigned'];
     allTasks[id]['prio'] = currentTaskPrio;
 
-    
     await saveAllTasks();
     renderTasks();
     closeDetailTaskDialog();
@@ -111,6 +110,21 @@ function clearEditTaskForm() {
     taskDueDate.value = '';
 
     deactivatePrioButtons();
+}
+
+
+function checkActivatedPrioButton(id) {
+    let urgentButton = document.getElementById('urgent-button-edit');
+    let mediumButton = document.getElementById('medium-button-edit');
+    let lowButton = document.getElementById('low-button-edit');
+
+    if (allTasks[id]['prio'] == 'urgent') {
+        urgentButton.classList.add('prio-button-active');
+    } else if (allTasks[id]['prio'] == 'medium') {
+        mediumButton.classList.add('prio-button-active');
+    } else if (allTasks[id]['prio'] == 'low') {
+        lowButton.classList.add('prio-button-active');
+    }
 }
 
 
