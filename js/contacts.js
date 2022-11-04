@@ -32,10 +32,11 @@ function activeContactsNavLink() {
 
 
 
-let allNames = [];
+
 let allInitials = [];
 
 function getInitial() {
+    let allNames = [];
 
     // Alle Namen herausfinden:
     for (let i = 0; i < allContacts.length; i++) {
@@ -51,7 +52,6 @@ function getInitial() {
     }
 
     console.log(allInitials);
-
 }
 
 
