@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join - Contacts</title>
+
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../css/contacts.css">
+    <link rel="stylesheet" type="text/css" href="../css/home.css">
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/sidenav.css">
+
+    <script src="../js/mini_backend.js"></script>
+    <script src="../script.js"></script>
+    <script src="../js/includeHtml.js"></script>
+
+    <script src="../js/contacts.js"></script>
+    <script src="../js/addTask.js"></script>
+    <script src="../js/board.js"></script>
+
+</head>
+
+<body onload="initContacts()">
+    <nav w3-include-html="../templates/sidenav.html" class="left-main-container"></nav>
+
+    <div class="right-main-container">
+        <header w3-include-html="../templates/header.html"></header>
+
+        <div class="contacts-container">
+            <div id="contacts-nav-container" class="contacts-nav">
+
+                <!-- <div id="contact-box" class="contact-box">
+                    <div class="initial-section">
+                        <p>A</p>
+                    </div>
+                    <hr>
+                    <div class="contact-section">
+                        <p>Anton Mayer</p>
+                        <p>antonm@gmail.com</p>
+                    </div>
+                </div> -->
+
+            </div>
+
+            <div class="main-container">
+                <div class="contacts-headline">
+                    <h1 class="headline">Contacts</h1>
+                    <p>Better with a team</p>
+                </div>
+                <div id="contact-detail" class="contact-detail">
+                    <p>Test</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

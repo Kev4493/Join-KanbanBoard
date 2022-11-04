@@ -1,0 +1,64 @@
+.contacts-container {
+    display: flex;
+}
+
+.contacts-nav {
+    margin-top: 4px;
+    background-color: white;
+    box-shadow: 5px 4px 4px rgb(0 0 0 / 10%);
+    padding: 0rem 4rem;
+    overflow-y: scroll;
+    width: 30vw;
+    height: 100vh;
+}
+
+/* === Contact-Box === */
+
+.contacts-box {
+
+}
+
+.initial-section {
+    padding: 1rem 0rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-section {
+    padding: 1rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* === Main Container === */
+
+.main-container {
+    padding: 3rem 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* === Contacts Headline === */
+
+.contacts-headline {
+    display: flex;
+    align-items: center;
+}
+
+.contacts-headline > h1 {
+    border-right: 1px solid black;
+    padding-right: 2rem;
+    font-size: 3rem;
+}
+
+.contacts-headline > p {
+    padding-left: 2rem;
+    font-size: 1.5rem;
+}
+
+/* === Contact-Detail === */
+
+.contact-detail {
+    margin-top: 3rem;
+}
