@@ -45,8 +45,10 @@ function getInitial() {
     }
 
     // Anfangsbuchstaben herausfinden:
-    let initial = allNames.map((n) => n[0]).join('')
-    allInitials.push(initial);
+    for (let i = 0; i < allNames.length; i++) {
+        let letter = allNames[i].charAt(0);
+        allInitials.push(letter);
+    }
 
     console.log(allInitials);
 
