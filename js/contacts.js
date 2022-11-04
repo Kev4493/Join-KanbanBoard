@@ -6,6 +6,7 @@ async function initContacts() {
     showAllContacts();
 }
 
+let allNames = [];
 let allInitials = [];
 
 let allContacts = [
@@ -28,11 +29,9 @@ let allContacts = [
 
 
 function getInitial() {
-    let allNames = [];
 
     // Alle Namen herausfinden:
     for (let i = 0; i < allContacts.length; i++) {
-
         let names = allContacts[i]['name'];
         allNames.push(names);
     }
@@ -45,6 +44,9 @@ function getInitial() {
 
     // Anfangsbuchstaben Alphabetisch sortieren:
     allInitials.sort();
+
+    // Duplikate entfernen
+    allInitials = [...new Set(allInitials)]
     console.log(allInitials);
 }
 
@@ -55,9 +57,10 @@ function showAllContacts() {
     let contactsNavContainer = document.getElementById('contacts-nav-container');
 
     for (let i = 0; i < allInitials.length; i++) {
-        // contactsNavContainer.innerHTML = '';
         contactsNavContainer.innerHTML += renderContactBoxes(i);
     }
+
+    checkNames();
 }
 
 
@@ -69,11 +72,29 @@ function renderContactBoxes(i) {
             </div>
             <hr>
             <div id="contact-box" class="contact-section">
-                <p>Name</p>
+                <p id="name">Name</p>
                 <p>Email</p>
             </div>
         </div>
     `;
+}
+
+
+function checkNames() {
+    // for (let i = 0; i < allInitials.length; i++) {
+    //     let findNames = allNames.filter((name) => name.startsWith(`${allInitials[0]}`));
+    //     console.log(findNames);
+    // }
+
+    for (let i = 0; i < allNames.length; i++) {
+
+        if (allNames[i].charAt(0) == allInitials[i]) [
+            document.getElementById('name').innerHTML = /*html*/ `
+                ${allNames[i]}
+            `
+        ]
+    }
+
 }
 
 
