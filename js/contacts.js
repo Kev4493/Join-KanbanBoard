@@ -4,8 +4,9 @@ async function initContacts() {
     await loadAllTasks();
     activeContactsNavLink();
     showAllContacts();
-    getInitial();
 }
+
+let allInitials = [];
 
 let allContacts = [
     {
@@ -26,15 +27,6 @@ let allContacts = [
 ]
 
 
-function activeContactsNavLink() {
-    document.getElementById('contacts-link').classList.add('active-link')
-}
-
-
-
-
-let allInitials = [];
-
 function getInitial() {
     let allNames = [];
 
@@ -51,31 +43,40 @@ function getInitial() {
         allInitials.push(letter);
     }
 
+    // Anfangsbuchstaben Alphabetisch sortieren:
+    allInitials.sort();
     console.log(allInitials);
 }
 
 
 function showAllContacts() {
+    getInitial();
+
     let contactsNavContainer = document.getElementById('contacts-nav-container');
 
-    for (let i = 0; i < allContacts.length; i++) {
-        contactsNavContainer.innerHTML = '';
-        contactsNavContainer.innerHTML += renderAllContacts(i);
+    for (let i = 0; i < allInitials.length; i++) {
+        // contactsNavContainer.innerHTML = '';
+        contactsNavContainer.innerHTML += renderContactBoxes(i);
     }
 }
 
 
-function renderAllContacts(i) {
+function renderContactBoxes(i) {
     return /*html*/ `
-        <div class="contact-box">
+        <div id="contact-box${i}" class="contact-box">
             <div class="initial-section">
-                <p>A</p>
+                <p>${allInitials[i]}</p>
             </div>
             <hr>
-            <div class="contact-section">
-                <p>Anton Mayer</p>
-                <p>antonm@gmail.com</p>
+            <div id="contact-box" class="contact-section">
+                <p>Name</p>
+                <p>Email</p>
             </div>
         </div>
     `;
+}
+
+
+function activeContactsNavLink() {
+    document.getElementById('contacts-link').classList.add('active-link')
 }
