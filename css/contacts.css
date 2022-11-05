@@ -14,10 +14,6 @@
 
 /* === Contact-Box === */
 
-.contacts-box {
-
-}
-
 .initial-section {
     padding: 1rem 0rem;
     display: flex;
@@ -25,10 +21,34 @@
 }
 
 .contact-section {
-    padding: 1rem 0rem;
+    /* padding: 1rem 0rem; */
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.single-contact {
+    padding: 1rem 0rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-circle {
+    margin-right: 1rem;
+    border-radius: 50%;
+}
+
+.contact-circle > p {
+    color: whitesmoke;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email {
+    color: #007CEE;
 }
 
 /* === Main Container === */
