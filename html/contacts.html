@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="../css/header.css">
     <link rel="stylesheet" type="text/css" href="../css/sidenav.css">
 
+
     <script src="../js/mini_backend.js"></script>
     <script src="../script.js"></script>
     <script src="../js/includeHtml.js"></script>
@@ -31,17 +32,6 @@
         <div class="contacts-container">
             <div id="contacts-nav-container" class="contacts-nav">
 
-                <!-- <div id="contact-box" class="contact-box">
-                    <div class="initial-section">
-                        <p>A</p>
-                    </div>
-                    <hr>
-                    <div class="contact-section">
-                        <p>Anton Mayer</p>
-                        <p>antonm@gmail.com</p>
-                    </div>
-                </div> -->
-
             </div>
 
             <div class="main-container">
@@ -51,6 +41,15 @@
                 </div>
                 <div id="contact-detail" class="contact-detail">
                     
+                </div>
+                <div class="button-container">
+                    <input type="button" id="delete-button" class="d-none delete-contact-button" type="button" value="Delete Contact"></a>
+                    <input type="button" onclick="openNewContactDialog()" class="add-contact-button" type="button" value="Add a new Contact"></a>
+                </div>
+                <div id="dialog" class="new-contact-dialog-bg d-none">
+                    <div class="new-contact-dialog">
+                        <img onclick="closeNewContactDialog()" class="close-icon-dialog" src="../assets/icons/close_icon.png" alt="">
+                    </div>
                 </div>
             </div>
 

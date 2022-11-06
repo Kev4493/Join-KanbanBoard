@@ -14,39 +14,65 @@ let allContacts = [
         'name': 'Kristian Huptas',
         'email': 'kristian.huptas@icloud.com',
         'phone': '+49 4584 978 22 6',
-        'color': getRandomColor()
+        'color': getRandomColor(),
+        'company': 'IT Musterfirma AG'
     },
     {
         'name': 'Kevin Wagner',
         'email': 'kevin.wagner@icloud.com',
         'phone': '+49 5646 684 87 3',
-        'color': getRandomColor()
+        'color': getRandomColor(),
+        'company': 'IT Musterfirma AG'
     },
     {
         'name': 'Gergana Ivanova',
         'email': 'gergana.ivanova@icloud.com',
         'phone': '+49 3153 776 21 8',
-        'color': getRandomColor()
+        'color': getRandomColor(),
+        'company': 'IT Musterfirma AG'
     },
     {
         'name': 'Maurice Rauffmann',
         'email': 'maurice.rauffmann@icloud.com',
         'phone': '+49 6671 557 97 0',
-        'color': getRandomColor()
+        'color': getRandomColor(),
+        'company': 'IT Musterfirma AG'
     },
     {
         'name': 'Delong Liang',
         'email': 'delong.liang@icloud.com',
         'phone': '+49 9641 219 34 4',
-        'color': getRandomColor()
+        'color': getRandomColor(),
+        'company': 'IT Musterfirma AG'
     },
     {
         'name': 'Fabio Berni',
         'email': 'fabio.berni@icloud.com',
         'phone': '+49 7233 258 47 6',
-        'color': getRandomColor()
+        'color': getRandomColor(),
+        'company': 'IT Musterfirma AG'
+    },
+    {
+        'name': 'Fabio Berni',
+        'email': 'fabio.berni@icloud.com',
+        'phone': '+49 7233 258 47 6',
+        'color': getRandomColor(),
+        'company': 'IT Musterfirma AG'
+    },
+    {
+        'name': 'Fabio Berni',
+        'email': 'fabio.berni@icloud.com',
+        'phone': '+49 7233 258 47 6',
+        'color': getRandomColor(),
+        'company': 'IT Musterfirma AG'
     },
 ];
+
+
+function openNewContactDialog() {
+    let openNewContactDialog = document.getElementById('dialog');
+    openNewContactDialog.classList.remove('d-none');
+}
 
 
 function getInitial() {
@@ -110,7 +136,7 @@ function filterNames(i) {
 
 function renderContactToInitials(j) {
     return /*html*/ `
-        <div class="single-contact">
+        <div onclick="renderContactDetails(${j})" class="single-contact">
             <div class="contact-circle" style="background-color: ${allContacts[j]['color']}">
                 <p>${allContacts[j]['name'].split(" ").map(word => word[0]).join("")}</p>
             </div>
@@ -120,6 +146,46 @@ function renderContactToInitials(j) {
             </div>
         </div>
     `;
+}
+
+
+function renderContactDetails(j) {
+
+    showDeleteContactButton();
+
+    let contactDetailsContainer = document.getElementById('contact-detail');
+
+    contactDetailsContainer.innerHTML = /*html*/ `
+        <div class="contact-details-header">
+            <div class="contact-circle-container" style="background-color: ${allContacts[j]['color']}">
+                <p class="initials">${allContacts[j]['name'].split(" ").map(word => word[0]).join("")}</p>
+            </div>
+            <div class="contact-name-container">
+                <p class="contact-name">${allContacts[j]['name']}</p>
+            </div>
+        </div>
+        <div class="contact-information-container">
+            <p>Contact Information:</p>
+        </div>
+        <div class="contact-email-container">
+            <p class="headline">Email</p>
+            <p class="mail-address">${allContacts[j]['email']}</p>
+        </div>
+        <div class="contact-email-container">
+            <p class="headline">Phone</p>
+            <p class="phone-number">${allContacts[j]['phone']}</p>
+        </div>
+        <div class="contact-company-container">
+            <p class="headline">Company</p>
+            <p class="company-name">${allContacts[j]['company']}</p>
+        </div>
+    `;
+}
+
+
+function showDeleteContactButton() {
+    let deleteButton = document.getElementById('delete-button');
+    deleteButton.classList.remove('d-none');
 }
 
 
