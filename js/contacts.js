@@ -70,8 +70,13 @@ let allContacts = [
 
 
 function openNewContactDialog() {
-    let openNewContactDialog = document.getElementById('dialog');
-    openNewContactDialog.classList.remove('d-none');
+    let contactDialog = document.getElementById('dialog');
+    contactDialog.classList.remove('d-none');
+}
+
+function closeNewContactDialog() {
+    let contactDialog = document.getElementById('dialog')
+    contactDialog.classList.add('d-none');
 }
 
 

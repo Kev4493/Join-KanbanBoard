@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" type="text/css" href="../style.css">
     <link rel="stylesheet" type="text/css" href="../css/contacts.css">
-    <link rel="stylesheet" type="text/css" href="../css/home.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/home.css"> -->
     <link rel="stylesheet" type="text/css" href="../css/header.css">
     <link rel="stylesheet" type="text/css" href="../css/sidenav.css">
 
@@ -48,7 +48,38 @@
                 </div>
                 <div id="dialog" class="new-contact-dialog-bg d-none">
                     <div class="new-contact-dialog">
-                        <img onclick="closeNewContactDialog()" class="close-icon-dialog" src="../assets/icons/close_icon.png" alt="">
+                        <div class="headline-container-contact">
+                            <img class="logo" src="../assets/img/logo.png" alt="">
+                            <h1>Add Contact</h1>
+                            <p>Tasks are better with a team!</p>
+                        </div>
+                        <div class="form-container">
+                            <div class="close-container">
+                                <img onclick="closeNewContactDialog()" class="close-icon-dialog" src="../assets/icons/close_icon.png" alt="">
+                            </div>
+                            <div class="first-row">
+                                <div class="user-pic-container">
+                                    <img src="../assets/icons/user.png" alt="">
+                                </div>
+                                <form action="">
+                                    <!-- === Name === -->
+                                    <input class="contact-input" required name="name" type="text" placeholder="Name">
+                                    <i class="fa fa-user icon"></i>
+                                    <!-- === Email ===-->
+                                    <input class="contact-input" required name="email" type="email" placeholder="Email">
+                                    <!-- === Phone ===-->
+                                    <input class="contact-input" required name="phone" type="tel" placeholder="Phone">
+                                    <!-- === Company ===-->
+                                    <input class="contact-input" name="company" type="text" placeholder="Company">
+                                </form>
+                            </div>
+
+                            <div class="button-contact-container">
+                                <input onclick="closeNewContactDialog()" type="button" class="delete-contact-button" type="button" value="Cancel"></a>
+                                <input type="button" class="add-contact-button" type="button" value="create Contact"></a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
