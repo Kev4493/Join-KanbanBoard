@@ -69,6 +69,26 @@ let allContacts = [
 ];
 
 
+function addNewContact() {
+    let contactName = document.getElementById('contact-name');
+    let contactEmail = document.getElementById('contact-email');
+    let contactPhone = document.getElementById('contact-phone');
+    let contactCompany = document.getElementById('contact-company');
+
+    contact = {
+        'name': contactName.value,
+        'email': contactEmail.value,
+        'phone': contactPhone.value,
+        'company': contactCompany.value,
+        'color': getRandomColor()
+    }
+
+    allContacts.push(contact);
+    showAllContacts();
+    console.log('added new contact', allContacts);
+}
+
+
 function openNewContactDialog() {
     let contactDialog = document.getElementById('dialog');
     contactDialog.classList.remove('d-none');

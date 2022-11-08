@@ -64,22 +64,22 @@
                                 <form action="">
                                     <!-- === Name === -->
                                     <div class="input-cnt">
-                                        <input class="contact-input" required name="name" type="text" placeholder="Name">
+                                        <input id="contact-name" class="contact-input" required name="name" type="text" placeholder="Name">
                                         <img class="input-icons" src="../assets/icons/name-icon.png" alt="">
                                     </div>
                                     <!-- === Email ===-->
                                     <div class="input-cnt">
-                                        <input class="contact-input" required name="email" type="email" placeholder="Email">
+                                        <input id="contact-email" class="contact-input" required name="email" type="email" placeholder="Email">
                                         <img class="input-icons" src="../assets/icons/mail-icon.png" alt="">
                                     </div>
                                     <!-- === Phone ===-->
                                     <div class="input-cnt">
-                                        <input class="contact-input" required name="phone" type="tel" placeholder="Phone">
+                                        <input id="contact-phone" class="contact-input" required name="phone" type="tel" placeholder="Phone">
                                         <img class="input-icons" src="../assets/icons/phone-icon.png" alt="">
                                     </div>
                                     <!-- === Company ===-->
                                     <div class="input-cnt">
-                                        <input class="contact-input" name="company" type="text" placeholder="Company">
+                                        <input id="contact-company" class="contact-input" name="company" type="text" placeholder="Company">
                                         <img class="input-icons company-icon" src="../assets/icons/company.png" alt="">
                                     </div>
                                 </form>
@@ -87,7 +87,7 @@
 
                             <div class="button-contact-container">
                                 <input onclick="closeNewContactDialog()" type="button" class="delete-contact-button" type="button" value="Cancel"></a>
-                                <input type="button" class="add-contact-button" type="button" value="create Contact"></a>
+                                <input onclick="addNewContact()" type="button" class="add-contact-button" type="button" value="create Contact"></a>
                             </div>
                         </div>
 
