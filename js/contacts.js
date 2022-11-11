@@ -2,74 +2,18 @@ async function initContacts() {
     includeHTML();
     setURL('https://kanbanboard.kev-wagner.com/smallest_backend_ever');
     await loadAllTasks();
+    await loadAllContacts();
     activeContactsNavLink();
     showAllContacts();
 }
 
-let allNames = [];
+
 let allInitials = [];
-
-let allContacts = [
-    {
-        'name': 'Kristian Huptas',
-        'email': 'kristian.huptas@icloud.com',
-        'phone': '+49 4584 978 22 6',
-        'color': getRandomColor(),
-        'company': 'IT Musterfirma AG'
-    },
-    {
-        'name': 'Kevin Wagner',
-        'email': 'kevin.wagner@icloud.com',
-        'phone': '+49 5646 684 87 3',
-        'color': getRandomColor(),
-        'company': 'IT Musterfirma AG'
-    },
-    {
-        'name': 'Gergana Ivanova',
-        'email': 'gergana.ivanova@icloud.com',
-        'phone': '+49 3153 776 21 8',
-        'color': getRandomColor(),
-        'company': 'IT Musterfirma AG'
-    },
-    {
-        'name': 'Maurice Rauffmann',
-        'email': 'maurice.rauffmann@icloud.com',
-        'phone': '+49 6671 557 97 0',
-        'color': getRandomColor(),
-        'company': 'IT Musterfirma AG'
-    },
-    {
-        'name': 'Delong Liang',
-        'email': 'delong.liang@icloud.com',
-        'phone': '+49 9641 219 34 4',
-        'color': getRandomColor(),
-        'company': 'IT Musterfirma AG'
-    },
-    {
-        'name': 'Fabio Berni',
-        'email': 'fabio.berni@icloud.com',
-        'phone': '+49 7233 258 47 6',
-        'color': getRandomColor(),
-        'company': 'IT Musterfirma AG'
-    },
-    {
-        'name': 'Fabio Berni',
-        'email': 'fabio.berni@icloud.com',
-        'phone': '+49 7233 258 47 6',
-        'color': getRandomColor(),
-        'company': 'IT Musterfirma AG'
-    },
-    {
-        'name': 'Fabio Berni',
-        'email': 'fabio.berni@icloud.com',
-        'phone': '+49 7233 258 47 6',
-        'color': getRandomColor(),
-        'company': 'IT Musterfirma AG'
-    },
-];
+let allNames = [];
+let allContacts = [];
 
 
-function addNewContact() {
+async function addNewContact() {
     let contactName = document.getElementById('contact-name');
     let contactEmail = document.getElementById('contact-email');
     let contactPhone = document.getElementById('contact-phone');
@@ -84,23 +28,25 @@ function addNewContact() {
     }
 
     allContacts.push(contact);
+    
+    await saveAllContacts();
     showAllContacts();
+    closeNewContactDialog();
+
     console.log('added new contact', allContacts);
 }
 
 
-function openNewContactDialog() {
-    let contactDialog = document.getElementById('dialog');
-    contactDialog.classList.remove('d-none');
-}
-
-function closeNewContactDialog() {
-    let contactDialog = document.getElementById('dialog')
-    contactDialog.classList.add('d-none');
+function showAllContacts() {
+    getInitials();
+    renderInitialBoxes();
 }
 
 
-function getInitial() {
+function getInitials() {
+    allNames = [];
+    allInitials = [];
+
     // Alle Namen herausfinden:
     for (let i = 0; i < allContacts.length; i++) {
         let names = allContacts[i]['name'];
@@ -117,42 +63,35 @@ function getInitial() {
     allInitials.sort();
 
     // Duplikate entfernen:
-    allInitials = [...new Set(allInitials)]
+    allInitials = [...new Set(allInitials)];
 }
 
 
-function showAllContacts() {
-    getInitial();
-
+function renderInitialBoxes() {
     let contactsNavContainer = document.getElementById('contacts-nav-container');
+    contactsNavContainer.innerHTML = '';
 
     for (let i = 0; i < allInitials.length; i++) {
-        contactsNavContainer.innerHTML += renderContactBoxes(i);
+
+        contactsNavContainer.innerHTML += /*html*/ `
+            <div id="contact-box${i}" class="contact-box">
+                <div class="initial-section">
+                    <p>${allInitials[i]}</p>
+                </div>
+                <hr>
+                <div id="contact-section${i}" class="contact-section"></div>
+            </div>
+        `;
 
         filterNames(i);
     }
 }
 
 
-function renderContactBoxes(i) {
-    return /*html*/ `
-        <div id="contact-box${i}" class="contact-box">
-            <div class="initial-section">
-                <p>${allInitials[i]}</p>
-            </div>
-            <hr>
-            <div id="contact-section${i}" class="contact-section">
-                
-            </div>
-        </div>
-    `;
-}
-
-
 function filterNames(i) {
-    for (let j = 0; j < allNames.length; j++) {
+    for (let j = 0; j < allContacts.length; j++) {
 
-        if (allNames[j].charAt(0) === allInitials[i]) {
+        if (allContacts[j]['name'].charAt(0) === allInitials[i]) {
             document.getElementById(`contact-section${i}`).innerHTML += renderContactToInitials(j);
         }
     }
@@ -175,10 +114,8 @@ function renderContactToInitials(j) {
 
 
 function renderContactDetails(j) {
-
-    showDeleteContactButton();
-
     let contactDetailsContainer = document.getElementById('contact-detail');
+    contactDetailsContainer.innerHTML = '';
 
     contactDetailsContainer.innerHTML = /*html*/ `
         <div class="contact-details-header">
@@ -205,12 +142,28 @@ function renderContactDetails(j) {
             <p class="company-name">${allContacts[j]['company']}</p>
         </div>
     `;
+    showDeleteContactButton(j);
 }
 
 
-function showDeleteContactButton() {
+function showDeleteContactButton(j) {
+    let buttonContainer = document.getElementById('delete-button-container');
+    buttonContainer.innerHTML = '';
+    buttonContainer.innerHTML += /*html*/ `
+        <input onclick="deleteContact(${j})" type="button" id="delete-button" class="d-none delete-contact-button" type="button" value="Delete Contact"></a>
+    `;
+
     let deleteButton = document.getElementById('delete-button');
     deleteButton.classList.remove('d-none');
+}
+
+
+async function deleteContact(j) {
+    allContacts.splice(j, 1);
+    console.log('Gelöscht: AllContacts', [j]);
+    await saveAllContacts();
+    document.getElementById('contact-detail').innerHTML = '';
+    showAllContacts();
 }
 
 
@@ -226,4 +179,27 @@ function getRandomColor() {
 
 function activeContactsNavLink() {
     document.getElementById('contacts-link').classList.add('active-link')
+}
+
+
+function openNewContactDialog() {
+    let contactDialog = document.getElementById('dialog');
+    contactDialog.classList.remove('d-none');
+}
+
+
+function closeNewContactDialog() {
+    let contactDialog = document.getElementById('dialog')
+    contactDialog.classList.add('d-none');
+}
+
+
+async function saveAllContacts() {
+    await backend.setItem('allContacts', JSON.stringify(allContacts));
+}
+
+
+async function loadAllContacts() {
+    await downloadFromServer();
+    allContacts = JSON.parse(backend.getItem('allContacts')) || [];
 }

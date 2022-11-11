@@ -41,36 +41,6 @@ async function addTask() {
 };
 
 
-// async function addTaskFromDialog() {
-//     let taskTitle = document.getElementById('taskTitle');
-//     let taskDescription = document.getElementById('taskDescription');
-//     let taskCategory = document.getElementById('taskCategory');
-//     let taskAssignedTo = document.getElementById('taskAssignedTo');
-//     let taskDueDate = document.getElementById('taskDueDate');
-
-//     addTaskPrio();
-
-//     task = {
-//         'title': taskTitle.value,
-//         'description': taskDescription.value,
-//         'category': taskCategory.value,
-//         'assigned': taskAssignedTo.value,
-//         'dueDate': taskDueDate.value,
-//         'prio': currentTaskPrio,
-//         'id': new Date().getTime(),
-//         'status': 'todo',
-//     };
-
-//     allTasks.push(task);
-
-//     renderTasks();
-//     await saveAllTasks();
-//     closeAddTaskDialog();
-
-//     console.log('allTasks', allTasks)
-// }
-
-
 async function saveAllTasks() {
     await backend.setItem('allTasks', JSON.stringify(allTasks));
 }

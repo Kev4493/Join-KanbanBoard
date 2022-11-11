@@ -43,9 +43,13 @@
                     
                 </div>
                 <div class="button-container">
-                    <input type="button" id="delete-button" class="d-none delete-contact-button" type="button" value="Delete Contact"></a>
+                    <div id="delete-button-container" class="delete-button-container">
+
+                    </div>
                     <input type="button" onclick="openNewContactDialog()" class="add-contact-button" type="button" value="Add a new Contact"></a>
                 </div>
+
+                <!-- === Add Contact Dialog === -->
                 <div id="dialog" class="new-contact-dialog-bg d-none">
                     <div class="new-contact-dialog">
                         <div class="headline-container-contact">
@@ -61,7 +65,7 @@
                                 <div class="user-pic-container">
                                     <img src="../assets/icons/user.png" alt="">
                                 </div>
-                                <form action="">
+                                <form onsubmit="addNewContact(); return false;">
                                     <!-- === Name === -->
                                     <div class="input-cnt">
                                         <input id="contact-name" class="contact-input" required name="name" type="text" placeholder="Name">
@@ -82,13 +86,14 @@
                                         <input id="contact-company" class="contact-input" name="company" type="text" placeholder="Company">
                                         <img class="input-icons company-icon" src="../assets/icons/company.png" alt="">
                                     </div>
+                                    <div class="button-contact-container">
+                                        <input onclick="closeNewContactDialog()" type="button" class="delete-contact-button" type="button" value="Cancel"></a>
+                                        <input type="submit" class="add-contact-button" type="button" value="create Contact"></a>
+                                    </div>
                                 </form>
                             </div>
 
-                            <div class="button-contact-container">
-                                <input onclick="closeNewContactDialog()" type="button" class="delete-contact-button" type="button" value="Cancel"></a>
-                                <input onclick="addNewContact()" type="button" class="add-contact-button" type="button" value="create Contact"></a>
-                            </div>
+                            
                         </div>
 
                     </div>
