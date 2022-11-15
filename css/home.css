@@ -67,29 +67,29 @@
 @media (min-width: 2560px) {
 
     .home-header > h1 {
-        font-size: 4rem;
-    }
-
-    .home-header > p {
         font-size: 3.5rem;
     }
 
+    .home-header > p {
+        font-size: 3rem;
+    }
+
     .time > p {
-        font-size: 9rem;
+        font-size: 8rem;
     }
 
     .greeting > p {
-        font-size: 5rem;
+        font-size: 4rem;
         margin-top: 2rem;
     }
 
     .question {
-        font-size: 5rem;
+        font-size: 4rem;
         margin-top: 2rem;
     }
 
     .home-body {
-        margin-top: 20rem;
+        margin-top: 15rem;
     }
 
     .btn-container {
@@ -130,6 +130,14 @@
 }
 
 @media (max-width: 768px) {
+    .home-header > h1 {
+        font-size: 1.5rem;
+    }
+
+    .home-header > p {
+        font-size: 1rem;
+    }
+
     .time > p {
         font-size: 4rem;
     }

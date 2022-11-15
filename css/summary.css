@@ -166,3 +166,252 @@
     width: 60px;
     height: 60px;
 }
+
+
+/* === Responsive Design === */
+
+@media (min-width: 2560px) {
+    .summary-header > h1 {
+        font-size: 3.5rem;
+    }
+
+    .summary-header > p {
+        font-size: 3rem;
+    }
+
+    .summary-row-1 {
+        width: 920px;
+    }
+
+    .summary-box {
+        width: 250px;
+        height: 250px;
+    }
+
+    .text-in-box {
+        font-size: 1.5rem;
+    }
+
+    .number-in-box {
+        font-size: 5rem;
+    }
+
+    .summary-row-2 {
+        width: 920px;
+        height: 250px;
+    }
+
+    .urgent-box {
+        width: 920px;
+        height: 250px;
+    }
+
+    .urgent-box-left > img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .number-in-urgent-box {
+        font-size: 5rem;
+    }
+
+    .urgent-title {
+        font-size: 1.5rem;
+    }
+
+    .deadline-date {
+        font-size: 2rem;
+    }
+
+    .upcoming-deadline-title {
+        font-size: 1.5rem;
+    }
+
+    .summary-row-3 {
+        width: 920px;
+        height: 250px;
+    }
+
+    .todo-container, .done-container {
+        width: 410px;
+    }
+
+    .todo-container > img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .todo-number, .done-number {
+        font-size: 5rem;
+    }
+
+    .todo-text {
+        font-size: 1.5rem;
+    }
+
+    .done-text {
+        font-size: 1.5rem;
+    }
+
+    .done-container > img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* Bis zu einer Maximalen Bildschirmgröße von 1440px folgende CSS Eigenschaften: */
+@media (max-width:1440px) {
+    .summary-header > h1 {
+        font-size: 2rem;
+    }
+
+    .summary-header > p {
+        font-size: 1.5rem;
+    }
+
+    .summary-row-1 {
+        width: 515px;
+    }
+
+    .summary-box {
+        width: 150px;
+        height: 150px;
+    }
+
+    .text-in-box {
+        font-size: 1rem;
+    }
+
+    .number-in-box {
+        font-size: 3rem;
+    }
+
+    .summary-row-2 {
+        width: 515px;
+        height: 150px;
+    }
+
+    .urgent-box {
+        width: 515px;
+        height: 150px;
+    }
+
+    .urgent-box-left > img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .number-in-urgent-box {
+        font-size: 3rem;
+    }
+
+
+    .deadline-date {
+        font-size: 1rem;
+    }
+
+    .summary-row-3 {
+        width: 515px;
+        height: 150px;
+    }
+
+    .todo-container, .done-container {
+        width: 240px;
+    }
+
+    .todo-container > img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .todo-number, .done-number {
+        font-size: 3rem;
+    }
+
+    .done-container > img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Bis zu einer Maximalen Bildschirmgröße von 768px folgende CSS Eigenschaften: */
+@media (max-width: 768px) {
+    .summary-header > h1 {
+        font-size: 1.5rem;
+    }
+
+    .summary-header > p {
+        font-size: 1rem;
+    }
+
+    .summary-row-1 {
+        width: 380px;
+    }
+
+    .summary-box {
+        width: 110px;
+        height: 110px;
+    }
+
+    .text-in-box {
+        font-size: 0.8rem;
+    }
+
+    .number-in-box {
+        font-size: 2rem;
+    }
+
+    .summary-row-2 {
+        width: 380px;
+        height: 110px;
+    }
+
+    .urgent-box {
+        width: 380px;
+        height: 110px;
+    }
+
+    .urgent-box-left > img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .urgent-title {
+        font-size: 0.8rem;
+    }
+
+    .number-in-urgent-box {
+        font-size: 2rem;
+    }
+
+    .deadline-date {
+        font-size: 0.8rem;
+    }
+
+    .upcoming-deadline-title {
+        font-size: 0.8rem;
+    }
+
+    .summary-row-3 {
+        width: 380px;
+        height: 110px;
+    }
+
+    .todo-container, .done-container {
+        width: 175px;
+    }
+
+    .todo-container > img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .todo-number, .done-number {
+        font-size: 2rem;
+    }
+
+    .done-container > img {
+        width: 40px;
+        height: 40px;
+    }
+}

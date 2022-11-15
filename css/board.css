@@ -124,6 +124,10 @@ body {
     color: rgba(0, 0, 0, 0.5);
 }
 
+.description-container > p {
+    overflow: scroll;
+}
+
 .card-footer {
     display: flex;
     align-items: center;
@@ -364,4 +368,121 @@ body {
     width: 17px;
     height: 26px;
     object-fit: cover;
+}
+
+@media (min-width: 2560px) {
+    .headline-container > h1 {
+        font-size: 3.5rem;
+    }
+
+    .task-search {
+        font-size: 1.5rem;
+        height: 60px;
+    }
+
+    .add-task-button {
+        font-size: 1.5rem;
+        height: 60px;
+    }
+
+    .add-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .task-status-container {
+        margin-top: 6rem;
+    }
+
+    .task-status-header {
+        font-size: 1.5rem;
+    }
+
+    .task {
+        min-height: 400px;
+        padding: 2rem
+    }
+
+    .category-container > p {
+        font-size: 1.3rem;
+    }
+
+    .title-container {
+        font-size: 1.3rem;
+    }
+
+    .description-container {
+        font-size: 1.3rem;
+    }
+
+    .description-container > p {
+        width: 310px;
+        height: 140px;
+    }
+
+    .assigned-to-container {
+        width: 50px;
+        height: 50px;
+    }
+
+    .assigned-to-container > p{
+        font-size: 1.5rem;
+    }
+
+    .prio-container > img {
+        width: 25px;
+        height: 20px;
+    }
+
+    .card-footer {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 1440px) {
+    .headline-container > h1 {
+        font-size: 2rem;
+    }
+
+    .task-search {
+        height: 40px;
+    }
+
+    .add-task-button {
+        height: 40px;
+    }
+
+    .category-container > p {
+        font-size: 0.7rem;
+    }
+
+    .title-container > p {
+        font-size: 0.7rem;
+    }
+
+    .description-container > p {
+        font-size: 0.7rem;
+    }
+
+    .assigned-to-container {
+        width: 30px;
+        height: 30px;
+    }
+
+    .assigned-to-container > p{
+        font-size: 0.8rem;
+    }
+
+    .prio-container > img {
+        width: 15px;
+        height: 10px;
+    }
+
+    .task {
+        min-height: 235px;
+    }
+
+    .description-container > p {
+        height: 70px;
+    }
 }

@@ -65,9 +65,9 @@ function generateTaskHtml(i, task) {
             <div class="card-footer">
                 <div id="assigned-to-container${i}" class="assigned-to-container ${task['assigned']}" title="Assigned to: ${task['assigned']}">
                     <!-- Mit folgender Syntax, lassen sich die Anfangsbuchstaben von einem String anzeigen: -->
-                    ${task['assigned'].split(" ").map(word => word[0]).join("")}
+                    <p>${task['assigned'].split(" ").map(word => word[0]).join("")}</p>
                 </div>
-                <div id="prio-container${i}">
+                <div class="prio-container" id="prio-container${i}">
                     <img src="../assets/icons/${task['prio']}.png" alt="" title="Priority: ${task['prio']}">
                 </div>
             </div>
