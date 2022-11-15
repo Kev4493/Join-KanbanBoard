@@ -43,7 +43,8 @@
 .greeting > p {
     font-size: 3rem;
     font-weight: 700;
-    color: #091931;;
+    color: #091931;
+    text-align: center;
 }
 
 .question {
@@ -59,4 +60,85 @@
 
 .btn-container > a {
     text-decoration: none;
+}
+
+/* === Responsive Design === */
+
+@media (min-width: 2560px) {
+
+    .home-header > h1 {
+        font-size: 4rem;
+    }
+
+    .home-header > p {
+        font-size: 3.5rem;
+    }
+
+    .time > p {
+        font-size: 9rem;
+    }
+
+    .greeting > p {
+        font-size: 5rem;
+        margin-top: 2rem;
+    }
+
+    .question {
+        font-size: 5rem;
+        margin-top: 2rem;
+    }
+
+    .home-body {
+        margin-top: 20rem;
+    }
+
+    .btn-container {
+        margin-top: 4rem;
+    }
+
+    .btn-container > a {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}
+
+@media (max-width: 1440px) {
+    
+}
+
+@media (max-width: 1024px) {
+    .home-header > h1 {
+        font-size: 2rem;
+    }
+
+    .home-header > p {
+        font-size: 1.5rem;
+    }
+
+    .time > p {
+        font-size: 5rem;
+    }
+
+    .greeting > p {
+        font-size: 2rem;
+    }
+
+    .question {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .time > p {
+        font-size: 4rem;
+    }
+
+    .greeting > p {
+        font-size: 1.5rem;
+    }
+
+    .question {
+        font-size: 1.5rem;
+    }
 }

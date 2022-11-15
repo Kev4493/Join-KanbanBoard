@@ -5,7 +5,7 @@ async function initSummary() {
     await loadAllTasks();
     loadAllCounters();
     activeSummaryNavLink();
-    greetingUsers();
+    // greetingUsers();
 }
 
 
@@ -116,24 +116,24 @@ function activeSummaryNavLink() {
 }
 
 
-function greetingUsers() {
-    let myDate = new Date()
-    let hours = myDate.getHours();
-    let greetingMessage;
+// function greetingUsers() {
+//     let myDate = new Date()
+//     let hours = myDate.getHours();
+//     let greetingMessage;
 
-    if (hours < 12) {
-        greetingMessage = 'Good morning,';
-    } else if (hours >= 12 && hours <= 17) {
-        greetingMessage = 'Good afternoon,';
-    } else if (hours >= 17 && hours <= 24) {
-        greetingMessage = 'Good evening,';
-    }
+//     if (hours < 12) {
+//         greetingMessage = 'Good morning,';
+//     } else if (hours >= 12 && hours <= 17) {
+//         greetingMessage = 'Good afternoon,';
+//     } else if (hours >= 17 && hours <= 24) {
+//         greetingMessage = 'Good evening,';
+//     }
 
-    document.getElementById('welcome-text').innerHTML = greetingMessage;
+//     document.getElementById('welcome-text').innerHTML = greetingMessage;
 
-    // setCurrentDate();
-    setCurrentTime();
-}
+//     // setCurrentDate();
+//     setCurrentTime();
+// }
 
 
 function setCurrentDate() {

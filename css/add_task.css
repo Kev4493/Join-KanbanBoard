@@ -157,3 +157,29 @@ hr {
     display: flex;
     justify-content: flex-end;
 }
+
+
+/* === Responsive Design === */
+
+@media (min-width: 2560px) {
+
+    .submit-button {
+        height: 100px;
+        font-size: 2rem;
+
+        background-color: white;
+        border: 1px solid #D1D1D1;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-left: 1rem;
+        display: flex;
+        align-items: center;
+        padding: 0rem 1rem;
+        border: 1px solid #2A3647;
+    }
+
+    .create-task-button {
+        background-color: #2A3647;
+        color: white;
+    }
+}

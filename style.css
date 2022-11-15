@@ -47,8 +47,8 @@
 
 body {
     display: flex;
-    max-height: 100vh;
-    overflow: hidden;
+    /* max-height: 100vh; */
+    /* overflow: hidden; */
 }
 
 .right-main-container {
