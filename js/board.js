@@ -53,8 +53,10 @@ function renderTasks() {
 function generateTaskHtml(i, task) {
     return /*html*/ `
         <div onclick="openDetailTaskDialog(${task.id})" draggable="true" ondragstart="startDragging(${task['id']})" class="task">
-            <div id="category-container${i}" class="category-container ${task['category']}">
-                <p title="Category">${task['category']}</p>
+            <div class="category-placeholder-cnt">
+                <div id="category-container${i}" class="category-container ${task['category']}">
+                    <p title="Category">${task['category']}</p>
+                </div>
             </div>
             <div class="title-container">
                 <p title="Title">${task['title']}</p>
