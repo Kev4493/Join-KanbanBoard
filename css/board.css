@@ -125,7 +125,11 @@ body {
 }
 
 .description-container > p {
-    overflow: scroll;
+    overflow-y: scroll;
+}
+
+.description-container > p::-webkit-scrollbar {
+    display: none;
 }
 
 .card-footer {
@@ -221,7 +225,8 @@ body {
 }
 
 .detail-task-dialog {
-    /* width: 315px; */
+    /* width: 460px; */
+    /* min-width: 315px; */
     /* height: 420px; */
     padding: 2rem;
     background-color: #F5F5F5;
@@ -370,18 +375,31 @@ body {
     object-fit: cover;
 }
 
+.submit-button-edit {
+    height: 50px;
+    background-color: white;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 0rem 1rem;
+    border: 1px solid #2A3647;
+}
+
 @media (min-width: 2560px) {
     .headline-container > h1 {
         font-size: 3.5rem;
     }
 
     .task-search {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         height: 60px;
     }
 
     .add-task-button {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         height: 60px;
     }
 
@@ -437,6 +455,130 @@ body {
     .card-footer {
         margin-top: 2rem;
     }
+
+    .category-container-dialog > p {
+        font-size: 1.3rem;
+    }
+
+    .title-container-dialog {
+        font-size: 1.3rem;
+        margin-top: 2rem;
+    }
+
+    .description-container-dialog {
+        font-size: 1.3rem;
+        margin-top: 1rem;
+    }
+
+    .description-container-dialog > p {
+        width: 500px;
+        min-height: 100px;
+    }
+
+    .due-date-container {
+        margin-top: 2rem;
+    }
+
+    .priority-container {
+        margin-top: 2rem;
+    }
+
+    .font-size-small {
+        font-size: 1.3rem;
+    }
+
+    .assigned-to-container-dialog {
+        margin-top: 2rem;
+    }
+
+    .assigned-to-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .assigned-to-circle > p {
+        font-size: 1.5rem;
+    }
+
+    .delete {
+        width: 50px;
+        height: 50px;
+    }
+
+    .trash-icon-dialog {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+    }
+
+    .edit {
+        width: 50px;
+        height: 50px;
+    }
+
+    .pencil-icon-dialog {
+        width: 25px;
+        height: 35px;
+        object-fit: cover;
+    }
+
+    .close-icon-dialog {
+        width: 35px;
+        height: 35px;
+    }
+
+    label {
+        font-size: 1.5rem;
+    }
+
+    .add-task-inputfield {
+        font-size: 1rem;
+    }
+
+    textarea {
+        font-size: 1rem;
+    }
+
+    .prio-button-headline {
+        font-size: 1.5rem !important;
+    }
+
+    .add-task-inputfield {
+        height: 60px !important;
+        font-size: 1.2rem;
+        width: 500px;
+    }
+
+    textarea {
+        font-size: 1.2rem;
+    }
+
+    .prio-button {
+        font-size: 1.2rem;
+        height: 55px !important;
+        width: 155px !important;
+    }
+
+    .prio-button-icon {
+        margin-right: 1rem !important;
+        width: 20px !important;
+    }
+
+    .submit-button-edit {
+        height: 55px;
+        font-size: 1.2rem;
+    }
+
+    .submit-container-edit-task {
+        margin-top: 4rem !important;
+    }
+
+    .add-task-dialog {
+        height: 60vh;
+        width: 61vw;
+    }
+
+
 }
 
 @media (max-width: 1440px) {
@@ -484,5 +626,9 @@ body {
 
     .description-container > p {
         height: 70px;
+    }
+
+    .detail-task-dialog {
+
     }
 }

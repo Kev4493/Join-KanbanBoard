@@ -133,6 +133,19 @@ hr {
     border: 1px solid #2A3647;
 }
 
+.submit-button-addtask {
+    height: 50px;
+    background-color: white;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 0rem 1rem;
+    border: 1px solid #2A3647;
+}
+
 .create-task-button {
     background-color: #2A3647;
     color: white;
@@ -181,5 +194,10 @@ hr {
     .create-task-button {
         background-color: #2A3647;
         color: white;
+    }
+
+    .submit-button-addtask {
+        font-size: 1.2rem;
+        height: 60px;
     }
 }

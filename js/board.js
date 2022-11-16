@@ -222,7 +222,7 @@ function renderDetailTasksDialog(id) {
             <p class="font-size-small bold">Assigned To:</p>
             <div class="names-cnt">
                 <div class="assigned-to-circle ${allTasks[id]['assigned']}" title="Assigned to: ${allTasks[id]['assigned']}">
-                    ${allTasks[id]['assigned'].split(" ").map(word => word[0]).join("")}
+                    <p>${allTasks[id]['assigned'].split(" ").map(word => word[0]).join("")}</p>
                 </div>
                 <div>
                     <p class="font-size-small">${allTasks[id]['assigned']}</p>

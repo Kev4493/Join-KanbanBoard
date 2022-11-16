@@ -168,9 +168,9 @@ function renderEditTaskDialog(id) {
 
                 <!-- === Submit Buttons === -->
                 <div class="submit-container-edit-task">
-                    <button onclick="clearEditTaskForm()" type="button" class="submit-button">Clear <img class="submit-button-icon" src="../assets/icons/cancel.png"
+                    <button onclick="clearEditTaskForm()" type="button" class="submit-button-edit">Clear <img class="submit-button-icon" src="../assets/icons/cancel.png"
                         alt=""></button>
-                    <button type="submit" class="submit-button create-task-button">Edit Task <img
+                    <button type="submit" class="submit-button-edit create-task-button">Edit Task <img
                         class="submit-button-icon" src="../assets/icons/done.png" alt=""></button>
                 </div>
             </div>
