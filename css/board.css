@@ -546,14 +546,14 @@ body {
     .add-task-inputfield {
         height: 60px !important;
         font-size: 1.2rem;
-        width: 500px;
+        /* width: 500px; */
     }
 
     textarea {
         font-size: 1.2rem;
     }
 
-    .prio-button {
+    .prio-button-dialog {
         font-size: 1.2rem;
         height: 55px !important;
         width: 155px !important;
@@ -651,7 +651,7 @@ body {
         height: 34px;
     }
 
-    .form-container {
+    .form-container-dialog {
         justify-content: space-evenly;
     }
 
@@ -662,10 +662,19 @@ body {
 }
 
 @media (max-width: 768px) {
+    .headline-container > h1 {
+        font-size: 1.5rem;
+    }
+
     .task-status-container {
         flex-direction: column;
         overflow-y: scroll ;
         height: 70vh;
+        margin-top: 4rem;
+    }
+
+    .task-status-header > p {
+        color: whitesmoke;
     }
 
     .task-status-row {
@@ -673,7 +682,7 @@ body {
         flex-direction: column;
         width: unset;
         
-        background-color: antiquewhite;
+        background-color: #2A3647;
         border-radius: 50px;
         padding: 1rem 0rem;
         margin-bottom: 3rem;
@@ -709,8 +718,20 @@ body {
         height: unset;
     }
 
+    .add-task-button {
+        height: 30px;
+    }
+
+    .task-search {
+        height: 30px;
+    }
+
     .add-task-dialog {
-        height: 75vh;
+        height: 85vh;
+    }
+
+    form {
+        margin-top: 4rem;
     }
 
 }

@@ -1,9 +1,9 @@
 <div class="add-task-container">
 
-    <h1 class="headline">Add Task</h1>
+    <h1 class="headline-dialog">Add Task</h1>
 
     <form onsubmit="addTask(); return false;">
-        <div class="form-container">
+        <div class="form-container-dialog">
 
             <div class="left-form-container">
                 <!-- === Title === -->
@@ -45,21 +45,21 @@
                 <!-- === Prio Buttons === -->
                 <div class="prio-button-container">
                     <h3 class="prio-button-headline">Prio</h3>
-                    <div class="button-container">
-                        <button type="button" onclick="activateUrgentButton()" id="urgent-button" class="prio-button" value="urgent"><img
+                    <div class="button-container-dialog">
+                        <button type="button" onclick="activateUrgentButton()" id="urgent-button" class="prio-button-dialog" value="urgent"><img
                                 class="prio-button-icon" src="../assets/icons/urgent.png" alt="">
                             Urgent</button>
-                        <button type="button" onclick="activateMediumButton()" id="medium-button" class="prio-button" value="medium"><img
+                        <button type="button" onclick="activateMediumButton()" id="medium-button" class="prio-button-dialog" value="medium"><img
                                 class="prio-button-icon" src="../assets/icons/medium.png" alt="">
                             Medium</button>
-                        <button type="button" onclick="activateLowButton()" id="low-button" class="prio-button" value="low"><img
+                        <button type="button" onclick="activateLowButton()" id="low-button" class="prio-button-dialog" value="low"><img
                                 class="prio-button-icon" src="../assets/icons/low.png" alt=""> Low</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="submit-container">
+        <div class="submit-container-dialog">
             <!-- === Clear & Create Task Buttons === -->
             <button type="button" class="submit-button-addtask">Clear <img class="submit-button-icon" src="../assets/icons/cancel.png"
                     alt=""></button>

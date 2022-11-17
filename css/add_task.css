@@ -5,14 +5,23 @@
     justify-content: center;
 }
 
+.headline-dialog {
+    font-size: 3rem;
+}
+
 .headline {
     font-size: 3rem;
+}
+
+.form-container-dialog {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .form-container {
     display: flex;
     width: 100%;
-    /* border: 1px solid black; */
     justify-content: space-between;
 }
 
@@ -84,6 +93,14 @@ hr {
     align-items: center;
 }
 
+.button-container-dialog {
+    display: flex;
+    justify-content: space-between;
+    /* width: 422px; */
+    display: flex;
+    align-items: center;
+}
+
 .prio-button-icon {
     margin-right: 0.5rem;
     width: 15px;
@@ -103,6 +120,16 @@ hr {
     font-size: 13.3px; */
 }
 
+.prio-button-dialog {
+    width: 130px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
 .prio-button-active {
     background: #e5e5e5;
     -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
@@ -114,10 +141,16 @@ hr {
 /* === Submit Container === */
 
 .submit-container {
-    /* margin-top: 5rem; */
+    margin-top: 5rem;
     display: flex;
     justify-content: flex-end;
     /* max-width: 1000px; */
+}
+
+.submit-container-dialog {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .submit-button {
@@ -177,8 +210,8 @@ hr {
 @media (min-width: 2560px) {
 
     .submit-button {
-        height: 100px;
-        font-size: 1.5rem;
+        height: 80px;
+        font-size: 1.2rem;
 
         background-color: white;
         border: 1px solid #D1D1D1;
@@ -200,13 +233,19 @@ hr {
         font-size: 1.2rem;
         height: 60px;
     }
-}
 
-@media (max-width: 768px) {
-    .submit-container {
-        margin-top: 3rem;
+    .prio-button {
+        width: 220px;
+        height: 60px;
+        font-size: 1.2rem;
     }
 
+    .form-container-dialog {
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 1024px) {
     .button-container {
         flex-direction: column;
         align-items: flex-start !important;
@@ -217,4 +256,30 @@ hr {
         margin-bottom: 1rem;
         width: 100% !important;
     }
+}
+
+@media (max-width: 768px) {
+    .submit-container-dialog {
+        margin-top: 3rem;
+    }
+
+    .button-container-dialog {
+        flex-direction: column;
+        align-items: flex-start !important;
+        justify-content: unset !important;
+    }
+
+    .prio-button-dialog {
+        margin-bottom: 1rem;
+        width: 100% !important;
+    }
+
+    .add-task-container {
+        padding: 3rem 10%;
+    }
+
+    .headline, .headline-dialog {
+        font-size: 1.5rem;
+    }
+
 }
