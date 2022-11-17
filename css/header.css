@@ -27,3 +27,23 @@
     margin-left: 2rem;
     cursor: pointer;
 }
+
+@media (min-width: 2560px) {
+    .header-container {
+        padding: 0 5%;
+        height: 115px;
+    }
+
+    .profile {
+        width: 55px;
+        height: 55px;
+    }
+
+    .headline-container > p {
+        font-size: 1.5rem;
+    }
+
+    .questionmark-icon {
+        width: 55px;
+    }
+}

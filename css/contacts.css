@@ -7,8 +7,8 @@
     padding-bottom: 75px;
     background-color: white;
     box-shadow: 5px 4px 4px rgb(0 0 0 / 10%);
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     overflow-y: scroll;
     width: 30vw;
     height: 100vh;
@@ -319,4 +319,206 @@ form {
     display: flex;
     justify-content: flex-end;
     margin-top: 2rem;
+}
+
+@media (min-width: 2560px) {
+    .headline {
+        font-size: 3.5rem;
+    }
+
+    .contacts-headline {
+        font-size: 3rem;
+    }
+
+    .contacts-nav {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    .initial-section > p {
+        font-size: 2rem;
+    }
+
+    .contact-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .contact-circle > p {
+        font-size: 1.5rem;
+    }
+
+    .contact-information > p {
+        font-size: 1.5rem;
+    }
+
+    .contact-detail {
+        height: 75%;
+    }
+
+    .contact-name {
+        font-size: 2rem;
+    }
+
+    .contact-information-container {
+        margin-top: 4rem;
+    }
+
+    .contact-information-container > p {
+        font-size: 1.5rem;
+    }
+
+    .contact-email-container {
+        margin-top: 4rem;
+    }
+
+    .contact-company-container {
+        margin-top: 4rem;
+    }
+
+    .headline {
+        font-size: 1.5rem;
+    }
+
+    .mail-address {
+        font-size: 1.5rem;
+    }
+
+    .phone-number {
+        font-size: 1.5rem;
+    }
+
+    .company-name {
+        font-size: 1.5rem;
+    }
+
+    .main-container {
+        width: 60%;
+    }
+
+    .add-contact-button {
+        font-size: 1.3rem;
+        height: 60px;
+    }
+
+    .delete-contact-button {
+        font-size: 1.3rem;
+        height: 60px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .contacts-headline > h1 {
+        font-size: 2rem;
+    }
+
+    .contacts-headline > p {
+        font-size: 1rem;
+    }
+
+    .main-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .contact-information > p {
+        font-size: 0.8rem;
+    }
+
+    .contacts-nav {
+        width: 36vw;
+    }
+
+    .contact-name {
+        font-size: 1.3rem;
+    }
+
+    .contact-information-container > p {
+        font-size: 0.8rem;
+    }
+
+    .headline {
+        font-size: 0.8rem;
+    }
+
+    .mail-address {
+        font-size: 0.8rem;
+    }
+
+    .phone-number {
+        font-size: 0.8rem;
+    }
+
+    .company-name {
+        font-size: 0.8rem;
+    }
+
+    .contact-circle-container {
+        width: 55px;
+        height: 55px;
+        margin-right: 2rem;
+    }
+
+    .initials {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        display: none;
+    }
+
+    .contacts-nav {
+        width: 100vw;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        padding-top: 3rem;
+    }
+
+    .contact-information > p {
+        font-size: 1rem;
+    }
+
+    .contact-circle {
+        width: 45px;
+        height: 45px;
+
+    }
+
+    .contact-details-mobile {
+        background-color: white;
+        z-index: 999;
+        position: absolute;
+        top: 80px;
+        bottom: 0;
+        right: 0;
+        left: 200px;
+        padding: 3rem 10%;
+    }
+
+    .contact-details-container-mobile {
+        background-color: rgba(0, 0, 0, 0.03);
+        padding: 2rem;
+        border-radius: 12px;
+        height: 100%;
+    }
+
+    .backwards-icon-cnt {
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .backwards-icon-cnt:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+        transition: all 0.125s ease-in-out;
+    }
 }

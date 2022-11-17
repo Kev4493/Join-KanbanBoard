@@ -100,7 +100,7 @@ function filterNames(i) {
 
 function renderContactToInitials(j) {
     return /*html*/ `
-        <div onclick="renderContactDetails(${j})" class="single-contact">
+        <div onclick="renderContactDetails(${j}); renderContactDetailsMobile(${j})" class="single-contact">
             <div class="contact-circle" style="background-color: ${allContacts[j]['color']}">
                 <p>${allContacts[j]['name'].split(" ").map(word => word[0]).join("")}</p>
             </div>
@@ -143,6 +143,56 @@ function renderContactDetails(j) {
         </div>
     `;
     showDeleteContactButton(j);
+}
+
+
+function renderContactDetailsMobile(j) {
+    let mediaQuery = window.matchMedia('(max-width: 768px)')
+
+    if (mediaQuery.matches) {
+        let contactDetailsContainerMobile = document.getElementById('contact-details-mobile');
+        contactDetailsContainerMobile.innerHTML = '';
+
+        contactDetailsContainerMobile.innerHTML = /*html*/ `
+            <div class="contact-details-container-mobile">
+                <div class="contact-details-header">
+                    <div class="contact-circle-container" style="background-color: ${allContacts[j]['color']}">
+                        <p class="initials">${allContacts[j]['name'].split(" ").map(word => word[0]).join("")}</p>
+                    </div>
+                    <div class="contact-name-container">
+                        <p class="contact-name">${allContacts[j]['name']}</p>
+                    </div>
+                    <div onclick="closeContactDetailsMobile()" class="backwards-icon-cnt">
+                        <img src="/assets/icons/backwards.png" title="go back to all Contacts" alt="">
+                    </div>
+                </div>
+                <div class="contact-information-container">
+                    <p>Contact Information:</p>
+                </div>
+                <div class="contact-email-container">
+                    <p class="headline">Email</p>
+                    <p class="mail-address">${allContacts[j]['email']}</p>
+                </div>
+                <div class="contact-email-container">
+                    <p class="headline">Phone</p>
+                    <p class="phone-number">${allContacts[j]['phone']}</p>
+                </div>
+                <div class="contact-company-container">
+                    <p class="headline">Company</p>
+                    <p class="company-name">${allContacts[j]['company']}</p>
+                </div>
+            </div>
+        `;
+
+        contactDetailsContainerMobile.classList.remove('d-none');
+        showDeleteContactButton(j);
+    }
+}
+
+
+function closeContactDetailsMobile() {
+    let contactDetailsContainerMobile = document.getElementById('contact-details-mobile');
+    contactDetailsContainerMobile.classList.add('d-none');
 }
 
 

@@ -176,7 +176,7 @@
     }
 
     .summary-header > p {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .summary-row-1 {
@@ -345,7 +345,7 @@
     }
 
     .summary-row-1 {
-        width: 380px;
+        width: 100%;
     }
 
     .summary-box {
@@ -362,12 +362,12 @@
     }
 
     .summary-row-2 {
-        width: 380px;
+        width: 100%;
         height: 110px;
     }
 
     .urgent-box {
-        width: 380px;
+        width: 100%;
         height: 110px;
     }
 
@@ -393,7 +393,7 @@
     }
 
     .summary-row-3 {
-        width: 380px;
+        width: 100%;
         height: 110px;
     }
 
