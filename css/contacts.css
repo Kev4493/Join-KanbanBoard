@@ -75,8 +75,8 @@
 .main-container {
     /* padding: 3rem 10%; */
     padding-bottom: 123px;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     padding-top: 3rem;
     display: flex;
     flex-direction: column;
@@ -414,9 +414,70 @@ form {
         font-size: 1.3rem;
         height: 60px;
     }
+
+    .new-contact-dialog {
+        width: 1200px;
+        /* height: 750px; */
+    }
+
+    .headline-container-contact {
+        padding: 5rem 2rem;
+    }
+
+    .headline-container-contact > h1 {
+        font-size: 3rem;
+    }
+
+    .headline-container-contact > p {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        width: 80px;
+        top: 5rem;
+    }
+
+    .form-container {
+        padding: 5rem 2rem;
+        margin-top: 3rem;
+    }
+
+    .user-pic-container > img {
+        width: 150px;
+        margin-right: 2rem;
+    }
+
+    .close-container {
+        top: 2rem;
+        right: 2rem;
+        position: absolute;
+    }
+
+    .close-icon-dialog {
+        width: 35px;
+        height: 35px;
+    }
+
+    .contact-input {
+        font-size: 1.2rem;
+        height: 60px;
+        width: 420px;
+    }
+
+    .first-row {
+        justify-content: center;
+    }
+
+    .button-contact-container {
+        margin-top: 3rem;
+    }
+
+    .input-icons {
+        top: 35px;
+    }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
     .contacts-headline > h1 {
         font-size: 2rem;
     }
@@ -425,10 +486,6 @@ form {
         font-size: 1rem;
     }
 
-    .main-container {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
 
     .contact-information > p {
         font-size: 0.8rem;
@@ -473,7 +530,7 @@ form {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 940px) {
     .main-container {
         display: none;
     }
@@ -596,6 +653,7 @@ form {
         position: absolute;
         top: 1rem;
         right: 1rem;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(340deg) brightness(105%) contrast(103%);
     }
 
     .user-pic-container {
@@ -624,9 +682,20 @@ form {
     }
 }
 
+@media (max-width: 675px) {
+    .contacts-nav {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .headline-container > p {
+        display: none;
+    }
+}
+
 
 /* Ab einer mindestgröße von 769px passiert folgendes: */
-@media (min-width: 769px) {
+@media (min-width: 941px) {
     .add-contact-button-mobile {
         display: none;
     }

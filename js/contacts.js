@@ -147,7 +147,7 @@ function renderContactDetails(j) {
 
 
 function renderContactDetailsMobile(j) {
-    let mediaQuery = window.matchMedia('(max-width: 768px)')
+    let mediaQuery = window.matchMedia('(max-width: 941px)')
 
     if (mediaQuery.matches) {
         let contactDetailsContainerMobile = document.getElementById('contact-details-mobile');

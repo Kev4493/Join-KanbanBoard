@@ -1,5 +1,5 @@
 .summary-container {
-    padding: 3rem 10%;
+    padding: 3rem 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,7 +28,7 @@
 .summary-row-1 {
     display: flex;
     justify-content: space-between;
-    margin-top: 4rem;
+    margin-top: 3rem;
     width: 600px;
 }
 

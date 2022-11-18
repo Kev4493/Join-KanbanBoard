@@ -128,53 +128,56 @@ function renderEditTaskDialog(id) {
     let taskDialog = document.getElementById('detail-task-dialog');
 
     taskDialog.innerHTML = /*html*/ `
-        <form onsubmit="editTask(${id}); return false;">
-        <img onclick="closeDetailTaskDialog()" class="close-icon-dialog" src="../assets/icons/close_icon.png" alt="">
-            <div class="form-container-edit-task">
+        <div class="edit-task-cnt">
+            <form onsubmit="editTask(${id}); return false;">
+            <img onclick="closeDetailTaskDialog()" class="close-icon-dialog" src="../assets/icons/close_icon.png" alt="">
+                <div class="form-container-edit-task">
 
-                <!-- === Title === -->
-                <label for="title">Title</label>
-                <input required id="task-title-edit" class="add-task-inputfield" type="text" name="title"
-                    value="${allTasks[id]['title']}"/>
+                    <!-- === Title === -->
+                    <label for="title">Title</label>
+                    <input required id="task-title-edit" class="add-task-inputfield" type="text" name="title"
+                        value="${allTasks[id]['title']}"/>
 
-                <!-- === Description === -->
-                <label for="description">Description</label>
-                <textarea required name="description" id="task-description-edit" cols="30" rows="10">${allTasks[id]['description']}</textarea>
+                    <!-- === Description === -->
+                    <label for="description">Description</label>
+                    <textarea required name="description" id="task-description-edit" cols="30" rows="10">${allTasks[id]['description']}</textarea>
 
-                <!-- === Due Date === -->
-                <label for="dueDate">Due date</label>
-                <input value="${allTasks[id]['dueDate']}" required class="add-task-inputfield" type="date" id="task-duedate-edit" name="dueDate">
+                    <!-- === Due Date === -->
+                    <label for="dueDate">Due date</label>
+                    <input value="${allTasks[id]['dueDate']}" required class="add-task-inputfield" type="date" id="task-duedate-edit" name="dueDate">
 
-                <!-- === Assigned To === -->
-                <label for="assigned">Assigned to</label>
-                <select required class="add-task-inputfield" name="assigned" id="task-assigned-edit">
-                    <option value="" disabled selected hidden>${allTasks[id]['assigned']}</option>
-                    <option value="Kevin Wagner">Kevin Wagner</option>
-                    <option value="Kristian Huptas">Kristian Huptas</option>
-                </select>
+                    <!-- === Assigned To === -->
+                    <label for="assigned">Assigned to</label>
+                    <select required class="add-task-inputfield" name="assigned" id="task-assigned-edit">
+                        <option value="" disabled selected hidden>${allTasks[id]['assigned']}</option>
+                        <option value="Kevin Wagner">Kevin Wagner</option>
+                        <option value="Kristian Huptas">Kristian Huptas</option>
+                    </select>
 
-                <!-- === Prio Buttons === -->
-                <div class="prio-button-container">
-                    <h3 class="prio-button-headline">Prio</h3>
-                    <div class="button-container">
-                        <button type="button" onclick="activateUrgentEditButton()" id="urgent-button-edit" class="prio-button" value="urgent"><img
-                            class="prio-button-icon" src="../assets/icons/urgent.png" alt="">Urgent</button>
-                        <button type="button" onclick="activateMediumEditButton()" id="medium-button-edit" class="prio-button" value="medium"><img
-                            class="prio-button-icon" src="../assets/icons/medium.png" alt="">Medium</button>
-                        <button type="button" onclick="activateLowEditButton()" id="low-button-edit" class="prio-button" value="low"><img
-                            class="prio-button-icon" src="../assets/icons/low.png" alt=""> Low</button>
+                    <!-- === Prio Buttons === -->
+                    <div class="prio-button-container">
+                        <h3 class="prio-button-headline">Prio</h3>
+                        <div class="button-container">
+                            <button type="button" onclick="activateUrgentEditButton()" id="urgent-button-edit" class="prio-button" value="urgent"><img
+                                class="prio-button-icon" src="../assets/icons/urgent.png" alt="">Urgent</button>
+                            <button type="button" onclick="activateMediumEditButton()" id="medium-button-edit" class="prio-button" value="medium"><img
+                                class="prio-button-icon" src="../assets/icons/medium.png" alt="">Medium</button>
+                            <button type="button" onclick="activateLowEditButton()" id="low-button-edit" class="prio-button" value="low"><img
+                                class="prio-button-icon" src="../assets/icons/low.png" alt=""> Low</button>
+                        </div>
+                    </div>
+
+                    <!-- === Submit Buttons === -->
+                    <div class="submit-container-edit-task">
+                        <button onclick="clearEditTaskForm()" type="button" class="submit-button-edit">Clear <img class="submit-button-icon" src="../assets/icons/cancel.png"
+                            alt=""></button>
+                        <button type="submit" class="submit-button-edit create-task-button">Edit Task <img
+                            class="submit-button-icon" src="../assets/icons/done.png" alt=""></button>
                     </div>
                 </div>
+            </form>
+        </div>
 
-                <!-- === Submit Buttons === -->
-                <div class="submit-container-edit-task">
-                    <button onclick="clearEditTaskForm()" type="button" class="submit-button-edit">Clear <img class="submit-button-icon" src="../assets/icons/cancel.png"
-                        alt=""></button>
-                    <button type="submit" class="submit-button-edit create-task-button">Edit Task <img
-                        class="submit-button-icon" src="../assets/icons/done.png" alt=""></button>
-                </div>
-            </div>
-        </form>
     `;
 
     checkActivatedPrioButton(id);

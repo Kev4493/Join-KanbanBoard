@@ -202,43 +202,46 @@ function openDetailTaskDialog(foo) {
 
 function renderDetailTasksDialog(id) {
     return /*html*/ `
-        <img onclick="closeDetailTaskDialog()" class="close-icon-dialog" src="../assets/icons/close_icon.png" alt="">
-        <div class="category-container-dialog ${allTasks[id]['category']}">
-            <p title="Category">${allTasks[id]['category']}</p>
-        </div>
-        <div class="title-container-dialog">
-            <p title="Title">${allTasks[id]['title']}</p>
-        </div>
-        <div class="description-container-dialog">
-            <p title="Description">${allTasks[id]['description']}</p>
-        </div>
-        <div class="due-date-container">
-            <p class="font-size-small bold mr1">Due Date:</p>
-            <p class="font-size-small">${allTasks[id]['dueDate']}</p>
-        </div>
-        <div class="priority-container">
-            <p class="font-size-small bold mr1">Priority:</p>
-            <p class="font-size-small prio-${allTasks[id]['prio']}">${allTasks[id]['prio']}</p>
-        </div>
-        <div class="assigned-to-container-dialog">
-            <p class="font-size-small bold">Assigned To:</p>
-            <div class="names-cnt">
-                <div class="assigned-to-circle ${allTasks[id]['assigned']}" title="Assigned to: ${allTasks[id]['assigned']}">
-                    <p>${allTasks[id]['assigned'].split(" ").map(word => word[0]).join("")}</p>
+        <div class="detail-task-cnt">
+            <img onclick="closeDetailTaskDialog()" class="close-icon-dialog" src="../assets/icons/close_icon.png" alt="">
+            <div class="category-container-dialog ${allTasks[id]['category']}">
+                <p title="Category">${allTasks[id]['category']}</p>
+            </div>
+            <div class="title-container-dialog">
+                <p title="Title">${allTasks[id]['title']}</p>
+            </div>
+            <div class="description-container-dialog">
+                <p title="Description">${allTasks[id]['description']}</p>
+            </div>
+            <div class="due-date-container">
+                <p class="font-size-small bold mr1">Due Date:</p>
+                <p class="font-size-small">${allTasks[id]['dueDate']}</p>
+            </div>
+            <div class="priority-container">
+                <p class="font-size-small bold mr1">Priority:</p>
+                <p class="font-size-small prio-${allTasks[id]['prio']}">${allTasks[id]['prio']}</p>
+            </div>
+            <div class="assigned-to-container-dialog">
+                <p class="font-size-small bold">Assigned To:</p>
+                <div class="names-cnt">
+                    <div class="assigned-to-circle ${allTasks[id]['assigned']}" title="Assigned to: ${allTasks[id]['assigned']}">
+                        <p>${allTasks[id]['assigned'].split(" ").map(word => word[0]).join("")}</p>
+                    </div>
+                    <div>
+                        <p class="font-size-small">${allTasks[id]['assigned']}</p>
+                    </div>
                 </div>
-                <div>
-                    <p class="font-size-small">${allTasks[id]['assigned']}</p>
+            </div>
+            <div class="edit-cnt">
+                <div class="delete">
+                    <img class="trash-icon-dialog" onclick="deleteTask(${allTasks[id].id})" src="../assets/icons/trash.png" alt="" title="Delete complete Task">
+                </div>
+                <div onclick="renderEditTaskDialog(${id})" class="edit">
+                    <img class="pencil-icon-dialog" src="../assets/icons/pencil.png" alt="" title="Edit Task">
                 </div>
             </div>
         </div>
-        <div class="edit-cnt">
-            <div class="delete">
-                <img class="trash-icon-dialog" onclick="deleteTask(${allTasks[id].id})" src="../assets/icons/trash.png" alt="" title="Delete complete Task">
-            </div>
-            <div onclick="renderEditTaskDialog(${id})" class="edit">
-                <img class="pencil-icon-dialog" src="../assets/icons/pencil.png" alt="" title="Edit Task">
-            </div>
-        </div>
+
     `
 }
 
