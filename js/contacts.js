@@ -181,6 +181,9 @@ function renderContactDetailsMobile(j) {
                     <p class="headline">Company</p>
                     <p class="company-name">${allContacts[j]['company']}</p>
                 </div>
+                <div class="contact-button-container">
+                    <input onclick="deleteContact(${j})" type="button" id="delete-button" class="d-none delete-contact-button-mobile" type="button" value="Delete Contact"></a>
+                </div>
             </div>
         `;
 

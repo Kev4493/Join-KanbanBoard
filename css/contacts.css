@@ -190,6 +190,13 @@
     border: 1px solid #2A3647;
 }
 
+.add-contact-icon {
+    width: 23px;
+    height: 23px;
+    margin-left: 1rem;
+    margin-bottom: 1px;
+}
+
 .delete-contact-button {
     background-color: white;
     height: 50px;
@@ -256,6 +263,8 @@
     flex-direction: column;
     justify-content: center;
     padding: 2rem;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
 }
 
 .headline-container-contact > p {
@@ -473,7 +482,7 @@ form {
         width: 100vw;
         padding-left: 5rem;
         padding-right: 5rem;
-        padding-top: 3rem;
+        padding-top: 5rem;
     }
 
     .contact-information > p {
@@ -501,7 +510,6 @@ form {
         background-color: rgba(0, 0, 0, 0.03);
         padding: 2rem;
         border-radius: 12px;
-        height: 100%;
     }
 
     .backwards-icon-cnt {
@@ -520,5 +528,106 @@ form {
     .backwards-icon-cnt:hover {
         background-color: rgba(0, 0, 0, 0.05);
         transition: all 0.125s ease-in-out;
+    }
+
+    .contact-button-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 8rem;
+    }
+
+    .delete-contact-button-mobile {
+        background-color: white;
+        height: 35px;
+        border: 1px solid #D1D1D1;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 0rem 1rem;
+        border: 1px solid #2A3647;
+    }
+
+    .add-contact-button-mobile {
+        background-color: #2A3647;
+        color: white;
+        height: 40px;
+        border: 1px solid #D1D1D1;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-left: 1rem;
+        display: flex;
+        align-items: center;
+        padding: 0rem 1rem;
+        border: 1px solid #2A3647;
+        position: absolute;
+        top: 7rem;
+        right: 3rem;
+    }
+
+    .new-contact-dialog {
+        width: unset;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headline-container-contact {
+        width: 100%;
+        border-top-right-radius: 12px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        align-items: center;
+        padding: 4rem;
+    }
+
+    .headline-container-contact > p {
+        border: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .close-container {
+        margin-bottom: 0;
+    }
+
+    .close-icon-dialog {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .user-pic-container {
+        position: absolute;
+        top: 10.5rem;
+        left: 8rem;
+        width: 100px;
+    }
+
+    .user-pic-container > img {
+        width: 100px;
+    }
+
+    .form-container {
+        margin-top: 2rem;
+        width: unset;
+    }
+
+    .delete-contact-button {
+        height: 35px;
+        margin-left: unset;
+    }
+
+    .add-contact-button {
+        height: 35px;
+    }
+}
+
+
+/* Ab einer mindestgröße von 769px passiert folgendes: */
+@media (min-width: 769px) {
+    .add-contact-button-mobile {
+        display: none;
     }
 }

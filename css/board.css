@@ -719,6 +719,10 @@ body {
         padding: 2rem 10%;
     }
 
+    .board-header > p {
+        display: none;
+    }
+
     .headline-container > h1 {
         font-size: 2rem;
     }
@@ -726,8 +730,9 @@ body {
     .task-status-container {
         flex-direction: column;
         overflow-y: scroll ;
-        height: 70vh;
-        margin-top: 4rem;
+        height: 73vh;
+        margin-top: 3rem;
+        border-radius: 12px;
     }
 
     .task-status-header > p {
@@ -762,6 +767,7 @@ body {
         min-height: 215px;
     }
 
+
     .description-container > p {
         height: 35px;
         width: unset;
@@ -776,11 +782,11 @@ body {
     }
 
     .add-task-button {
-        height: 50px;
+        height: 35px;
     }
 
     .task-search {
-        height: 50px;
+        height: 35px;
     }
 
     .add-task-dialog {
