@@ -52,3 +52,15 @@
         width: 55px;
     }
 }
+
+@media (min-width: 426px) {
+    .logo-container {
+        display: none;
+    }
+}
+
+@media (max-width: 425px) {
+    .logo-container > img {
+        width: 35px;
+    }
+}

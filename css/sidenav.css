@@ -101,3 +101,21 @@
         font-size: 0.9rem;
     }
 }
+
+@media (max-width: 425px) {
+    .sidenav-container {
+        display: none;
+    }
+
+    .header-container {
+        border-left: unset;
+    }
+
+    .headline-container > p {
+        display: none;
+    }
+
+    .questionmark-icon {
+        display: none;
+    }
+}
