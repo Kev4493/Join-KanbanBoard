@@ -106,12 +106,13 @@ body {
 
 .task {
     width: 80%;
-    min-height: 250px;
+    min-height: 260px;
     background-color: white;
     margin-bottom: 2rem;
     border-radius: 30px;
     padding: 1rem;
     border: 1px solid white;
+    box-shadow: 10px 15px 16px rgb(0 0 0 / 30%);
 }
 
 .task:hover {
@@ -240,21 +241,36 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: lightDown 225ms ease-in-out;
+}
+
+@keyframes lightDown {
+    0% {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.93);
+    }
 }
 
 .detail-task-dialog {
-    /* width: 460px; */
-    /* min-width: 315px; */
-    /* height: 420px; */
-    padding: 3rem;
-    /* background-color: #F5F5F5; */
+    padding: 2rem;
     background-color: #2A3647;
-    /* border: 1px solid lightgray; */
     border-radius: 50px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     position: relative;
+    animation: fly 225ms ease-in-out;
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(-1080px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .detail-task-cnt {
@@ -263,6 +279,7 @@ body {
     padding: 2rem;
     height: 500px;
     border-radius: 30px;
+    box-shadow: 10px 15px 35px rgb(0 0 0 / 48%);
 }
 
 .edit-task-cnt {
@@ -276,8 +293,8 @@ body {
     position: absolute;
     width: 30px;
     height: 30px;
-    top: 1rem;
-    right: 1.5rem;
+    top: -20px;
+    right: -20px;
     cursor: pointer;
     border-radius: 50%;
     transition: all 0.125s ease-in-out;
@@ -311,6 +328,11 @@ body {
     margin-top: 0.5rem;
     font-size: 0.8rem;
     color: rgba(0, 0, 0, 0.5);
+}
+
+.description-container-dialog > p {
+    height: 50px;
+    overflow-y: scroll;
 }
 
 .due-date-container {
@@ -379,7 +401,7 @@ body {
 }
 
 .edit-cnt {
-    margin-top: 5rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -395,6 +417,18 @@ body {
     align-items: center;
     cursor: pointer;
     border-radius: 10px;
+}
+
+.edit {
+    position: absolute;
+    bottom: 3rem;
+    right: 4rem;
+}
+
+.delete {
+    position: absolute;
+    bottom: 3rem;
+    left: 4rem;
 }
 
 .edit:hover, .delete:hover{
@@ -508,26 +542,30 @@ body {
     }
 
     .category-container-dialog > p {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     .title-container-dialog {
-        font-size: 1.3rem;
+        /* font-size: 1.3rem; */
         margin-top: 2rem;
     }
 
+    .title-container-dialog > p {
+        font-size: 2.5rem;
+    }
+
     .description-container-dialog {
-        font-size: 1.3rem;
         margin-top: 1rem;
     }
 
     .description-container-dialog > p {
         width: 500px;
         min-height: 100px;
+        font-size: 1.3rem;
     }
 
     .due-date-container {
-        margin-top: 2rem;
+        margin-top: 4rem;
     }
 
     .priority-container {
@@ -552,8 +590,10 @@ body {
     }
 
     .delete {
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
+        bottom: 7rem;
+        left: 7rem;
     }
 
     .trash-icon-dialog {
@@ -563,8 +603,10 @@ body {
     }
 
     .edit {
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
+        bottom: 7rem;
+        right: 7rem;
     }
 
     .pencil-icon-dialog {
@@ -574,8 +616,10 @@ body {
     }
 
     .close-icon-dialog {
-        width: 35px;
-        height: 35px;
+        width: 45px;
+        height: 45px;
+        top: -50px;
+        right: -50px;
     }
 
     label {
@@ -627,6 +671,19 @@ body {
     .add-task-dialog {
         height: 60vh;
         width: 61vw;
+    }
+
+    .detail-task-cnt {
+        width: 600px;
+        height: 850px;
+    }
+
+    .edit-task-cnt {
+        width: 600px;
+    }
+
+    .detail-task-dialog {
+        padding: 4rem;
     }
 }
 
