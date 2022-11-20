@@ -415,3 +415,25 @@
         height: 40px;
     }
 }
+
+@media (max-width: 425px) {
+    .summary-container {
+        padding: 2rem 5%;
+    }
+
+    .summary-header > h1 {
+        padding-right: 1rem;
+    }
+
+    .summary-header > p {
+        padding-left: 1rem;
+    }
+    
+    .number-in-box {
+        font-size: 2rem;
+    }
+
+    .urgent-box {
+        padding: 1rem;
+    }
+}

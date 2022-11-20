@@ -894,3 +894,36 @@ body {
     }
 
 }
+
+@media (max-width: 425px) {
+    .add-task-button {
+        display: none;
+    }
+
+    .task-status-container {
+        margin-top: 2rem;
+    }
+
+    .add-task-button-mobile {
+        background-color: #2A3647;
+        color: white;
+        display: flex;
+        align-items: center;
+        height: 35px;
+        padding: 1rem;
+        border-radius: 10px;
+        margin-left: 1rem;
+        border: 1px solid #2A3647;
+        cursor: pointer;
+    }
+
+    .add-task-button-mobile > .add-icon {
+        margin-left: unset;
+    }
+}
+
+@media (min-width:426px) {
+    .add-task-button-mobile {
+        display: none;
+    }
+}

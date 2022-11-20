@@ -11,6 +11,9 @@ async function initHome() {
 
 function activeHomeNavLink() {
     document.getElementById('home-link').classList.add('active-link')
+    document.getElementById('home-link-mobile').classList.add('active-link')
+
+
 }
 
 

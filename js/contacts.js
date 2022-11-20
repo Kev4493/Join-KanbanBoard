@@ -231,7 +231,8 @@ function getRandomColor() {
 
 
 function activeContactsNavLink() {
-    document.getElementById('contacts-link').classList.add('active-link')
+    document.getElementById('contacts-link').classList.add('active-link');
+    document.getElementById('contacts-link-mobile').classList.add('active-link');
 }
 
 

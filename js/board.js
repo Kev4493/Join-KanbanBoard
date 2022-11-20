@@ -130,7 +130,8 @@ function closeAddTaskDialog() {
 
 
 function activeBoardNavLink() {
-    document.getElementById('board-link').classList.add('active-link')
+    document.getElementById('board-link').classList.add('active-link');
+    document.getElementById('board-link-mobile').classList.add('active-link');
 };
 
 

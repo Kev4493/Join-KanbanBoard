@@ -183,6 +183,16 @@ hr {
 .create-task-button {
     background-color: #2A3647;
     color: white;
+
+    height: 50px;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 0rem 1rem;
+    border: 1px solid #2A3647;
 }
 
 .submit-button-icon {
@@ -283,4 +293,58 @@ hr {
         font-size: 2rem;
     }
 
+}
+
+@media (max-width: 425px) {
+    hr {
+        display: none;
+    }
+
+    .form-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .add-task-container {
+        padding: 2rem 5%;
+        position: relative;
+    }
+
+    .headline {
+        margin-bottom: 0rem;
+    }
+
+    .left-form-container {
+        width: 100%;
+    }
+
+    .right-form-container {
+        width: 100%;
+    }
+
+    label {
+        margin-top: 1.5rem;
+    }
+
+    .button-container {
+        flex-direction: row;
+    }
+
+    .submit-container {
+        margin-top: 1rem;
+    }
+
+    .submit-button {
+        display: none;
+    }
+
+    .create-task-button {
+        position: absolute;
+        top: 2rem;
+        height: 40px;
+    }
+
+    .prio-button {
+        margin-bottom: unset;
+    }
 }

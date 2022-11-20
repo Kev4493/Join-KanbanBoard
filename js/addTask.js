@@ -125,7 +125,8 @@ function addTaskPrio() {
 
 
 function activeAddTaskNavLink() {
-    document.getElementById('addtask-link').classList.add('active-link')
+    document.getElementById('addtask-link').classList.add('active-link');
+    document.getElementById('addtask-link-mobile').classList.add('active-link');
 }
 
 

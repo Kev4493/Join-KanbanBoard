@@ -112,7 +112,8 @@ function showNearestUrgentDate() {
 }
 
 function activeSummaryNavLink() {
-    document.getElementById('summary-link').classList.add('active-link')
+    document.getElementById('summary-link').classList.add('active-link');
+    document.getElementById('summary-link-mobile').classList.add('active-link');
 }
 
 
