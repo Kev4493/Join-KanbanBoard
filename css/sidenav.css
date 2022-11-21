@@ -97,16 +97,17 @@
 
 @media (max-width: 768px) {
     .sidenav-container {
-        width: 190px;
+        /* width: 190px; */
     }
 
     .nav-link {
-        padding: 1rem 2rem;
-        font-size: 0.9rem;
+        /* padding: 1rem 2rem; */
+        /* font-size: 0.9rem; */
     }
 }
 
-@media (max-width: 425px) {
+/* 425 PX */
+@media (max-width: 600px) {
     .sidenav-container {
         display: none;
     }
@@ -149,7 +150,8 @@
     }
 }
 
-@media (min-width: 426px) {
+/* 426 PX */
+@media (min-width: 601px) {
     .nav-mobile {
         display: none;
     }

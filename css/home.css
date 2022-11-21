@@ -184,6 +184,7 @@
     }
 }
 
+/* 425 Px */
 @media (max-width: 425px) {
     .home-container {
         padding: 2rem 5%;
@@ -198,13 +199,9 @@
     }
 }
 
-@media (max-width: 375px) {
-    .greeting > p {
-        font-size: 1.3rem;
-    }
-}
+/* 375 px */
 
-@media (max-width: 320px) {
+@media (max-width: 376px) {
     .home-header > p {
         font-size: 0.8rem;
         padding-left: 1rem;

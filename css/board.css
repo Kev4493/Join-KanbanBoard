@@ -826,7 +826,7 @@ body {
     .task-status-container {
         flex-direction: column;
         overflow-y: scroll ;
-        height: 73vh;
+        height: 79vh;
         margin-top: 3rem;
         border-radius: 12px;
     }
@@ -895,13 +895,9 @@ body {
 
 }
 
-@media (max-width: 425px) {
+@media (max-width: 634px) {
     .add-task-button {
         display: none;
-    }
-
-    .task-status-container {
-        margin-top: 2rem;
     }
 
     .add-task-button-mobile {
@@ -920,10 +916,51 @@ body {
     .add-task-button-mobile > .add-icon {
         margin-left: unset;
     }
+}
+
+@media (min-width:635px) {
+    .add-task-button-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .task-status-container {
+        height: 73vh;
+    }
+}
+
+@media (max-width: 425px) {
+    /* .add-task-button {
+        display: none;
+    }
+
+    .task-status-container {
+        margin-top: 2rem;
+    }
+
+    .add-task-button-mobile {
+        background-color: #2A3647;
+        color: white;
+        display: flex;
+        align-items: center;
+        height: 35px;
+        padding: 1rem;
+        border-radius: 10px;
+        margin-left: 1rem;
+        border: 1px solid #2A3647;
+        cursor: pointer;
+    } */
+
+    .add-task-button-mobile > .add-icon {
+        margin-left: unset;
+    }
 
     .detail-task-dialog-bg {
         background-color: unset;
         animation: unset;
+        top: 75px;
+        bottom: 75px;
     }
 
     .detail-task-dialog {
@@ -969,17 +1006,12 @@ body {
 
 }
 
-@media (max-width: 375px) {
+@media (max-width: 400px) {
     .task-search {
         display: none;
     }
 }
 
-@media (min-width:426px) {
-    .add-task-button-mobile {
-        display: none;
-    }
-}
 
 @media (max-width: 320px) {
     .task {
@@ -987,7 +1019,7 @@ body {
     }
 
     .submit-button-edit {
-        height: 35px;
+        /* height: 35px; */
     }
 
     .detail-task-cnt {

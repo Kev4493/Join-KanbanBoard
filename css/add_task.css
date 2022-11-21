@@ -326,7 +326,7 @@ hr {
 
 }
 
-@media (max-width: 425px) {
+@media (max-width: 500px) {
     hr {
         display: none;
     }
@@ -358,7 +358,7 @@ hr {
     }
 
     .button-container {
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .submit-container {
@@ -376,7 +376,7 @@ hr {
     }
 
     .prio-button {
-        margin-bottom: unset;
+        margin-bottom: 1rem;
     }
 
     .submit-container-edit-task {
@@ -384,10 +384,10 @@ hr {
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 350px) {
 
     .submit-container-edit-task {
-        margin-top: 3rem;
+        /* margin-top: 3rem; */
     }
 
     .prio-button {
@@ -395,11 +395,11 @@ hr {
     }
 
     .submit-container-edit-task {
-        margin-top: 7rem;
+        /* margin-top: 7rem; */
     }
 
     .create-task-button-dialog {
-        height: 35px;
+        /* height: 35px; */
     }
 
     .create-task-button > p {

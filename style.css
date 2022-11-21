@@ -130,11 +130,13 @@ body {
     background-color: lightgreen;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 600px) {
     .right-main-container {
         height: 100vh;
     }
+}
 
+@media (max-width: 425px) {
     .font-size-small {
         font-size: 1rem;
     }
