@@ -195,6 +195,21 @@ hr {
     border: 1px solid #2A3647;
 }
 
+.create-task-button-dialog {
+    background-color: #2A3647;
+    color: white;
+
+    height: 50px;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 0rem 1rem;
+    border: 1px solid #2A3647;
+}
+
 .submit-button-icon {
     margin-left: 1rem;
     width: 15px;
@@ -271,6 +286,22 @@ hr {
         margin-bottom: 1rem;
         width: 100% !important;
     }
+
+    label {
+        margin-top: 1rem;
+    }
+
+    .add-task-inputfield {
+        height: 35px;
+    }
+
+    .prio-button {
+        height: 35px;
+    }
+
+    .submit-container-edit-task {
+        margin-top: 1rem;
+    }
 }
 
 @media (max-width: 881px) {
@@ -346,5 +377,36 @@ hr {
 
     .prio-button {
         margin-bottom: unset;
+    }
+
+    .submit-container-edit-task {
+        margin-top: 5rem;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .submit-container-edit-task {
+        margin-top: 3rem;
+    }
+
+    .prio-button {
+        margin-bottom: 1rem;
+    }
+
+    .submit-container-edit-task {
+        margin-top: 7rem;
+    }
+
+    .create-task-button-dialog {
+        height: 35px;
+    }
+
+    .create-task-button > p {
+        display: none;
+    }
+
+    .ml0 {
+        margin-left: unset;
     }
 }

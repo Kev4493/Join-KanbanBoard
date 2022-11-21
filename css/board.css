@@ -920,10 +920,87 @@ body {
     .add-task-button-mobile > .add-icon {
         margin-left: unset;
     }
+
+    .detail-task-dialog-bg {
+        background-color: unset;
+        animation: unset;
+    }
+
+    .detail-task-dialog {
+        padding: unset;
+    }
+
+    .edit-task-cnt {
+        width: 100vw;
+        height: 83vh;
+        border-radius: unset;
+    }
+
+    .close-icon-dialog {
+        top: 15px;
+        right: 25px;
+        filter: unset;
+    }
+
+    .detail-task-cnt {
+        width: 100vw;
+        height: 83vh;
+        border-radius: 0;
+        padding: 3rem;
+    }
+
+    .category-container-dialog {
+        font-size: 1rem;
+    }
+
+    .description-container-dialog {
+        font-size: 1rem;
+    }
+
+    .trash-icon-dialog {
+        width: 30px;
+        height: 30px;
+    }
+
+    .edit, .delete {
+        width: 50px;
+        height: 50px;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .task-search {
+        display: none;
+    }
 }
 
 @media (min-width:426px) {
     .add-task-button-mobile {
         display: none;
     }
+}
+
+@media (max-width: 320px) {
+    .task {
+        width: 250px;
+    }
+
+    .submit-button-edit {
+        height: 35px;
+    }
+
+    .detail-task-cnt {
+        box-shadow: unset;
+    }
+
+    .detail-task-dialog-bg {
+        top: 75px;
+        bottom: 75px;
+    }
+
+    .edit-task-cnt {
+        padding: 2rem 5%;
+    }
+
 }

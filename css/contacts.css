@@ -733,6 +733,8 @@ form {
     .contacts-nav {
         padding-top: 0;
         padding-bottom: 2rem;
+        padding-left: 5%;
+        padding-right: 5%;
         margin-top: 0;
         height: 76vh;
     }
@@ -740,7 +742,55 @@ form {
     .add-contact-btn-mobile-container {
         display: flex;
         justify-content: flex-end;
-        margin-top: 1rem;
-        margin-right: 1rem;
+        margin: 1rem;
+    }
+
+    .contacts-name {
+        width: 185px;
+    }
+}
+
+@media (max-width: 320px) {
+    .contact-information > p {
+        font-size: 0.8rem;
+    }
+
+    .contact-circle {
+        width: 35px;
+        height: 35px;
+    }
+
+    .headline-container-contact {
+        padding: 2rem;
+    }
+
+    .headline-container-contact > h1 {
+        font-size: 1.5rem;
+    }
+
+    .user-pic-container > img {
+        width: 60px;
+    }
+
+    .user-pic-container {
+        top: 7.5rem;
+        left: 8rem;
+    }
+
+    .contact-name {
+        width: 104px;
+    }
+
+    .contact-circle-container {
+        width: 40px;
+        height: 40px;
+    }
+
+    .initials {
+        font-size: 1rem;
+    }
+
+    .contact-name {
+        font-size: 1rem;
     }
 }

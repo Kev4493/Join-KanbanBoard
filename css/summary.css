@@ -437,3 +437,90 @@
         padding: 1rem;
     }
 }
+
+@media (max-width: 375px) {
+    .number-in-box {
+        font-size: 1.5rem;
+    }
+
+    .summary-box {
+        padding: 0.5rem;
+        width: 105px;
+        height: 105px;
+    }
+
+    .urgent-box {
+        padding: 0.5rem;
+    }
+
+    .number-in-urgent-box {
+        font-size: 1.5rem;
+    }
+
+    .todo-number, .done-number {
+        font-size: 1.5rem;
+    }
+
+    .todo-text {
+        font-size: 0.8rem;
+    }
+
+    .done-text {
+        font-size: 0.8rem;
+    }
+
+    .todo-container, .done-container {
+        width: 150px;
+    }
+
+    .todo-text-container, .done-text-container {
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .summary-header > p {
+        font-size: 0.8rem;
+    }
+
+    .summary-box {
+        width: 90px;
+        height: 90px;
+    }
+
+    .number-in-box {
+        font-size: 1rem;
+    }
+
+    .urgent-box {
+        height: 90px;
+    }
+
+    .number-in-urgent-box {
+        font-size: 1rem;
+    }
+
+    .urgent-box-left > img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .todo-container, .done-container {
+        width: 125px;
+        height: 90px;
+    }
+
+    .todo-number, .done-number {
+        font-size: 1rem;
+    }
+
+    .todo-container > img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .done-container > img {
+        width: 30px;
+        height: 30px;
+    }
+}

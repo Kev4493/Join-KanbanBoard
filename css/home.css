@@ -197,3 +197,43 @@
         margin-top: 5rem;
     }
 }
+
+@media (max-width: 375px) {
+    .greeting > p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .home-header > p {
+        font-size: 0.8rem;
+        padding-left: 1rem;
+    }
+
+    .home-header > h1 {
+        padding-right: 1rem;
+    }
+
+    .time > p {
+        font-size: 3rem;
+    }
+
+    .greeting > p {
+        font-size: 1rem;
+    }
+
+    .btn-container {
+        flex-direction: column;
+    }
+
+    .create-task-button-home {
+        margin-top: 1rem;
+        height: 40px;
+        margin-left: unset;
+    }
+
+    .submit-button-home {
+        height: 40px;
+        margin-left: unset;
+    }
+}
