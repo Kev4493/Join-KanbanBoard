@@ -9,20 +9,12 @@
 }
 
 .logo {
-    animation: moveLogo 1s ease-in-out;
-    animation-fill-mode: forwards;
     position: absolute;
+    top: 3rem;
+    left: 3rem;
+    width: 80px;
 }
 
-@keyframes moveLogo {
-    0% {
-    transform: translate(0px, 0px);
-    }
-    100% {
-        transform: translate(-715px, -360px);
-        width: 100px;
-    }
-}
 
 .signup-box {
     display: flex;
@@ -36,13 +28,14 @@
     padding: 2rem;
     width: 600px;
     background-color: white;
-    border-radius: 12px;
+    border-radius: 30px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    box-shadow: 0px 0px 14px 3px rgb(0 0 0 / 4%);
 }
 
-.log-in-box > h1 {
+.log-in-box>h1 {
     font-size: 3rem;
 }
 
@@ -78,7 +71,7 @@ form {
     height: 50px;
     padding: 0rem 1rem;
     border-radius: 10px;
-    margin-left: 1rem;
+    margin-left: 2rem;
     border: 1px solid #2A3647;
     cursor: pointer;
 }
@@ -131,5 +124,3 @@ form {
     width: 120px;
     justify-content: center;
 }
-
-

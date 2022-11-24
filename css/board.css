@@ -369,6 +369,10 @@ body {
     overflow-y: scroll;
 }
 
+.description-container-dialog>p::-webkit-scrollbar {
+    display: none;
+}
+
 .due-date-container {
     margin-top: 1.5rem;
     display: flex;
