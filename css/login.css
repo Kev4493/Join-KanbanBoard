@@ -15,7 +15,6 @@
     width: 80px;
 }
 
-
 .signup-box {
     display: flex;
     align-items: center;
@@ -52,15 +51,31 @@ form {
     flex-direction: column;
 }
 
+.input-cnt {
+    position: relative;
+}
+
 .login-input {
     border: 1px solid #D1D1D1;
     width: 350px;
     height: 40px;
     border-radius: 10px;
-    padding: 0 1rem;
+    padding: 0rem 3rem 0rem 1rem;
     display: flex;
     align-items: center;
     margin-top: 2rem;
+}
+
+.mail-icon {
+    position: absolute;
+    top: 42px;
+    right: 15px;
+}
+
+.lock-icon {
+    position: absolute;
+    top: 42px;
+    right: 15px;
 }
 
 .sign-up-btn {
@@ -83,11 +98,17 @@ form {
 
 .checkbox {
     margin-right: 1rem;
+    cursor: pointer;
 }
 
-.remember {
+.account-settings-container > p:first-of-type {
     margin-right: 2rem;
 }
+
+.account-settings-container > p:last-of-type {
+    cursor: pointer;
+}
+
 
 .btn-cnt {
     display: flex;
