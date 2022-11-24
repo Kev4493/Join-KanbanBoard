@@ -708,6 +708,32 @@ form {
     .add-contact-button-mobile {
         display: none;
     }
+
+    .contact-details-container-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 940px) {
+    .contact-details-mobile {
+        left: 150px;
+        height: unset;
+    }
+
+    .contact-details-container-mobile {
+        height: 100%;
+    }
+
+    .backwards-icon-cnt {
+        top: 0rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-details-mobile {
+        left: 0;
+        bottom: 75px;
+    }
 }
 
 @media (max-width: 425px) {

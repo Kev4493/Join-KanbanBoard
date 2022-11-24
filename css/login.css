@@ -1,0 +1,135 @@
+.log-in-container {
+    width: 100vw;
+    height: 100vh;
+    padding: 3rem 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F5F5;
+}
+
+.logo {
+    animation: moveLogo 1s ease-in-out;
+    animation-fill-mode: forwards;
+    position: absolute;
+}
+
+@keyframes moveLogo {
+    0% {
+    transform: translate(0px, 0px);
+    }
+    100% {
+        transform: translate(-715px, -360px);
+        width: 100px;
+    }
+}
+
+.signup-box {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 3rem;
+    right: 5%;
+}
+
+.log-in-box {
+    padding: 2rem;
+    width: 600px;
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.log-in-box > h1 {
+    font-size: 3rem;
+}
+
+hr {
+    width: 100px;
+    height: 4px;
+    background-color: #29ABE2;
+    border: none;
+    margin-top: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-input {
+    border: 1px solid #D1D1D1;
+    width: 350px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.sign-up-btn {
+    background-color: #2A3647;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0rem 1rem;
+    border-radius: 10px;
+    margin-left: 1rem;
+    border: 1px solid #2A3647;
+    cursor: pointer;
+}
+
+.account-settings-container {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.checkbox {
+    margin-right: 1rem;
+}
+
+.remember {
+    margin-right: 2rem;
+}
+
+.btn-cnt {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.login-btn {
+    background-color: #2A3647;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0rem 1rem;
+    border-radius: 10px;
+    margin-left: 1rem;
+    border: 1px solid #2A3647;
+    cursor: pointer;
+    width: 120px;
+    justify-content: center;
+}
+
+.guest-login-btn {
+    background-color: white;
+    color: #2A3647;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0rem 1rem;
+    border-radius: 10px;
+    margin-left: 1rem;
+    border: 1px solid #2A3647;
+    cursor: pointer;
+    width: 120px;
+    justify-content: center;
+}
+
+
