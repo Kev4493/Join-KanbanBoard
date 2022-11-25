@@ -17,7 +17,7 @@
         <script src="./js/login.js"></script>
     </head>
 
-    <body onload="init()">
+    <body onload="initLogin()">
         <div class="log-in-container">
             <img class="logo" src="/assets/img/big-logo.png" alt="">
             <div class="signup-box">
@@ -30,12 +30,12 @@
                 <hr>
                 <form action="">
                     <div class="input-cnt">
-                        <input class="login-input" type="email" placeholder="Email">
+                        <input id="login-mail" class="login-input" type="email" placeholder="Email">
                         <img class="mail-icon" src="/assets/icons/mail-icon.png" alt="">
                     </div>
 
                     <div class="input-cnt">
-                        <input class="login-input" type="password" placeholder="Password">
+                        <input id="login-password" class="login-input" type="password" placeholder="Password">
                         <img class="lock-icon" src="/assets/icons/lock-icon.png" alt="">
                     </div>
 
@@ -45,7 +45,7 @@
                         <p>Forgot my password</p>
                     </div>
                     <div class="btn-cnt">
-                        <button class="login-btn"><p>Log in</p></button>
+                        <button type="submit" class="login-btn"><p>Log in</p></button>
                         <button class="guest-login-btn"><p>Guest Log in</p></button>
                     </div>
                 </form>
@@ -55,27 +55,31 @@
                 <img onclick="closeSignUpDialog()" class="close-icon" src="/assets/icons/close_icon.png" alt="">
                 <h1>Sign up</h1>
                 <hr>
-                <form action="">
+                <form onsubmit="signUp(); return false;">
                     <div class="input-cnt">
-                        <input class="login-input" type="email" placeholder="Name">
+                        <input id="signup-name" class="login-input" type="text" placeholder="Name" required>
                         <img class="mail-icon" src="/assets/icons/name-icon.png" alt="">
                     </div>
 
                     <div class="input-cnt">
-                        <input class="login-input" type="email" placeholder="Email">
+                        <input id="signup-mail" class="login-input" type="email" placeholder="Email" required>
                         <img class="mail-icon" src="/assets/icons/mail-icon.png" alt="">
                     </div>
 
                     <div class="input-cnt">
-                        <input class="login-input" type="password" placeholder="Password">
+                        <input id="signup-password" class="login-input" type="password" placeholder="Password" required>
                         <img class="lock-icon" src="/assets/icons/lock-icon.png" alt="">
                     </div>
 
 
                     <div class="btn-cnt">
-                        <button class="login-btn"><p>Register</p></button>
+                        <button type="submit" class="login-btn"><p>Register</p></button>
                     </div>
                 </form>
+            </div>
+            <!-- === Notification Dialog === -->
+            <div id="notification" class="notification-cnt d-none">
+                <p>successfully signed up</p>
             </div>
         </div>
     </body>

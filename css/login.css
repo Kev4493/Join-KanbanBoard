@@ -118,11 +118,11 @@ form {
     cursor: pointer;
 }
 
-.account-settings-container > p:first-of-type {
+.account-settings-container>p:first-of-type {
     margin-right: 2rem;
 }
 
-.account-settings-container > p:last-of-type {
+.account-settings-container>p:last-of-type {
     cursor: pointer;
 }
 
@@ -161,4 +161,30 @@ form {
     cursor: pointer;
     width: 120px;
     justify-content: center;
+}
+
+.notification-cnt {
+    background-color: #2A3647;
+    color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    position: absolute;
+    bottom: 2rem;
+
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
 }
