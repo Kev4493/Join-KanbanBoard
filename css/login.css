@@ -188,3 +188,40 @@ form {
         transform: none;
     }
 }
+
+.wrong-email {
+    border: 2px solid red;
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.wrong-password {
+    border: 2px solid red;
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.correct-email {
+    border: 2px solid green;
+}
+
+.correct-password {
+    border: 2px solid green;
+}
+
+
+@keyframes shake {
+    0%, 100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    10%, 30%, 50%, 70%, 90% {
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    20%, 40%, 60%, 80% {
+        transform: translate3d(10px, 0, 0);
+    }
+}

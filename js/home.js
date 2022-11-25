@@ -31,6 +31,7 @@ function greetingUsers() {
     }
 
     document.getElementById('welcome-text').innerHTML = greetingMessage;
+    // document.getElementById('welcome-name').innerHTML = `<p>${currentUser}</p>`;
 
     // setCurrentDate();
     setCurrentTime();

@@ -5,7 +5,8 @@ async function initLogin() {
 }
 
 
-let users = [];
+let allUsers = [];
+let currentUser;
 
 
 function openSignUpDialog() {
@@ -37,7 +38,7 @@ async function signUp() {
         'password': password.value
     };
 
-    users.push(user);
+    allUsers.push(user);
     await saveAllUsers();
 
     name.value = '';
@@ -50,17 +51,17 @@ async function signUp() {
 
 
 async function saveAllUsers() {
-    await backend.setItem('users', JSON.stringify(users));
+    await backend.setItem('allUsers', JSON.stringify(allUsers));
 }
 
 
 async function loadAllUsers() {
     await downloadFromServer();
-    users = JSON.parse(backend.getItem('users')) || [];
+    allUsers = JSON.parse(backend.getItem('allUsers')) || [];
 }
 
 async function deleteAllUsers() {
-    await backend.deleteItem('users');
+    await backend.deleteItem('allUsers');
 }
 
 
@@ -70,4 +71,35 @@ function signUpNotification() {
     setTimeout(function () {
         document.getElementById('notification').classList.add('d-none')
     }, 3000)
+}
+
+
+function logIn() {
+    let email = document.getElementById('login-mail');
+    let password = document.getElementById('login-password');
+    let user = allUsers.find(u => u.email == email.value && u.password == password.value);
+
+    for (let i = 0; i < allUsers.length; i++) {
+
+        if (email.value == allUsers[i].email && password.value == allUsers[i].password) {
+            console.log(allUsers[i].name);
+            window.location.href = '/html/home.html';
+        } else {
+            if (email.value == allUsers[i].email) {
+                // email.style.borderColor = 'green'
+                email.classList.add('correct-email')
+            } else {
+                // email.style.borderColor = 'red'
+                email.classList.add('wrong-email')
+            } if (password.value == allUsers[i].password) {
+                // password.style.borderColor = 'green'
+                password.classList.add('correct-password')
+            } else {
+                // password.style.borderColor = 'red'
+                password.classList.add('wrong-password')
+            }
+        }
+
+
+    }
 }

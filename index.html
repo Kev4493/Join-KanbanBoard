@@ -28,14 +28,14 @@
             <div id="log-in-box" class="log-in-box">
                 <h1>Log in</h1>
                 <hr>
-                <form action="">
+                <form onsubmit="logIn(); return false;">
                     <div class="input-cnt">
-                        <input id="login-mail" class="login-input" type="email" placeholder="Email">
+                        <input id="login-mail" class="login-input" type="email" placeholder="Email" required>
                         <img class="mail-icon" src="/assets/icons/mail-icon.png" alt="">
                     </div>
 
                     <div class="input-cnt">
-                        <input id="login-password" class="login-input" type="password" placeholder="Password">
+                        <input id="login-password" class="login-input" type="password" placeholder="Password" required>
                         <img class="lock-icon" src="/assets/icons/lock-icon.png" alt="">
                     </div>
 
