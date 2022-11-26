@@ -10,7 +10,13 @@
 
     <div class="icon-container">
         <img class="questionmark-icon" src="../assets/icons/questionmark.png" alt="">
-        <img class="profile" src="../assets/img/profilbild.JPG" alt="">
+        <img onclick="showLogOutDialog()" class="profile" src="../assets/img/profilbild.JPG" alt="">
+    </div>
+
+    <div id="dialog" class="logout-dialog d-none">
+        <a class="help" href="/html/help.html"><p>Help</p></a>
+        <a class="legal-notice" href="/html/legal-notice.html"><p>Legal notice</p></a>
+        <a href="/index.html"><p>Log Out</p></a>
     </div>
 
 </div>

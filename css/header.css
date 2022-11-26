@@ -7,6 +7,7 @@
     align-items: center;
     padding: 0 5%;
     border-left: 2px solid whitesmoke;
+    position: relative;
 }
 
 .icon-container {
@@ -33,6 +34,29 @@
     cursor: pointer;
 }
 
+.logout-dialog {
+    background-color: #2A3647;
+    color: white;
+    padding: 0.5rem;
+    position: absolute;
+    right: 100px;
+    bottom: -50px;
+    display: flex;
+    flex-direction: column;
+    width: 115px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    cursor: pointer;
+}
+
+.logout-dialog > a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.5rem;
+}
+
 @media (min-width: 2560px) {
     .header-container {
         padding: 0 5%;
@@ -51,11 +75,60 @@
     .questionmark-icon {
         width: 55px;
     }
+
+    .logout-dialog > a {
+        font-size: 1.5rem;
+    }
+
+    .logout-dialog {
+        right: 135px;
+        bottom: -70px;
+        width: 150px;
+    }
+}
+
+@media (max-width:1440px) {
+    .logout-dialog {
+        right: 85px;
+    }
+}
+
+@media (max-width:1024px) {
+    .logout-dialog {
+        right: 65px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logout-dialog {
+        right: 50px;
+    }
+}
+
+@media (max-width:600px) {
+    .logout-dialog {
+        right: 40px;
+        bottom: -116px;
+    }
+}
+
+@media (max-width: 425px) {
+
+}
+
+@media (max-width: 320px) {
+    .logout-dialog {
+        right: 30px;
+    }
 }
 
 /* 426 PX */
 @media (min-width: 601px) {
     .logo-container {
+        display: none;
+    }
+
+    .help, .legal-notice {
         display: none;
     }
 }

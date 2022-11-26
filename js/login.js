@@ -82,24 +82,21 @@ function logIn() {
     for (let i = 0; i < allUsers.length; i++) {
 
         if (email.value == allUsers[i].email && password.value == allUsers[i].password) {
-            console.log(allUsers[i].name);
+            console.log('user found:', allUsers[i].name);
+            email.classList.remove('wrong-email')
+            password.classList.remove('wrong-password')
+            email.classList.add('correct-email')
+            password.classList.add('correct-password')
             window.location.href = '/html/home.html';
         } else {
-            if (email.value == allUsers[i].email) {
-                // email.style.borderColor = 'green'
-                email.classList.add('correct-email')
-            } else {
-                // email.style.borderColor = 'red'
-                email.classList.add('wrong-email')
-            } if (password.value == allUsers[i].password) {
-                // password.style.borderColor = 'green'
-                password.classList.add('correct-password')
-            } else {
-                // password.style.borderColor = 'red'
-                password.classList.add('wrong-password')
-            }
+            email.classList.add('wrong-email')
+            password.classList.add('wrong-password')
+            email.classList.remove('correct-email')
+            password.classList.remove('correct-password')
         }
 
 
     }
 }
+
+
