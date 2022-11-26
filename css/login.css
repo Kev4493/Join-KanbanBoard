@@ -113,14 +113,16 @@ form {
     margin-top: 2rem;
 }
 
+.remember-cnt {
+    display: flex;
+    margin-right: 2rem;
+}
+
 .checkbox {
     margin-right: 1rem;
     cursor: pointer;
 }
 
-.account-settings-container>p:first-of-type {
-    margin-right: 2rem;
-}
 
 .account-settings-container>p:last-of-type {
     cursor: pointer;
@@ -235,7 +237,7 @@ form {
         font-size: 1.5rem;
     }
 
-    .signup-box > p {
+    .signup-box>p {
         font-size: 1.5rem;
     }
 
@@ -243,7 +245,7 @@ form {
         width: 830px;
     }
 
-    .log-in-box > h1 {
+    .log-in-box>h1 {
         font-size: 3.5rem;
     }
 
@@ -262,11 +264,11 @@ form {
         top: 54px;
     }
 
-    .account-settings-container{
+    .account-settings-container {
         margin-top: 3rem;
     }
 
-    .account-settings-container > p {
+    .account-settings-container>p {
         font-size: 1.2rem;
     }
 
@@ -274,7 +276,7 @@ form {
         width: 155px;
     }
 
-    .login-btn > p {
+    .login-btn>p {
         font-size: 1.2rem;
     }
 
@@ -282,11 +284,93 @@ form {
         width: 155px;
     }
 
-    .guest-login-btn > p {
+    .guest-login-btn>p {
         font-size: 1.2rem;
     }
 
     .btn-cnt {
         margin-top: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .log-in-box {
+        width: 520px;
+    }
+}
+
+@media (max-width: 425px) {
+    .account-settings-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .account-settings-container > p {
+        margin-top: 1rem;
+    }
+
+    .remember-cnt {
+        margin-right: 0;
+    }
+
+    .login-input {
+        width: 285px;
+    }
+
+    .btn-cnt {
+        flex-direction: column;
+        align-items: center
+    }
+
+    .login-btn {
+        margin-left: 0;
+        width: 180px;
+    }
+
+    .guest-login-btn {
+        margin-top: 1rem;
+        margin-left: 0;
+        width: 180px;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    .log-in-box {
+        width: 350px;
+    }
+
+    .log-in-box > h1 {
+        font-size: 2rem;
+    }
+
+    .signup-box {
+        top: 47rem;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        width: 245px;
+    }
+
+    .close-icon {
+        right: -20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .log-in-box {
+        padding: 1rem;
+    }
+
+    .close-icon {
+        right: -6px;
+    }
+}
+
+@media (max-width: 320px) {
+    .login-input {
+        width: 250px;
     }
 }

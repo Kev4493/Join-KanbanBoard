@@ -343,6 +343,10 @@ hr {
         position: relative;
     }
 
+    .add-task-inputfield {
+        font-size: 0.8rem;
+    }
+
     .headline {
         margin-bottom: 0rem;
     }
@@ -356,7 +360,8 @@ hr {
     }
 
     label {
-        margin-top: 1.5rem;
+        margin-top: 1rem;
+        font-size: 0.8rem;
     }
 
     .button-container {
@@ -377,6 +382,11 @@ hr {
         height: 40px;
     }
 
+    .prio-button-headline {
+        font-size: 0.8rem;
+        margin-top: 1rem;
+    }
+
     .prio-button {
         margin-bottom: 1rem;
     }
@@ -389,15 +399,11 @@ hr {
 @media (max-width: 350px) {
 
     .submit-container-edit-task {
-        /* margin-top: 3rem; */
+        margin-top: 2rem;
     }
 
     .prio-button {
         margin-bottom: 1rem;
-    }
-
-    .submit-container-edit-task {
-        /* margin-top: 7rem; */
     }
 
     .create-task-button-dialog {
@@ -410,5 +416,13 @@ hr {
 
     .ml0 {
         margin-left: unset;
+    }
+
+    label {
+        margin-top: 1rem;
+    }
+
+    .prio-button-headline {
+        margin-top: 1rem;
     }
 }
