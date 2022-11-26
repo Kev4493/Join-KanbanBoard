@@ -237,13 +237,13 @@ function activeContactsNavLink() {
 
 
 function openNewContactDialog() {
-    let contactDialog = document.getElementById('dialog');
+    let contactDialog = document.getElementById('contact-dialog');
     contactDialog.classList.remove('d-none');
 }
 
 
 function closeNewContactDialog() {
-    let contactDialog = document.getElementById('dialog')
+    let contactDialog = document.getElementById('contact-dialog')
     contactDialog.classList.add('d-none');
 }
 

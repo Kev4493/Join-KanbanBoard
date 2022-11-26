@@ -225,3 +225,68 @@ form {
         transform: translate3d(10px, 0, 0);
     }
 }
+
+@media (min-width: 2560px) {
+    .logo {
+        width: 160px;
+    }
+
+    .sign-up-btn {
+        font-size: 1.5rem;
+    }
+
+    .signup-box > p {
+        font-size: 1.5rem;
+    }
+
+    .log-in-box {
+        width: 830px;
+    }
+
+    .log-in-box > h1 {
+        font-size: 3.5rem;
+    }
+
+    .login-input {
+        height: 60px;
+        font-size: 1.2rem;
+        width: 480px;
+        margin-top: 3rem;
+    }
+
+    .mail-icon {
+        top: 54px;
+    }
+
+    .lock-icon {
+        top: 54px;
+    }
+
+    .account-settings-container{
+        margin-top: 3rem;
+    }
+
+    .account-settings-container > p {
+        font-size: 1.2rem;
+    }
+
+    .login-btn {
+        width: 155px;
+    }
+
+    .login-btn > p {
+        font-size: 1.2rem;
+    }
+
+    .guest-login-btn {
+        width: 155px;
+    }
+
+    .guest-login-btn > p {
+        font-size: 1.2rem;
+    }
+
+    .btn-cnt {
+        margin-top: 3rem;
+    }
+}
