@@ -28,11 +28,16 @@ async function addNewContact() {
     }
 
     allContacts.push(contact);
-    
+
     await saveAllContacts();
     showAllContacts();
     closeNewContactDialog();
 
+    contactName.value = '';
+    contactEmail.value = '';
+    contactPhone.value = '';
+    contactCompany.value = '';
+    
     console.log('added new contact', allContacts);
 }
 
