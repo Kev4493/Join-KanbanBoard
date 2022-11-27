@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Join - KanbanBoard</title>
 
+        <link rel="icon" type="image/x-icon" href="./assets/img/logo.png">
+
         <link rel="stylesheet" type="text/css" href="./style.css">
         <link rel="stylesheet" type="text/css" href="./css/sidenav.css">
         <link rel="stylesheet" type="text/css" href="./css/header.css">
@@ -14,12 +16,14 @@
         <script src="./js/mini_backend.js"></script>
         <script src="./script.js"></script>
         <script src="./js/includeHtml.js"></script>
+        <script src="./js/addTask.js"></script>
         <script src="./js/login.js"></script>
+
     </head>
 
     <body onload="initLogin()">
         <div class="log-in-container">
-            <img class="logo" src="/assets/img/big-logo.png" alt="">
+            <img class="logo" src="./assets/img/big-logo.png" alt="">
             <div class="signup-box">
                 <p>Not a Join user?</p>
                 <button onclick="openSignUpDialog()" class="sign-up-btn">Sign up</button>
@@ -31,12 +35,12 @@
                 <form onsubmit="logIn(); return false;">
                     <div class="input-cnt">
                         <input id="login-mail" class="login-input" type="email" placeholder="Email" required>
-                        <img class="mail-icon" src="/assets/icons/mail-icon.png" alt="">
+                        <img class="mail-icon" src="./assets/icons/mail-icon.png" alt="">
                     </div>
 
                     <div class="input-cnt">
                         <input id="login-password" class="login-input" type="password" placeholder="Password" required>
-                        <img class="lock-icon" src="/assets/icons/lock-icon.png" alt="">
+                        <img class="lock-icon" src="./assets/icons/lock-icon.png" alt="">
                     </div>
 
                     <div class="account-settings-container">
@@ -48,29 +52,29 @@
                     </div>
                     <div class="btn-cnt">
                         <button type="submit" class="login-btn"><p>Log in</p></button>
-                        <button class="guest-login-btn"><p>Guest Log in</p></button>
+                        <button type="button" onclick="guestLogin()" class="guest-login-btn"><p>Guest Log in</p></button>
                     </div>
                 </form>
             </div>
             <!-- === Sign up Box === -->
             <div id="sign-up-box" class="log-in-box d-none">
-                <img onclick="closeSignUpDialog()" class="close-icon" src="/assets/icons/close_icon.png" alt="">
+                <img onclick="closeSignUpDialog()" class="close-icon" src="./assets/icons/close_icon.png" alt="">
                 <h1>Sign up</h1>
                 <hr>
                 <form onsubmit="signUp(); return false;">
                     <div class="input-cnt">
                         <input id="signup-name" class="login-input" type="text" placeholder="Name" required>
-                        <img class="mail-icon" src="/assets/icons/name-icon.png" alt="">
+                        <img class="mail-icon" src="./assets/icons/name-icon.png" alt="">
                     </div>
 
                     <div class="input-cnt">
                         <input id="signup-mail" class="login-input" type="email" placeholder="Email" required>
-                        <img class="mail-icon" src="/assets/icons/mail-icon.png" alt="">
+                        <img class="mail-icon" src="./assets/icons/mail-icon.png" alt="">
                     </div>
 
                     <div class="input-cnt">
                         <input id="signup-password" class="login-input" type="password" placeholder="Password" required>
-                        <img class="lock-icon" src="/assets/icons/lock-icon.png" alt="">
+                        <img class="lock-icon" src="./assets/icons/lock-icon.png" alt="">
                     </div>
 
 

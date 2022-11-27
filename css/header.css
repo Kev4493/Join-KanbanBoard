@@ -110,6 +110,10 @@
         right: 40px;
         bottom: -116px;
     }
+
+    .header-container {
+        border-left: unset;
+    }
 }
 
 @media (max-width: 425px) {

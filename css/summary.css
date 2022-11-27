@@ -7,13 +7,13 @@
 
 /* === Summary Header */
 
-.summary-header > h1 {
+.summary-header>h1 {
     border-right: 1px solid black;
     padding-right: 2rem;
     font-size: 3rem;
 }
 
-.summary-header > p {
+.summary-header>p {
     padding-left: 2rem;
     font-size: 1.5rem;
 }
@@ -44,6 +44,11 @@
     padding: 1rem;
 }
 
+.summary-box:hover {
+    border: 2px solid #2A3647;
+    cursor: pointer;
+}
+
 .number-in-box {
     /* font-weight: 700; */
     font-size: 4rem;
@@ -69,6 +74,12 @@
     border-radius: 30px;
     width: 600px;
     padding: 2rem;
+    border: 2px solid white;
+}
+
+.urgent-box:hover {
+    border: 2px solid #2A3647;
+    cursor: pointer;
 }
 
 .urgent-box-left {
@@ -79,7 +90,7 @@
     width: 50%;
 }
 
-.urgent-box-left > img {
+.urgent-box-left>img {
     width: 60px;
     height: 60px;
 }
@@ -143,6 +154,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 2px solid white;
+}
+
+.todo-container:hover, .done-container:hover {
+    border: 2px solid #2A3647;
+    cursor: pointer;
 }
 
 .todo-number, .done-number {
@@ -157,12 +174,12 @@
     margin-left: 2rem;
 }
 
-.done-container > img {
+.done-container>img {
     width: 60px;
     height: 60px;
 }
 
-.todo-container > img {
+.todo-container>img {
     width: 60px;
     height: 60px;
 }
@@ -171,11 +188,11 @@
 /* === Responsive Design === */
 
 @media (min-width: 2560px) {
-    .summary-header > h1 {
+    .summary-header>h1 {
         font-size: 3.5rem;
     }
 
-    .summary-header > p {
+    .summary-header>p {
         font-size: 2rem;
     }
 
@@ -206,7 +223,7 @@
         height: 250px;
     }
 
-    .urgent-box-left > img {
+    .urgent-box-left>img {
         width: 80px;
         height: 80px;
     }
@@ -236,7 +253,7 @@
         width: 410px;
     }
 
-    .todo-container > img {
+    .todo-container>img {
         width: 80px;
         height: 80px;
     }
@@ -253,7 +270,7 @@
         font-size: 1.5rem;
     }
 
-    .done-container > img {
+    .done-container>img {
         width: 80px;
         height: 80px;
     }
@@ -261,11 +278,11 @@
 
 /* Bis zu einer Maximalen Bildschirmgröße von 1440px folgende CSS Eigenschaften: */
 @media (max-width:1440px) {
-    .summary-header > h1 {
+    .summary-header>h1 {
         font-size: 2rem;
     }
 
-    .summary-header > p {
+    .summary-header>p {
         font-size: 1.5rem;
     }
 
@@ -296,7 +313,7 @@
         height: 150px;
     }
 
-    .urgent-box-left > img {
+    .urgent-box-left>img {
         width: 50px;
         height: 50px;
     }
@@ -319,7 +336,7 @@
         width: 240px;
     }
 
-    .todo-container > img {
+    .todo-container>img {
         width: 50px;
         height: 50px;
     }
@@ -328,7 +345,7 @@
         font-size: 3rem;
     }
 
-    .done-container > img {
+    .done-container>img {
         width: 50px;
         height: 50px;
     }
@@ -336,11 +353,11 @@
 
 /* Bis zu einer Maximalen Bildschirmgröße von 768px folgende CSS Eigenschaften: */
 @media (max-width: 768px) {
-    .summary-header > h1 {
+    .summary-header>h1 {
         font-size: 1.5rem;
     }
 
-    .summary-header > p {
+    .summary-header>p {
         font-size: 1rem;
     }
 
@@ -371,7 +388,7 @@
         height: 110px;
     }
 
-    .urgent-box-left > img {
+    .urgent-box-left>img {
         width: 40px;
         height: 40px;
     }
@@ -401,7 +418,7 @@
         width: 175px;
     }
 
-    .todo-container > img {
+    .todo-container>img {
         width: 40px;
         height: 40px;
     }
@@ -410,7 +427,7 @@
         font-size: 2rem;
     }
 
-    .done-container > img {
+    .done-container>img {
         width: 40px;
         height: 40px;
     }
@@ -473,14 +490,14 @@
         padding: 2rem 5%;
     }
 
-    .summary-header > h1 {
+    .summary-header>h1 {
         padding-right: 1rem;
     }
 
-    .summary-header > p {
+    .summary-header>p {
         padding-left: 1rem;
     }
-    
+
     .number-in-box {
         font-size: 2rem;
     }
@@ -533,7 +550,7 @@
 
 /* 320 PX */
 @media (max-width: 383px) {
-    .summary-header > p {
+    .summary-header>p {
         font-size: 0.8rem;
     }
 
@@ -554,7 +571,7 @@
         font-size: 1rem;
     }
 
-    .urgent-box-left > img {
+    .urgent-box-left>img {
         width: 30px;
         height: 30px;
     }
@@ -568,12 +585,12 @@
         font-size: 1rem;
     }
 
-    .todo-container > img {
+    .todo-container>img {
         width: 30px;
         height: 30px;
     }
 
-    .done-container > img {
+    .done-container>img {
         width: 30px;
         height: 30px;
     }

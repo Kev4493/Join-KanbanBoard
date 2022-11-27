@@ -1,19 +1,15 @@
 async function initHome() {
     includeHTML();
-    // setURL('https://kevin-wagner.developerakademie.net/smallest_backend_ever');
     setURL('https://kanbanboard.kev-wagner.com/smallest_backend_ever');
-    await loadAllTasks();
-    // loadAllCounters();
-    activeHomeNavLink();
+    await loadCurrentUser()
     greetingUsers();
+    activeHomeNavLink();
 }
 
 
 function activeHomeNavLink() {
     document.getElementById('home-link').classList.add('active-link')
     document.getElementById('home-link-mobile').classList.add('active-link')
-
-
 }
 
 
@@ -31,7 +27,7 @@ function greetingUsers() {
     }
 
     document.getElementById('welcome-text').innerHTML = greetingMessage;
-    // document.getElementById('welcome-name').innerHTML = `<p>${currentUser}</p>`;
+    document.getElementById('welcome-name').innerHTML = currentUser.split(' ')[0];
 
     // setCurrentDate();
     setCurrentTime();

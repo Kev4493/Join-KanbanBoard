@@ -54,11 +54,22 @@ async function saveAllUsers() {
     await backend.setItem('allUsers', JSON.stringify(allUsers));
 }
 
+async function saveCurrentUser() {
+    await backend.setItem('currentUser', JSON.stringify(currentUser));
+}
+
 
 async function loadAllUsers() {
     await downloadFromServer();
     allUsers = JSON.parse(backend.getItem('allUsers')) || [];
 }
+
+
+async function loadCurrentUser() {
+    await downloadFromServer();
+    currentUser = JSON.parse(backend.getItem('currentUser')) || [];
+}
+
 
 async function deleteAllUsers() {
     await backend.deleteItem('allUsers');
@@ -74,29 +85,39 @@ function signUpNotification() {
 }
 
 
-function logIn() {
+async function logIn() {
     let email = document.getElementById('login-mail');
     let password = document.getElementById('login-password');
     let user = allUsers.find(u => u.email == email.value && u.password == password.value);
 
-    for (let i = 0; i < allUsers.length; i++) {
 
-        if (email.value == allUsers[i].email && password.value == allUsers[i].password) {
-            console.log('user found:', allUsers[i].name);
-            email.classList.remove('wrong-email')
-            password.classList.remove('wrong-password')
-            email.classList.add('correct-email')
-            password.classList.add('correct-password')
-            window.location.href = '/html/home.html';
-        } else {
-            email.classList.add('wrong-email')
-            password.classList.add('wrong-password')
-            email.classList.remove('correct-email')
-            password.classList.remove('correct-password')
-        }
+    if (user) {
+        console.log('user found:', user.name);
+        currentUser = user.name;
+        await saveCurrentUser()
+        email.classList.remove('wrong-email')
+        password.classList.remove('wrong-password')
+        email.classList.add('correct-email')
+        password.classList.add('correct-password')
+        // window.location.href = '../Join-Javascript/html/home.html';
+        window.location.href = '../html/home.html';
 
-
+    } else {
+        email.classList.add('wrong-email')
+        password.classList.add('wrong-password')
+        email.classList.remove('correct-email')
+        password.classList.remove('correct-password')
     }
+
+}
+
+
+async function guestLogin() {
+    currentUser = 'Guest';
+    await saveCurrentUser();
+    // window.location.href = '../Join-Javascript/html/home.html';
+    window.location.href = '../html/home.html';
+
 }
 
 

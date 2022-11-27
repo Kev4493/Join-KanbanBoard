@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Join - Summary</title>
 
+        <link rel="icon" type="image/x-icon" href="../assets/img/logo.png">
+
         <link rel="stylesheet" type="text/css" href="../style.css">
         <link rel="stylesheet" type="text/css" href="../css/summary.css">
         <link rel="stylesheet" type="text/css" href="../css/header.css">
@@ -34,22 +36,22 @@
             
             
                 <div class="summary-row-1">
-                    <div class="summary-box">
+                    <div onclick="goToBoard()" class="summary-box btn-1">
                         <p id="board-counter" class="number-in-box"></p>
                         <p class="text-in-box">Tasks <br> in Board</p>
                     </div>
-                    <div class="summary-box">
+                    <div onclick="goToBoard()" class="summary-box">
                         <p id="progress-counter" class="number-in-box"></p>
                         <p class="text-in-box">Tasks <br> in Progress</p>
                     </div>
-                    <div class="summary-box">
+                    <div onclick="goToBoard()" class="summary-box">
                         <p id="feedback-counter" class="number-in-box"></p>
                         <p class="text-in-box">Awaiting <br> Feedback</p>
                     </div>
                 </div>
             
                 <div class="summary-row-2">
-                    <div class="urgent-box">
+                    <div onclick="goToBoard()" class="urgent-box">
                         <div class="urgent-box-left">
                             <img src="../assets/icons/urgent_circle.png" alt="">
                             <div class="number-container">
@@ -62,20 +64,10 @@
                             <p class="upcoming-deadline-title">Upcoming Deadline</p>
                         </div>
                     </div>
-                    <!-- <div class="welcome-text-container">
-                        <p class="welcome-name" id="clock"></p>
-                        <p id="date"></p>
-                        <div class="text-box">
-                            <p id="welcome-text" class="welcome-text"></p>
-                            <p class="welcome-name">Kevin Wagner</p>
-                        </div>
-                        <p class="welcome-text">what's on today?</p>
-
-                    </div> -->
                 </div>
             
                 <div class="summary-row-3">
-                    <div class="todo-container">
+                    <div onclick="goToBoard()" class="todo-container">
                         <img src="../assets/icons/todo_circle.png" alt="">
                         <div class="todo-text-container">
                             <p id="todo-counter" class="todo-number">1</p>
@@ -83,7 +75,7 @@
                         </div>
                     </div>
             
-                    <div class="done-container">
+                    <div onclick="goToBoard()" class="done-container">
                         <img src="../assets/icons/done_circle.png" alt="">
                         <div class="done-text-container">
                             <p id="done-counter" class="done-number"></p>
