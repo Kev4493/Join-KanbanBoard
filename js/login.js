@@ -99,7 +99,7 @@ async function logIn() {
         password.classList.remove('wrong-password')
         email.classList.add('correct-email')
         password.classList.add('correct-password')
-        // window.location.href = '../Join-Javascript/html/home.html';
+        // window.location.href = '../Join-Javascript/html/home.html'; server
         window.location.href = '../html/home.html';
 
     } else {
@@ -115,7 +115,7 @@ async function logIn() {
 async function guestLogin() {
     currentUser = 'Guest';
     await saveCurrentUser();
-    // window.location.href = '../Join-Javascript/html/home.html';
+    // window.location.href = '../Join-Javascript/html/home.html'; server 
     window.location.href = '../html/home.html';
 
 }
