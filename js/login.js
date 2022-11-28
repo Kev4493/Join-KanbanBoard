@@ -100,7 +100,8 @@ async function logIn() {
         email.classList.add('correct-email')
         password.classList.add('correct-password')
         // window.location.href = '../Join-Javascript/html/home.html'; server
-        window.location.href = '../html/home.html';
+        checkHref();
+        // window.location.href = '../html/home.html'; Lokal
 
     } else {
         email.classList.add('wrong-email')
@@ -115,9 +116,20 @@ async function logIn() {
 async function guestLogin() {
     currentUser = 'Guest';
     await saveCurrentUser();
-    // window.location.href = '../Join-Javascript/html/home.html'; server 
-    window.location.href = '../html/home.html';
+    // window.location.href = '../Join-Javascript/html/home.html'; server
+    checkHref();
+    // window.location.href = '../html/home.html'; Lokal
 
+}
+
+function checkHref() {
+    if (window.location.href.indexOf("kevin-wagner") > -1) {
+        // The URL contains the string 'kevin-wagner'(DA-Server)
+        window.location.href = '../Join-Javascript/html/home.html';
+      } else {
+        // The URL do not contain the string 'kevin-wagner' (Lokal)
+        window.location.href = '../html/home.html';
+      }
 }
 
 

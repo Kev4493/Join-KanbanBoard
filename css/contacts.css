@@ -734,6 +734,10 @@ form {
         left: 0;
         bottom: 75px;
     }
+
+    .contacts-nav {
+        height: 76vh;
+    }
 }
 
 @media (max-width: 425px) {
