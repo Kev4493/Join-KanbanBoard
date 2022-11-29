@@ -10,13 +10,13 @@
     align-items: center;
 }
 
-.home-header > h1 {
+.home-header>h1 {
     font-size: 3rem;
     border-right: 1px solid black;
     padding-right: 2rem;
 }
 
-.home-header > p {
+.home-header>p {
     padding-left: 2rem;
     font-size: 1.5rem;
 }
@@ -29,32 +29,61 @@
     flex-direction: column;
 }
 
-.time > p {
+.time>p {
     font-size: 6rem;
     font-weight: 700;
-    color: #091931;;
+    color: #091931;
+    
+    animation-delay: 0.5s;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: both;
 }
 
 
-.greeting > p {
+.greeting>p {
     font-size: 3rem;
     font-weight: 700;
     color: #091931;
     text-align: center;
+
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .question {
     margin-top: 4rem;
     font-size: 3rem;
     color: #29ABE2;
+
+    animation-delay: 0.5s;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: both;
 }
 
 .btn-container {
     display: flex;
     margin-top: 2rem;
+
+    animation-delay: 0.5s;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: both;
 }
 
-.btn-container > a {
+.btn-container>a {
     text-decoration: none;
 }
 
@@ -90,19 +119,19 @@
 
 @media (min-width: 2560px) {
 
-    .home-header > h1 {
+    .home-header>h1 {
         font-size: 3.5rem;
     }
 
-    .home-header > p {
+    .home-header>p {
         font-size: 2rem;
     }
 
-    .time > p {
+    .time>p {
         font-size: 8rem;
     }
 
-    .greeting > p {
+    .greeting>p {
         font-size: 4rem;
         margin-top: 2rem;
     }
@@ -120,7 +149,7 @@
         margin-top: 4rem;
     }
 
-    .btn-container > a {
+    .btn-container>a {
         margin-left: 3rem;
         margin-right: 3rem;
     }
@@ -136,24 +165,22 @@
     }
 }
 
-@media (max-width: 1440px) {
-    
-}
+@media (max-width: 1440px) {}
 
 @media (max-width: 1024px) {
-    .home-header > h1 {
+    .home-header>h1 {
         font-size: 2rem;
     }
 
-    .home-header > p {
+    .home-header>p {
         font-size: 1.5rem;
     }
 
-    .time > p {
+    .time>p {
         font-size: 5rem;
     }
 
-    .greeting > p {
+    .greeting>p {
         font-size: 2rem;
     }
 
@@ -167,20 +194,20 @@
     .home-body {
         margin-top: 10rem;
     }
-    
-    .home-header > h1 {
+
+    .home-header>h1 {
         font-size: 1.5rem;
     }
 
-    .home-header > p {
+    .home-header>p {
         font-size: 1rem;
     }
 
-    .time > p {
+    .time>p {
         font-size: 4rem;
     }
 
-    .greeting > p {
+    .greeting>p {
         font-size: 1.5rem;
     }
 
@@ -195,7 +222,7 @@
         padding: 2rem 5%;
     }
 
-    .greeting > p {
+    .greeting>p {
         font-size: 1.4rem;
     }
 
@@ -207,20 +234,20 @@
 /* 375 px */
 
 @media (max-width: 376px) {
-    .home-header > p {
+    .home-header>p {
         font-size: 0.8rem;
         padding-left: 1rem;
     }
 
-    .home-header > h1 {
+    .home-header>h1 {
         padding-right: 1rem;
     }
 
-    .time > p {
+    .time>p {
         font-size: 3rem;
     }
 
-    .greeting > p {
+    .greeting>p {
         font-size: 1rem;
     }
 
