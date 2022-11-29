@@ -228,9 +228,13 @@
 .new-contact-dialog {
     width: 800px;
     background-color: white;
-    border-radius: 12px;
+    /* border-radius: 12px; */
     position: relative;
     display: flex;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 .close-container {
