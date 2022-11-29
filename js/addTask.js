@@ -1,6 +1,5 @@
 async function initAddTask() {
-    includeHTML();
-    // setURL('https://kevin-wagner.developerakademie.net/smallest_backend_ever');
+    await includeHTML();
     setURL('https://kanbanboard.kev-wagner.com/smallest_backend_ever');
     await loadAllTasks();
     activeAddTaskNavLink();
