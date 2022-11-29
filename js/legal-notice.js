@@ -5,5 +5,5 @@ async function initLegalNotice() {
 }
 
 function activeLegalNoticeLink() {
-    document.getElementById('contacts-link').classList.add('active-link')
+    document.getElementById('legalnotice-link').classList.add('active-link')
 }
