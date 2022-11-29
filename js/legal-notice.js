@@ -1,6 +1,7 @@
 async function initLegalNotice() {
     includeHTML();
     setURL('https://kanbanboard.kev-wagner.com/smallest_backend_ever');
+    await loadAllTasks();
     activeLegalNoticeLink();
 }
 
