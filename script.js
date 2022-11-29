@@ -4,7 +4,6 @@ function init() {
 }
 
 // Log Out Dialog:
-
 function showLogOutDialog() {
     document.getElementById('dialog').classList.toggle('d-none');
 }

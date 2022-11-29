@@ -264,7 +264,7 @@ body {
     position: relative;
     /* animation: fly 225ms ease-in-out; */
     animation-name: bounceInDown;
-    animation-duration: 1s;
+    animation-duration: 0.7s;
     animation-fill-mode: both;
 }
 
