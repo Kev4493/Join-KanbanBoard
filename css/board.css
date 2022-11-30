@@ -206,7 +206,23 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+
+    animation-name: slideInRight;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
 }
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        visibility: visible;
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 
 .close-icon {
     position: absolute;
@@ -808,12 +824,12 @@ body {
     }
 
     .task-search {
-        height: 30px;
+        /* height: 30px; */
         font-size: 0.8rem;
     }
 
     .add-task-button {
-        height: 30px;
+        /* height: 30px; */
         font-size: 0.8rem;
     }
 

@@ -27,6 +27,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 2rem 0rem 3rem 0rem;
+    border-radius: 12px;
 }
 
 .time>p {
