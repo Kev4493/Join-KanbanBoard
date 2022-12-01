@@ -213,6 +213,11 @@ form {
     border: 2px solid green;
 }
 
+.pw-text {
+    text-align: center;
+    margin-top: 2rem;
+}
+
 
 @keyframes shake {
     0%, 100% {

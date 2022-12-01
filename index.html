@@ -49,7 +49,7 @@
                             <input class="checkbox" type="checkbox">
                             <p>Remember me</p>
                         </div>
-                        <p>Forgot my password</p>
+                        <p onclick="openPwResetDialog()">Forgot my password</p>
                     </div>
                     <div class="btn-cnt">
                         <button type="submit" class="login-btn"><p>Log in</p></button>
@@ -87,6 +87,24 @@
             <!-- === Notification Dialog === -->
             <div id="notification" class="notification-cnt d-none">
                 <p>successfully signed up</p>
+            </div>
+            <!-- === Forgot Password Dialog === -->
+            <div id="reset-dialog" class="log-in-box d-none">
+                <img onclick="closeResetDialog()" class="close-icon" src="./assets/icons/close_icon.png" alt="">
+                <h1>I Forgot my Password</h1>
+                <p class="pw-text">Don't worry! We will send you an email with the instructions to reset your password.</p>
+                <hr>
+                <form action="https://kevin-wagner.developerakademie.net/Join-Javascript/send_mail.php" method="post">
+
+                    <div class="input-cnt">
+                        <input name="mail" id="pw-email" class="login-input" type="email" placeholder="Email" required>
+                        <img class="mail-icon" src="./assets/icons/mail-icon.png" alt="">
+                    </div>
+
+                    <div class="btn-cnt">
+                        <button type="submit" class="login-btn"><p>Send</p></button>
+                    </div>
+                </form>
             </div>
         </div>
     </body>

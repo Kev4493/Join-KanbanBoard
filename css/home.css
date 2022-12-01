@@ -219,6 +219,12 @@
     }
 }
 
+@media (max-width: 600px) {
+    .home-body {
+        margin-top: 8rem;
+    }
+}
+
 /* 425 Px */
 @media (max-width: 425px) {
     .home-container {

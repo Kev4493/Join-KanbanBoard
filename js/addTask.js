@@ -36,7 +36,9 @@ async function addTask() {
 
     allTasks.push(task);
     await saveAllTasks();
-    window.location.href = '../html/board.html';
+    clearAddTaskForm()
+    // window.location.href = '../html/board.html';
+    addTaskNotification();
 };
 
 
@@ -100,6 +102,7 @@ async function deleteAllTasks() {
     await backend.deleteItem('allTasks');
 }
 
+
 function addTaskPrio() {
     let urgentBtn = document.getElementById('urgent-button');
     let mediumBtn = document.getElementById('medium-button');
@@ -154,4 +157,13 @@ function deactivatePrioButtons() {
     urgentButton.classList.remove('prio-button-active');
     mediumButton.classList.remove('prio-button-active');
     lowButton.classList.remove('prio-button-active');
+}
+
+
+function addTaskNotification() {
+    document.getElementById('at-notification-cnt').classList.remove('d-none');
+
+    setTimeout(function () {
+        document.getElementById('at-notification-cnt').classList.add('d-none')
+    }, 3000)
 }

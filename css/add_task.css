@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 }
 
 .headline-dialog {
@@ -215,6 +216,41 @@ hr {
     width: 15px;
 }
 
+.at-notification-cnt {
+    background-color: #2A3647;
+    color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    position: absolute;
+    /* bottom: 2rem; */
+    width: 278px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 2rem;
+    right: 0;
+    left: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
 /* === Edit Task Dialog */
 
 .form-container-edit-task {
@@ -304,6 +340,10 @@ hr {
     .submit-container-edit-task {
         margin-top: 1rem;
     }
+
+    .at-notification-cnt {
+        left: 150px;
+    }
 }
 
 @media (max-width: 881px) {
@@ -325,7 +365,13 @@ hr {
     .headline, .headline-dialog {
         font-size: 2rem;
     }
+}
 
+@media (max-width: 600px) {
+    .at-notification-cnt {
+        bottom: 101px;
+        left: 0;
+    }
 }
 
 @media (max-width: 500px) {

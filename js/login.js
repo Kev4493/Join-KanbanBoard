@@ -12,9 +12,11 @@ let currentUser;
 function openSignUpDialog() {
     let logInDialog = document.getElementById('log-in-box');
     let signUpDialog = document.getElementById('sign-up-box');
+    let PWdialog = document.getElementById('reset-dialog')
 
     logInDialog.classList.add('d-none');
     signUpDialog.classList.remove('d-none');
+    PWdialog.classList.add('d-none');
 }
 
 
@@ -133,3 +135,18 @@ function checkHref() {
 }
 
 
+function openPwResetDialog() {
+    document.getElementById('reset-dialog').classList.remove('d-none');
+    document.getElementById('log-in-box').classList.add('d-none');
+}
+
+
+function closeResetDialog() {
+    document.getElementById('reset-dialog').classList.add('d-none');
+    document.getElementById('log-in-box').classList.remove('d-none');
+}
+
+
+function resetPassword() {
+    
+}
