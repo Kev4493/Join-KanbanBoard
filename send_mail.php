@@ -2,13 +2,8 @@
 
 ########### CONFIG ###############
 
-$redirect = 'https://kevin-wagner.developerakademie.net/Join-Javascript/index.html';
-$link = "https://kevin-wagner.developerakademie.net/Join-Javascript/html/reset-password.html";
-$message = "Hello, \r\n \r\n
-please click on link below to reset your password \r\n \r\n $link \r\n \r\n
-Yours sincerely \r\n
-your JOIN-Kanban Team
-";
+$recipient = 'your@mail.com';
+// $redirect = 'success.html';
 
 
 ########### CONFIG END ###########
@@ -45,15 +40,26 @@ switch ($_SERVER['REQUEST_METHOD']) {
     case ("POST"): //Send the email;
         header("Access-Control-Allow-Origin: *");
 
-        $subject = "Contact From JOIN-Kanban Team";
-        $headers = "From:  noreply@developerakademie.com";
-        $recipient = $_POST['mail']
+        $email = $_POST['email'];
 
-        mail($recipient, $subject, $message, $headers);
-        header("Location: " . $redirect); 
+        $message = "Hello,\n 
+        \nFollow this link to reset your JOIN password for your " . $email . " account.\n
+        \nhttps://kevin-wagner.developerakademie.net/Join-Javascript/html/reset-password.html?email=" . $email . "\n
+        \nIf you didn't ask to reset your password, you can ignore this email.\n
+        \nThanks,\n
+        \nYour Join team\n";
+
+        $recipient = $email;
+        $subject = "Reset your password for JOIN App";
+        $headers = "From: noreply@https://kevin-wagner.developerakademie.net/Join-Javascript/index.html";
+        
+
+        $result = mail($recipient, $subject, $message, $headers);
+        print($result);
+        // header("Location: " . $redirect);
 
         break;
-    default: //Reject any non POST or OPTIONS requests.
+        default: //Reject any non POST or OPTIONS requests.
         header("Allow: POST", true, 405);
         exit;
 }

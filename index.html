@@ -29,6 +29,7 @@
                 <p>Not a Join user?</p>
                 <button onclick="openSignUpDialog()" class="sign-up-btn">Sign up</button>
             </div>
+
             <!-- === Login Box === -->
             <div id="log-in-box" class="log-in-box">
                 <h1>Log in</h1>
@@ -57,6 +58,7 @@
                     </div>
                 </form>
             </div>
+
             <!-- === Sign up Box === -->
             <div id="sign-up-box" class="log-in-box d-none">
                 <img onclick="closeSignUpDialog()" class="close-icon" src="./assets/icons/close_icon.png" alt="">
@@ -84,20 +86,21 @@
                     </div>
                 </form>
             </div>
+
             <!-- === Notification Dialog === -->
             <div id="notification" class="notification-cnt d-none">
                 <p>successfully signed up</p>
             </div>
+
             <!-- === Forgot Password Dialog === -->
             <div id="reset-dialog" class="log-in-box d-none">
                 <img onclick="closeResetDialog()" class="close-icon" src="./assets/icons/close_icon.png" alt="">
                 <h1>I Forgot my Password</h1>
                 <p class="pw-text">Don't worry! We will send you an email with the instructions to reset your password.</p>
                 <hr>
-                <form action="https://kevin-wagner.developerakademie.net/Join-Javascript/send_mail.php" method="post">
-
+                <form onsubmit="onSubmit(event)">
                     <div class="input-cnt">
-                        <input name="mail" id="pw-email" class="login-input" type="email" placeholder="Email" required>
+                        <input type="email" id="email" name="email" class="login-input"  placeholder="Email" required>
                         <img class="mail-icon" src="./assets/icons/mail-icon.png" alt="">
                     </div>
 

@@ -1,5 +1,5 @@
 async function initLogin() {
-    includeHTML();
+    // includeHTML();
     setURL('https://kanbanboard.kev-wagner.com/smallest_backend_ever');
     await loadAllUsers();
 }
@@ -147,6 +147,31 @@ function closeResetDialog() {
 }
 
 
-function resetPassword() {
-    
+// reset password:
+
+async function onSubmit(event) {
+    event.preventDefault(); // Prevent Default Form Action
+    let formData = new FormData(event.target); // Create a FormData based on our Form Element in HTML
+    let response = await action(formData);
+
+    if(response.ok) {
+        alert('Email was send!');
+    } else {
+        alert('Email not send!');
+    }
+        
+}
+
+
+function action(formData) {
+    const input = 'https://kevin-wagner.developerakademie.net/Join-Javascript/send_mail.php';
+    const requestInit = {
+        method: 'post',
+        body: formData
+    };
+
+    return fetch(
+        input,
+        requestInit
+    );
 }
