@@ -156,12 +156,13 @@ async function onSubmit(event) {
     let response = await action(formData);
 
     if(response.ok) {
-        alert('Email was send!');
         sentEmailNotification();
     } else {
-        alert('Email not send!');
+        sentEmailProblemNotification();
     }
-        
+
+    document.getElementById('email').value = '';
+    closeResetDialog();
 }
 
 
