@@ -36,7 +36,7 @@ async function addTask() {
 
     allTasks.push(task);
     await saveAllTasks();
-    clearAddTaskForm()
+    clearAddTaskForm();
     // window.location.href = '../html/board.html';
     addTaskNotification();
 };

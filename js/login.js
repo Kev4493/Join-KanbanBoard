@@ -79,10 +79,10 @@ async function deleteAllUsers() {
 
 
 function signUpNotification() {
-    document.getElementById('notification').classList.remove('d-none');
+    document.getElementById('notification-signup').classList.remove('d-none');
 
     setTimeout(function () {
-        document.getElementById('notification').classList.add('d-none')
+        document.getElementById('notification-signup').classList.add('d-none')
     }, 3000)
 }
 
@@ -147,6 +147,7 @@ function closeResetDialog() {
 }
 
 
+
 // reset password:
 
 async function onSubmit(event) {
@@ -156,6 +157,7 @@ async function onSubmit(event) {
 
     if(response.ok) {
         alert('Email was send!');
+        sentEmailNotification();
     } else {
         alert('Email not send!');
     }
@@ -174,4 +176,22 @@ function action(formData) {
         input,
         requestInit
     );
+}
+
+
+function sentEmailNotification() {
+    document.getElementById('notification-send-email').classList.remove('d-none');
+
+    setTimeout(function () {
+        document.getElementById('notification-send-email').classList.add('d-none')
+    }, 3000)
+}
+
+
+function sentEmailProblemNotification() {
+    document.getElementById('notification-send-email-problem').classList.remove('d-none');
+
+    setTimeout(function () {
+        document.getElementById('notification-send-email-problem').classList.add('d-none')
+    }, 3000)
 }
