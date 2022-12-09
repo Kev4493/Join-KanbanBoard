@@ -24,10 +24,11 @@ function getEmailUrlParameter() {
 }
 
 
-async function onSubmitPW(event) {
-    event.preventDefault();
+async function onSubmitPW(e) {
+    e.preventDefault();
     newPW = document.getElementById('password').value;
     user.password = newPW;
     await saveAllUsers();
     await loadAllUsers();
+    return false;
 }
