@@ -173,6 +173,9 @@ form {
     border-radius: 12px;
     position: absolute;
     bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     animation-name: fadeInUp;
     animation-duration: 1s;
@@ -189,6 +192,41 @@ form {
     100% {
         opacity: 1;
         transform: none;
+    }
+}
+
+.back-to-login {
+    background-color: #2A3647;
+    color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    position: absolute;
+    bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 170px;
+    left: 0;
+    right: 0;
+
+    animation-name: fadeIn;
+    animation-delay: 2.5s;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
@@ -311,7 +349,7 @@ form {
         align-items: center;
     }
 
-    .account-settings-container > p {
+    .account-settings-container>p {
         margin-top: 1rem;
     }
 
@@ -347,7 +385,7 @@ form {
         width: 350px;
     }
 
-    .log-in-box > h1 {
+    .log-in-box>h1 {
         font-size: 2rem;
     }
 

@@ -164,7 +164,6 @@ function addTaskNotification() {
     let notificationContainer = document.getElementById('at-notification-cnt');
 
     if (notificationContainer) {
-
         notificationContainer.classList.remove('d-none');
         setTimeout(function () {
             notificationContainer.classList.add('d-none')

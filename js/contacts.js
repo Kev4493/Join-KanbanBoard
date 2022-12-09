@@ -37,7 +37,7 @@ async function addNewContact() {
     contactPhone.value = '';
     contactCompany.value = '';
     
-    console.log('added new contact', allContacts);
+    // console.log('added new contact', allContacts);
 }
 
 
@@ -167,7 +167,7 @@ function renderContactDetailsMobile(j) {
                         <p class="contact-name">${allContacts[j]['name']}</p>
                     </div>
                     <div onclick="closeContactDetailsMobile()" class="backwards-icon-cnt">
-                        <img src="/assets/icons/backwards.png" title="go back to all Contacts" alt="">
+                        <img src="../assets/icons/backwards.png" title="go back to all Contacts" alt="">
                     </div>
                 </div>
                 <div class="contact-information-container">
@@ -217,7 +217,7 @@ function showDeleteContactButton(j) {
 
 async function deleteContact(j) {
     allContacts.splice(j, 1);
-    console.log('Gelöscht: AllContacts', [j]);
+    // console.log('Gelöscht: AllContacts', [j]);
     await saveAllContacts();
     document.getElementById('contact-detail').innerHTML = '';
     showAllContacts();

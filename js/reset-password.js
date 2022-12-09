@@ -28,7 +28,24 @@ async function onSubmitPW(e) {
     e.preventDefault();
     newPW = document.getElementById('password').value;
     user.password = newPW;
+    document.getElementById('password').value = "";
     await saveAllUsers();
     await loadAllUsers();
+    passwordNotification();
+    backToLoginBtn();
     return false;
+}
+
+
+function passwordNotification() {
+    document.getElementById('notification-password').classList.remove('d-none');
+
+    setTimeout(function () {
+        document.getElementById('notification-password').classList.add('d-none')
+    }, 2500)
+}
+
+
+function backToLoginBtn() {
+    document.getElementById('back-to-login').classList.remove('d-none');
 }
