@@ -161,9 +161,15 @@ function deactivatePrioButtons() {
 
 
 function addTaskNotification() {
-    document.getElementById('at-notification-cnt').classList.remove('d-none');
+    let notificationContainer = document.getElementById('at-notification-cnt');
 
-    setTimeout(function () {
-        document.getElementById('at-notification-cnt').classList.add('d-none')
-    }, 3000)
+    if (notificationContainer) {
+
+        notificationContainer.classList.remove('d-none');
+        setTimeout(function () {
+            notificationContainer.classList.add('d-none')
+        }, 3000)
+    } else {
+        window.location.href = '../html/board.html';
+    }
 }
