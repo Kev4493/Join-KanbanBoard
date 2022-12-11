@@ -29,6 +29,28 @@
     top: 3rem;
     left: 3rem;
     width: 80px;
+
+    animation: moveJoinLogo 1s ease-in-out;
+    animation-direction: normal;
+}
+
+@keyframes moveJoinLogo {
+    0% {
+        width: 200px;
+        left: 40%;
+        top: 40vh;
+    }
+
+    50% {
+        width: 200px;
+        left: 40%;
+        top: 40vh;
+    }
+
+    100% {
+        left: 50px;
+        top: 50px;
+    }
 }
 
 .signup-box {
@@ -49,6 +71,36 @@
     flex-direction: column;
     box-shadow: 0px 0px 14px 3px rgb(0 0 0 / 4%);
     position: relative;
+
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .log-in-box>h1 {
@@ -344,6 +396,48 @@ form {
 }
 
 @media (max-width: 425px) {
+    /* .log-in-container {
+        animation: bg-intro 2s ease-in-out;
+    }
+
+    @keyframes bg-intro {
+        0% {
+            display: block;
+            opacity: 1;
+            background-color: #2A3647;
+        }
+
+        20% {
+            display: block;
+            opacity: 1;
+            background-color: #2A3647;
+        }
+
+        40% {
+            display: block;
+            opacity: 1;
+            background-color: #2A3647;
+        }
+
+        75% {
+            display: block;
+            opacity: 1;
+        }
+
+        90% {
+            display: block;
+            opacity: 1;
+            
+        }
+
+        100% {
+            display: block;
+            opacity: 1;
+            
+        }
+
+    } */
+
     .account-settings-container {
         flex-direction: column;
         align-items: center;
@@ -379,7 +473,30 @@ form {
 
     .logo {
         width: 60px;
+
+        animation: moveJoinLogo 1s ease-in-out;
+        animation-direction: normal;
     }
+
+    @keyframes moveJoinLogo {
+        0% {
+            width: 200px;
+            left: 30%;
+            top: 30vh;
+        }
+    
+        50% {
+            width: 200px;
+            left: 30%;
+            top: 30vh;
+        }
+    
+        100% {
+            left: 50px;
+            top: 50px;
+        }
+    }
+
 
     .log-in-box {
         width: 350px;
@@ -390,7 +507,7 @@ form {
     }
 
     .signup-box {
-        top: 47rem;
+        top: 50rem;
         margin-left: auto;
         margin-right: auto;
         left: 0;

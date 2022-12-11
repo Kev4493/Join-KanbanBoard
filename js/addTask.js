@@ -50,6 +50,7 @@ async function saveAllTasks() {
 async function loadAllTasks() {
     await downloadFromServer();
     allTasks = JSON.parse(backend.getItem('allTasks')) || [];
+    console.log('loadAllTasks:', allTasks);
 }
 
 

@@ -260,4 +260,5 @@ async function saveAllContacts() {
 async function loadAllContacts() {
     await downloadFromServer();
     allContacts = JSON.parse(backend.getItem('allContacts')) || [];
+    console.log('loadAllContacts:', allContacts);
 }

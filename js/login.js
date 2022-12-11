@@ -64,12 +64,14 @@ async function saveCurrentUser() {
 async function loadAllUsers() {
     await downloadFromServer();
     allUsers = JSON.parse(backend.getItem('allUsers')) || [];
+    console.log('loadAllUsers:', allUsers);
 }
 
 
 async function loadCurrentUser() {
     await downloadFromServer();
     currentUser = JSON.parse(backend.getItem('currentUser')) || [];
+    console.log('loadCurrentUser:', currentUser);
 }
 
 
