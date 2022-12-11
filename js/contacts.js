@@ -12,7 +12,9 @@ let allNames = [];
 let allContacts = [];
 
 
-async function addNewContact() {
+async function addNewContact(e) {
+    e.preventDefault();
+
     let contactName = document.getElementById('contact-name');
     let contactEmail = document.getElementById('contact-email');
     let contactPhone = document.getElementById('contact-phone');
@@ -38,6 +40,7 @@ async function addNewContact() {
     contactCompany.value = '';
     
     // console.log('added new contact', allContacts);
+    return false;
 }
 
 

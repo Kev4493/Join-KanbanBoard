@@ -29,7 +29,9 @@ function closeSignUpDialog() {
 }
 
 
-async function signUp() {
+async function signUp(e) {
+    e.preventDefault();
+
     let name = document.getElementById('signup-name');
     let email = document.getElementById('signup-mail');
     let password = document.getElementById('signup-password');
@@ -49,6 +51,8 @@ async function signUp() {
 
     signUpNotification();
     closeSignUpDialog();
+
+    return false;
 }
 
 

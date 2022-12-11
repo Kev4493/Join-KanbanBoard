@@ -71,7 +71,7 @@
                             <div class="user-pic-container">
                                 <img src="../assets/icons/user.png" alt="">
                             </div>
-                            <form onsubmit="addNewContact(); return false;">
+                            <form onsubmit="return addNewContact(event)">
                                 <!-- === Name === -->
                                 <div class="input-cnt">
                                     <input id="contact-name" class="contact-input" required name="name" type="text"

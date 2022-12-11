@@ -14,7 +14,9 @@ let medium = false;
 let low = false
 
 
-async function addTask() {
+async function addTask(e) {
+    e.preventDefault();
+
     let taskTitle = document.getElementById('taskTitle');
     let taskDescription = document.getElementById('taskDescription');
     let taskCategory = document.getElementById('taskCategory');
@@ -39,6 +41,7 @@ async function addTask() {
     clearAddTaskForm();
     // window.location.href = '../html/board.html';
     addTaskNotification();
+    return false;
 };
 
 
