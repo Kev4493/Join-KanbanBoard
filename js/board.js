@@ -1,6 +1,7 @@
 async function initBoard() {
     await includeHTML();
-    setURL('https://kanbanboard.kev-wagner.com/smallest_backend_ever');
+    // setURL('https://kanbanboard.kev-wagner.com/smallest_backend_ever');
+    setURL('https://kevin-wagner.developerakademie.net/Join-Javascript/smallest_backend_ever');
     await loadAllTasks(); // Es wird gewartet bis alles geladen ist.
     renderTasks(); // Dann wird gerendert.
     activeBoardNavLink();
