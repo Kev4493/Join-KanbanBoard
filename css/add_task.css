@@ -64,6 +64,7 @@ textarea {
     height: 80px;
     border-radius: 10px;
     padding: 1rem;
+    resize: none;
 }
 
 hr {
@@ -471,4 +472,21 @@ hr {
     .prio-button-headline {
         margin-top: 1rem;
     }
+}
+
+
+@media (max-height: 830px) {
+    .headline {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    label {
+        margin-top: 1rem;
+    }
+
+    .submit-container {
+        margin-top: 2rem;
+    }
+
 }

@@ -595,3 +595,82 @@
         height: 30px;
     }
 }
+
+@media (max-height: 800px) {
+    .summary-header > p {
+        font-size: 1rem;
+    }
+    .summary-container {
+        padding: 2rem 5%;
+    }
+}
+
+
+@media (max-height: 765px) {
+    .summary-row-1 {
+        margin-top: 2rem;
+    }
+
+    .summary-row-2 {
+        margin-top: 2rem;
+    }
+
+    .summary-row-3 {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-height: 735px) {
+    .summary-row-2 {
+        margin-top: 1rem;
+    }
+
+    .summary-row-3 {
+        margin-top: 1rem;
+    }
+
+    .number-in-box {
+        font-size: 2rem;
+    }
+
+    .text-in-box {
+        font-size: 0.8rem;
+    }
+
+    .number-in-urgent-box {
+        font-size: 2rem;
+    }
+
+    .todo-number {
+        font-size: 2rem;
+    }
+
+    .done-number {
+        font-size: 2rem;
+    }
+
+    .summary-box {
+        width: 120px;
+        height: 120px;
+    }
+
+    .urgent-box {
+        height: 120px;
+    }
+
+    .urgent-title {
+        font-size: 0.8rem;
+    }
+
+    .todo-container {
+        height: 120px;
+    }
+
+    .done-container {
+        height: 120px;
+    }
+
+    .upcoming-deadline-title {
+        font-size: 0.8rem;
+    }
+}
