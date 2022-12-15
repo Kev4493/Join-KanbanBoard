@@ -1,7 +1,7 @@
 async function initAddTask() {
     await includeHTML();
-    // setURL('https://kanbanboard.kev-wagner.com/smallest_backend_ever');
-    setURL('https://kevin-wagner.developerakademie.net/Join-Javascript/smallest_backend_ever');
+    // setURL('https://kevin-wagner.developerakademie.net/Join-Javascript/smallest_backend_ever');
+    setURL('https://join.kev-wagner.com/Join-Javascript/smallest_backend_ever');
     await loadAllTasks();
     activeAddTaskNavLink();
 }
@@ -117,11 +117,11 @@ function addTaskPrio() {
 
     if (urgent == true) {
         currentTaskPrio = urgentBtnVal;
-    } else{
+    } else {
         if (medium == true) {
             currentTaskPrio = mediumBtnVal;
         } else {
-            if(low == true) {
+            if (low == true) {
                 currentTaskPrio = lowBtnVal;
             }
         }

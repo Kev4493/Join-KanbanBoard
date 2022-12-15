@@ -865,6 +865,12 @@ form {
     }
 }
 
+@media (max-height:830px) {
+    .contact-button-container {
+        margin-top: 8rem;
+    }
+}
+
 @media (max-height: 750px) {
 
     /* .contacts-headline > h1 {
@@ -895,5 +901,11 @@ form {
 
     .contact-company-container {
         margin-top: 1rem;
+    }
+}
+
+@media (max-height: 710px) {
+    .contact-button-container {
+        margin-top: 4rem;
     }
 }

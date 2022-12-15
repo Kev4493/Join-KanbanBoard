@@ -1,7 +1,6 @@
 async function initLogin() {
-    // includeHTML();
-    // setURL('https://kanbanboard.kev-wagner.com/smallest_backend_ever');
-    setURL('https://kevin-wagner.developerakademie.net/Join-Javascript/smallest_backend_ever');
+    // setURL('https://kevin-wagner.developerakademie.net/Join-Javascript/smallest_backend_ever');
+    setURL('https://join.kev-wagner.com/Join-Javascript/smallest_backend_ever');
     await loadAllUsers();
 }
 
@@ -126,7 +125,7 @@ async function guestLogin() {
 
 
 function checkHref() {
-    if (window.location.href.indexOf("kevin-wagner") > -1) {
+    if (window.location.href.indexOf("wagner") > -1) {
         // The URL contains the string 'kevin-wagner'(DA-Server)
         window.location.href = '../Join-Javascript/html/home.html';
       } else {

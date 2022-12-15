@@ -394,8 +394,9 @@ hr {
     }
 
     .add-task-container {
-        padding: 2rem 5%;
+        /* padding: 2rem 5%; */
         position: relative;
+        padding: 2rem 5% 107px 5%;
     }
 
     .add-task-inputfield {
@@ -448,6 +449,10 @@ hr {
 
     .submit-container-edit-task {
         margin-top: 5rem;
+    }
+
+    .nav-mobile {
+        z-index: 999;
     }
 }
 
