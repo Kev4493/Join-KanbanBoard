@@ -40,7 +40,6 @@ async function addTask(e) {
     allTasks.push(task);
     await saveAllTasks();
     clearAddTaskForm();
-    // window.location.href = '../html/board.html';
     addTaskNotification();
     return false;
 };
@@ -54,7 +53,6 @@ async function saveAllTasks() {
 async function loadAllTasks() {
     await downloadFromServer();
     allTasks = JSON.parse(backend.getItem('allTasks')) || [];
-    console.log('loadAllTasks:', allTasks);
 }
 
 

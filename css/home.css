@@ -168,16 +168,25 @@
     }
 }
 
-@media (max-width: 1440px) {}
-
-@media (max-width: 1024px) {
+@media (max-width: 1440px) {
     .home-header>h1 {
         font-size: 2rem;
     }
 
     .home-header>p {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
+
+}
+
+@media (max-width: 1024px) {
+    /* .home-header>h1 {
+        font-size: 2rem;
+    }
+
+    .home-header>p {
+        font-size: 1.5rem;
+    } */
 
     .time>p {
         font-size: 5rem;

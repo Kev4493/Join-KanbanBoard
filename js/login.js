@@ -61,6 +61,7 @@ async function saveAllUsers() {
     await backend.setItem('allUsers', JSON.stringify(allUsers));
 }
 
+
 async function saveCurrentUser() {
     await backend.setItem('currentUser', JSON.stringify(currentUser));
 }
@@ -69,14 +70,12 @@ async function saveCurrentUser() {
 async function loadAllUsers() {
     await downloadFromServer();
     allUsers = JSON.parse(backend.getItem('allUsers')) || [];
-    console.log('loadAllUsers:', allUsers);
 }
 
 
 async function loadCurrentUser() {
     await downloadFromServer();
     currentUser = JSON.parse(backend.getItem('currentUser')) || [];
-    console.log('loadCurrentUser:', currentUser);
 }
 
 
@@ -101,16 +100,13 @@ async function logIn() {
 
 
     if (user) {
-        console.log('user found:', user.name);
         currentUser = user.name;
         await saveCurrentUser()
         email.classList.remove('wrong-email')
         password.classList.remove('wrong-password')
         email.classList.add('correct-email')
         password.classList.add('correct-password')
-        // window.location.href = '../Join-Javascript/html/home.html'; server
         checkHref();
-        // window.location.href = '../html/home.html'; Lokal
 
     } else {
         email.classList.add('wrong-email')
@@ -125,11 +121,9 @@ async function logIn() {
 async function guestLogin() {
     currentUser = 'Guest';
     await saveCurrentUser();
-    // window.location.href = '../Join-Javascript/html/home.html'; server
     checkHref();
-    // window.location.href = '../html/home.html'; Lokal
-
 }
+
 
 function checkHref() {
     if (window.location.href.indexOf("kevin-wagner") > -1) {
@@ -155,10 +149,9 @@ function closeResetDialog() {
 
 
 
-// reset password:
-
+// Reset password:
 async function onSubmit(event) {
-    event.preventDefault(); // Prevent Default Form Action
+    event.preventDefault();
     let formData = new FormData(event.target); // Create a FormData based on our Form Element in HTML
     let response = await action(formData);
 

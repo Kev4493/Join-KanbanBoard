@@ -8,7 +8,19 @@ async function initBoard() {
 }
 
 
+let currentDraggedElement;
+
+
+
 function renderTasks() {
+    renderToDoTasks();
+    renderInProgressTasks();
+    renderAwaitingFeedbackTasks();
+    renderDoneTasks()
+}
+
+
+function renderToDoTasks() {
     let toDoCategory = allTasks.filter(t => t['status'] == 'todo');
     let toDoContainer = document.getElementById('todo-container');
     toDoContainer.innerHTML = '';
@@ -17,8 +29,10 @@ function renderTasks() {
         let task = toDoCategory[i];
         toDoContainer.innerHTML += generateTaskHtml(i, task, 'todo');
     }
+}
 
 
+function renderInProgressTasks() {
     let inProgressCategory = allTasks.filter(t => t['status'] == 'in-progress');
     let inProgressContainer = document.getElementById('in-progress-container');
     inProgressContainer.innerHTML = '';
@@ -27,8 +41,10 @@ function renderTasks() {
         let task = inProgressCategory[i];
         inProgressContainer.innerHTML += generateTaskHtml(i, task, 'in-progress');
     }
+}
 
 
+function renderAwaitingFeedbackTasks() {
     let awaitingFeedbackCategory = allTasks.filter(t => t['status'] == 'awaiting-feedback');
     let awaitingFeedbackContainer = document.getElementById('awaiting-feedback-container');
     awaitingFeedbackContainer.innerHTML = '';
@@ -37,8 +53,10 @@ function renderTasks() {
         let task = awaitingFeedbackCategory[i];
         awaitingFeedbackContainer.innerHTML += generateTaskHtml(i, task, 'awaiting-feedback');
     }
+}
 
 
+function renderDoneTasks() {
     let doneCategory = allTasks.filter(t => t['status'] == 'done');
     let doneContainer = document.getElementById('done-container');
     doneContainer.innerHTML = '';
@@ -78,10 +96,7 @@ function generateTaskHtml(i, task) {
 }
 
 
-// === Drag and Drop: ===
-
-let currentDraggedElement;
-
+//Drag and Drop:
 function startDragging(task) {
     currentDraggedElement = task;
 }
@@ -93,18 +108,15 @@ async function moveTo(containerType) {
 
     renderTasks();
     await saveAllTasks();
+    console.log('this is containertype.', containerType);
 }
 
 
 function allowDrop(ev) {
-    ev.preventDefault(); // Das Standartverhalten des DIV Containers wird damit so verändert, dass man Elemente dort hineinwerfen kann.
+    ev.preventDefault();
 }
 
-// === === === === === ===
 
-
-
-// Diese Funktion nochmal erklären lassen.. 
 async function deleteTask(foo) {
     let id;
 
@@ -139,6 +151,14 @@ function searchTask() {
     let search = document.getElementById('search').value
     search = search.toLowerCase();
 
+    searchToDoTask(search);
+    searchInProgressTask(search);
+    searchAwaitingFeedbackTask(search);
+    searchDoneTask(search)
+}
+
+
+function searchToDoTask(search) {
     let toDoCategory = allTasks.filter(t => t['status'] == 'todo');
     let toDoContainer = document.getElementById('todo-container');
     toDoContainer.innerHTML = '';
@@ -149,8 +169,10 @@ function searchTask() {
             toDoContainer.innerHTML += generateTaskHtml(i, task, 'todo');
         }
     }
+}
 
 
+function searchInProgressTask(search) {
     let inProgressCategory = allTasks.filter(t => t['status'] == 'in-progress');
     let inProgressContainer = document.getElementById('in-progress-container');
     inProgressContainer.innerHTML = '';
@@ -161,8 +183,10 @@ function searchTask() {
             inProgressContainer.innerHTML += generateTaskHtml(i, task, 'in-progress');
         }
     }
+}
 
 
+function searchAwaitingFeedbackTask(search) {
     let awaitingFeedbackCategory = allTasks.filter(t => t['status'] == 'awaiting-feedback');
     let awaitingFeedbackContainer = document.getElementById('awaiting-feedback-container');
     awaitingFeedbackContainer.innerHTML = '';
@@ -173,8 +197,10 @@ function searchTask() {
             awaitingFeedbackContainer.innerHTML += generateTaskHtml(i, task, 'awaiting-feedback');
         }
     }
+}
 
 
+function searchDoneTask(search) {
     let doneCategory = allTasks.filter(t => t['status'] == 'done');
     let doneContainer = document.getElementById('done-container');
     doneContainer.innerHTML = '';

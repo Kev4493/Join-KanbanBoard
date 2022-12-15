@@ -134,6 +134,7 @@ form {
     display: flex;
     align-items: center;
     margin-top: 2rem;
+    outline: none;
 }
 
 .mail-icon {
@@ -179,6 +180,7 @@ form {
 
 .account-settings-container>p:last-of-type {
     cursor: pointer;
+    color: #29ABE2;
 }
 
 

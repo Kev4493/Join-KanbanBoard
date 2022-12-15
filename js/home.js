@@ -30,7 +30,6 @@ function greetingUsers() {
     document.getElementById('welcome-text').innerHTML = greetingMessage;
     document.getElementById('welcome-name').innerHTML = currentUser.split(' ')[0];
 
-    // setCurrentDate();
     setCurrentTime();
 }
 
@@ -58,6 +57,7 @@ function setCurrentTime() {
     document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;
     setTimeout(setCurrentTime, 1000);
 }
+
 
 function checkTime(i) {
     if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10

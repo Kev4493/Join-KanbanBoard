@@ -39,8 +39,7 @@ async function addNewContact(e) {
     contactEmail.value = '';
     contactPhone.value = '';
     contactCompany.value = '';
-    
-    // console.log('added new contact', allContacts);
+
     return false;
 }
 
@@ -52,26 +51,34 @@ function showAllContacts() {
 
 
 function getInitials() {
-    allNames = [];
-    allInitials = [];
-
     // Alle Namen herausfinden:
-    for (let i = 0; i < allContacts.length; i++) {
-        let names = allContacts[i]['name'];
-        allNames.push(names);
-    }
+    getAllNames();
 
     // Anfangsbuchstaben herausfinden:
-    for (let i = 0; i < allNames.length; i++) {
-        let letter = allNames[i].charAt(0);
-        allInitials.push(letter);
-    }
+    getAllInitials();
 
     // Anfangsbuchstaben Alphabetisch sortieren:
     allInitials.sort();
 
     // Duplikate entfernen:
     allInitials = [...new Set(allInitials)];
+}
+
+
+
+function getAllNames() {
+    for (let i = 0; i < allContacts.length; i++) {
+        let names = allContacts[i]['name'];
+        allNames.push(names);
+    }
+}
+
+
+function getAllInitials() {
+    for (let i = 0; i < allNames.length; i++) {
+        let letter = allNames[i].charAt(0);
+        allInitials.push(letter);
+    }
 }
 
 
@@ -221,7 +228,6 @@ function showDeleteContactButton(j) {
 
 async function deleteContact(j) {
     allContacts.splice(j, 1);
-    // console.log('Gelöscht: AllContacts', [j]);
     await saveAllContacts();
     document.getElementById('contact-detail').innerHTML = '';
     showAllContacts();
@@ -244,6 +250,7 @@ function activeContactsNavLink() {
 }
 
 
+
 function openNewContactDialog() {
     let contactDialog = document.getElementById('contact-dialog');
     contactDialog.classList.remove('d-none');
@@ -264,5 +271,4 @@ async function saveAllContacts() {
 async function loadAllContacts() {
     await downloadFromServer();
     allContacts = JSON.parse(backend.getItem('allContacts')) || [];
-    console.log('loadAllContacts:', allContacts);
 }
